@@ -111,111 +111,228 @@
 						<div class="box">
 							<div class="box__head">
 								<div class="box__icon">
-									<svg class="icon icon-magazine">
-										<use xlink:href="img/sprite.svg#magazine"></use>
+									<svg class="icon icon-cart">
+										<use xlink:href="img/sprite.svg#cart"></use>
 									</svg>
 								</div>
-								<div class="box__title"><a href="#">Главная</a> > Контакты</div>
+								<div class="box__title">Корзина</div>
 							</div>
 							<div class="box__body">
-								<div class="row g-xxl-6 g-4">
-									<div class="col-xxl-5 col-lg-6 col-md-5">
-										<h3 class="font-500 size-lg mb-5">Контакты</h3>
-
-										<div class="mb-6 pt-2">
-											<a href="tel:+74996080853" class="contact-item  mb-4 d-flex align-items-center  gap-2">
-												<svg class="icon icon-tel">
-													<use xlink:href="img/sprite.svg#tel"></use>
-												</svg>
-												<span>+7 499 608-08-53</span>
-											</a>
-
-											<div class="contact-item  d-flex align-items-center  gap-2">
-												<svg class="icon icon-marker">
-													<use xlink:href="img/sprite.svg#marker"></use>
-												</svg>
-												<span>г. Москва</span>
-											</div>
-										</div>
-
-										<div class="contact-buttons ">
-											<a href="#" class="btn btn--block">
-												<svg class="icon icon-whatsapp">
-													<use xlink:href="img/sprite.svg#whatsapp"></use>
-												</svg>
-												НАПИСАТЬ В WHATSAPP
-											</a>
-											<a href="#" class="btn btn--block">
-												<svg class="icon icon-telegram">
-													<use xlink:href="img/sprite.svg#telegram"></use>
-												</svg>
-												НАПИСАТЬ В TELEGRAM
-											</a>
-										</div>
-									</div>
-									<div class="col-xxl-7 col-lg-12 col-md-7">
-										<h3 class="font-500 size-lg mb-5">Обратная связь</h3>
-
-										<form action="#">
-											<div class="form-field">
-												<input type="text" class="form-input" placeholder="Ваше имя*" required>
-											</div>
-											<div class="form-field">
-												<input type="email" class="form-input" placeholder="Ваш e-mail*" required>
-											</div>
-											<div class="form-field">
-												<textarea class="form-input" placeholder="Ваш вопрос"></textarea>
-											</div>
-											<div class="d-flex align-items-center gap-3 flex-wrap">
-												<div class="captcha">
-													<img src="img/captcha.png" alt="">
-												</div>
-												<button type="submit" class="btn ms-auto">ОТПРАВИТЬ</button>
-											</div>
-										</form>
+								<div class="info-block d-flex align-items-center gap-3 mb-5">
+									<img src="img/mol.svg" alt="">
+									<div>
+										Дата доставки зависит от выбранного товара, города и способа доставки. Вы можете удалить из корзины товары, дата доставки которых вам не подходит.
 									</div>
 								</div>
 
-								<hr class="mt-6 mb-6">
+								<div class="cart-wrap">
+									<table class="cart-table">
+										<thead>
+											<tr>
+												<th></th>
+												<th>Наименование</th>
+												<th class="nowrap">Кол-во</th>
+												<th>
+													Цена
+													<hr class="mt-0 mb-0">
+													Сумма
+												</th>
+												<th></th>
+											</tr>
+										</thead>
+										<tbody>
 
-								<div class="row g-xxl-6 g-4">
-									<div class="col-xxl-5 col-lg-6 col-md-5">
-										<h3 class="font-500 size-lg mb-4">Присоединяйтесь к нам в социальных сетях!</h3>
+											<tr class="cart-table__item">
+												<td class="cart-table__img">
+													<a href="#"><img src="img/product-img.jpg" alt=""></a>
+												</td>
+												<td class="cart-table__name">
+													<a href="#" class="ca-name">
+														FilodoroAbsolute 8 vita bassa
+													</a>
+													<div class="ca-setting mt-2">
+														<span class="ca-title">Размер/Цвет</span>
+														playa (телесный) / 3-M
+													</div>
 
-										<div class="contact-buttons ">
-											<a href="#" class="btn btn--block">
-												<svg class="icon icon-vk">
-													<use xlink:href="img/sprite.svg#vk"></use>
-												</svg>
-												НАША ГРУППА ВК
-											</a>
-											<a href="#" class="btn btn--block">
-												<svg class="icon icon-telegram">
-													<use xlink:href="img/sprite.svg#telegram"></use>
-												</svg>
-												НАШ TELEGRAM КАНАЛ
-											</a>
+													<div class="ca-delivery mt-2">
+														<span class="ca-title">Дата доставки</span>
+														Понедельник 22 Января
+														<span class="i-block">?</span>
+													</div>
+
+												</td>
+
+												<td class="cart-table__count">
+													<div class="counter" data-counter>
+														<button class="counter__btn counter__btn--minus" data-counter-minus type="button">&ndash;</button>
+														<div class="counter__val" data-counter-val>1</div>
+														<button class="counter__btn counter__btn--plus" data-counter-plus type="button">+</button>
+													</div>
+												</td>
+												<td class="cart-table__price">
+													<div class="ca-price">
+														364р.
+														<hr class="mt-1 mb-1">
+														3640р.
+													</div>
+												</td>
+
+												<td class="cart-table__actions">
+													<button class="cart-table__btn">
+														<img src="img/remove.svg" alt="">
+													</button>
+												</td>
+
+											</tr>
+
+											<tr class="cart-table__item">
+												<td class="cart-table__img">
+													<a href="#"><img src="img/product-img.jpg" alt=""></a>
+												</td>
+												<td class="cart-table__name">
+													<a href="#" class="ca-name">
+														FilodoroAbsolute 8 vita bassa
+													</a>
+													<div class="ca-setting mt-2">
+														<span class="ca-title">Размер/Цвет</span>
+														playa (телесный) / 3-M
+													</div>
+
+													<div class="ca-delivery mt-2">
+														<span class="ca-title">Дата доставки</span>
+														Понедельник 22 Января
+														<span class="i-block">?</span>
+													</div>
+
+												</td>
+
+												<td class="cart-table__count">
+													<div class="counter" data-counter>
+														<button class="counter__btn counter__btn--minus" data-counter-minus type="button">&ndash;</button>
+														<div class="counter__val" data-counter-val>1</div>
+														<button class="counter__btn counter__btn--plus" data-counter-plus type="button">+</button>
+													</div>
+												</td>
+												<td class="cart-table__price">
+													<div class="ca-price">
+														364р.
+														<hr class="mt-1 mb-1">
+														3640р.
+													</div>
+												</td>
+
+												<td class="cart-table__actions">
+													<button class="cart-table__btn">
+														<img src="img/remove.svg" alt="">
+													</button>
+												</td>
+
+											</tr>
+
+											<tr class="cart-table__item">
+												<td class="cart-table__img">
+													<a href="#"><img src="img/product-img.jpg" alt=""></a>
+												</td>
+												<td class="cart-table__name">
+													<a href="#" class="ca-name">
+														FilodoroAbsolute 8 vita bassa
+													</a>
+													<div class="ca-setting mt-2">
+														<span class="ca-title">Размер/Цвет</span>
+														playa (телесный) / 3-M
+													</div>
+
+													<div class="ca-delivery mt-2">
+														<span class="ca-title">Дата доставки</span>
+														Понедельник 22 Января
+														<span class="i-block">?</span>
+													</div>
+
+												</td>
+
+												<td class="cart-table__count">
+													<div class="counter" data-counter>
+														<button class="counter__btn counter__btn--minus" data-counter-minus type="button">&ndash;</button>
+														<div class="counter__val" data-counter-val>1</div>
+														<button class="counter__btn counter__btn--plus" data-counter-plus type="button">+</button>
+													</div>
+												</td>
+												<td class="cart-table__price">
+													<div class="ca-price">
+														364р.
+														<hr class="mt-1 mb-1">
+														3640р.
+													</div>
+												</td>
+
+												<td class="cart-table__actions">
+													<button class="cart-table__btn">
+														<img src="img/remove.svg" alt="">
+													</button>
+												</td>
+
+											</tr>
+
+											<tr class="cart-table__item">
+												<td colspan="3" class="cart-table__date">
+													Ориентировочная дата: 23 Января <span class="i-block">?</span>
+												</td>
+												<td colspan="2">
+													Итого: 1341464 руб.
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
+									<div class="cart-footer mt-4">
+
+										<div class="cart-footer__wrap">
+											<div class="cart-footer__wrap-left">
+												<h4 class="size-md font-700 mb-2">Выберите, чтобы узнать стоимость доставки:</h4>
+
+												<select class="form-select" data-placeholder="Москва за пределами МКАД - Курьер">
+													<option></option>
+													<option>Москва за пределами МКАД</option>
+													<option>Москва за пределами МКАД</option>
+												</select>
+											</div>
+											<div class="cart-footer__wrap-right">
+												Доставка: - <br>
+												<strong>Всего: 1341464 руб.</strong>
+											</div>
+										</div>
+
+										<hr>
+										<div class="cart-footer__wrap">
+											<div class="cart-footer__wrap-left">
+												<p>Нет времени оформлять заказ? <br>
+													<a href="#" class="underline">Нажмите здесь для оформления заказа в 1 клик!</a>
+												</p>
+											</div>
 										</div>
 									</div>
-									<div class="col-xxl-5 col-lg-6 col-md-5">
-
-										<h3 class="font-500 size-lg mb-4">Подпишитесь на скидки и акции</h3>
-
-										<form action="#" class="subs-form">
-											<div class="form-field">
-												<input type="email" class="form-input" placeholder="Введите ваш e-mail" required>
-											</div>
-
-											<button type="submit" class="btn btn--block">ПОДПИСАТЬСЯ</button>
-
-										</form>
-									</div>
 								</div>
+
+							</div>
+						</div>
+
+						<div class="support mt-4">
+							<div class="support__title">Есть вопросы? Напишите нам</div>
+
+							<div class="support__links">
+								<a href="#" class="underline">Написать в WhatsApp</a>
+								<a href="#" class="underline">Написать в Telegram</a>
+							</div>
+
+							<div class="support__text">
+								Поможем, проконсультируем, ответим на вопросы
 							</div>
 						</div>
 
 					</div>
 					<aside class="main__aside hidden-md">
+
 						<div class="box ">
 							<div class="box__head">
 								<div class="box__icon">
@@ -223,99 +340,31 @@
 										<use xlink:href="img/sprite.svg#login"></use>
 									</svg>
 								</div>
-								<div class="box__title">Авторизация</div>
+								<div class="box__title">Личный кабинет</div>
 							</div>
 							<div class="box__body">
-								<form action="#">
-									<div class="form-field">
-										<input type="text" placeholder="Логин" class="form-input form-input--warning">
-									</div>
-									<div class="form-field">
-										<input type="password" placeholder="Пароль" class="form-input form-input--warning">
-									</div>
-									<div class="d-flex align-items-center justify-content-between mt-3">
-										<label class="checkbox checkbox--warning">
-											<input type="checkbox" checked />
-											<span class="checkbox__text">Запомнить</span>
-										</label>
-										<button type="submit" class="btn">
-											ВОЙТИ
-										</button>
-									</div>
+								<div class="size-lg mb-4">Здравствуйте, Константин</div>
 
-									<div class="d-flex align-items-center flex-wrap gap-2 mt-3">
-										<a href="#" class="link">Регистрация</a> <span>|</span> <a href="#popup-forgot-password" class="link _open-modal">Забыли пароль?</a>
-									</div>
-								</form>
-							</div>
-						</div>
+								<ul class="user-menu">
+									<li><a href="#">Анкета</a></li>
 
-						<div class="box">
-							<div class="box__head">
-								<div class="box__icon">
-									<svg class="icon icon-voice">
-										<use xlink:href="img/sprite.svg#voice"></use>
-									</svg>
-								</div>
-								<div class="box__title">Статус / Оплата заказа</div>
-							</div>
-							<div class="box__body">
-								<form action="#">
-									<div class="form-field">
-										<input type="text" placeholder="Заказ №" class="form-input form-input--warning">
-									</div>
-									<div class="form-field">
-										<input type="tel" placeholder="Телефон" class="form-input form-input--warning">
-									</div>
-									<div class="d-flex align-items-center justify-content-between mt-3 gap-2">
-										<button type="submit" class="btn">
-											ОК
-										</button>
-										<a href="#" class="link">Не знаете номер заказа?</a>
-									</div>
-								</form>
-							</div>
-						</div>
+									<li><a href="#">Подписка sms</a></li>
 
-						<div class="box ">
-							<div class="box__head">
-								<div class="box__icon">
-									<svg class="icon icon-list">
-										<use xlink:href="img/sprite.svg#list"></use>
-									</svg>
-								</div>
-								<div class="box__title">ТОП-20</div>
-							</div>
-							<div class="box__body">
-								<ul class="menu menu--ol">
-									<li><a href="#">Cecilia de Rafael Eterno Super Lucido 10</a></li>
-									<li><a href="#">Cecilia de Rafael Eterno Super Lucido 20</a></li>
-									<li><a href="#">Cecilia de Rafael Vidrio 15</a></li>
-									<li><a href="#">Cecilia de Rafael Eterno 20</a></li>
-									<li><a href="#">Cecilia de Rafael Sevilla 15</a></li>
-									<li><a href="#">Cecilia de Rafael Vidrio Open Tights</a></li>
-									<li><a href="#">Cecilia de Rafael Eterno 15 Bas</a></li>
-									<li><a href="#">Gabriella Gold line 15</a></li>
-									<li><a href="#">Giulia Blues 70</a></li>
-									<li><a href="#">Cecilia de Rafael Eterno 15</a></li>
-									<li><a href="#">Cecilia de Rafael Uppsala</a></li>
-									<li><a href="#">Sisi Be free 20</a></li>
-									<li><a href="#">Giulia Love 20</a></li>
-									<li><a href="#">Giulia Emotion 20 aut.</a></li>
-									<li><a href="#">Filodoro Aurora 15</a></li>
-									<li><a href="#">Giulia Infinity 8</a></li>
-									<li><a href="#">Filodoro Ninfa 40</a></li>
-									<li><a href="#">Philippe Matignon Oro 15</a></li>
-									<li><a href="#">Gabriella Exclusive 15</a></li>
-									<li><a href="#">Cecilia de Rafael Chic Sevilla</a></li>
+									<li><a href="#">Мои Заказы</a></li>
 
+									<li><a href="#">Зарабатывайте с нами!</a></li>
+
+									<li><a href="#">Избранное</a></li>
+
+									<li><a href="#">Корзина</a></li>
 								</ul>
+
+								<div class="mt-4">
+									<button class="btn">ВЫЙТИ</button>
+								</div>
 							</div>
 						</div>
 
-						<div class="widget">
-							<img src="img/widget-vk.jpg" alt="">
-						</div>
 					</aside>
 					<aside class="main__aside hidden-lg">
 						<div class="box">

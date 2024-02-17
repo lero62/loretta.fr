@@ -77,10 +77,32 @@ document.addEventListener('DOMContentLoaded', function (event) {
 	})
 
 	$('.form-select').select2({
-		placeholder: function(){
-        $(this).data('placeholder');
-    }
+		minimumResultsForSearch: 10,
+
 	});
+
+	$('[data-counter-minus]').click(function () {
+		var $input = $(this).parent().find('[data-counter-val]');
+		var count = parseInt($input.text()) - 1;
+		count = count < 1 ? 1 : count;
+		$input.text(count);
+
+		return false;
+	});
+	$('[data-counter-plus]').click(function () {
+		var $input = $(this).parent().find('[data-counter-val]');
+		$input.text(parseInt($input.text()) + 1);
+
+		return false;
+	});
+
+
+
+	$('#sel-region, #sel-city').on('change', function () { 
+		if ($('#sel-region').val() && $('#sel-city').val()) { 
+			$('#delivery-info').show()
+		}
+	})
 	
 	// offcanvass
 // ----------------------------------------------
@@ -359,6 +381,45 @@ function dynamicAdaptSort(arr) {
 	});
 }
 
+	
+const spollers = document.querySelectorAll('[data-spoller]')
+if(spollers.length > 0) {
+	for(var i = 0; i < spollers.length; i++) {
+		const spoller = spollers[i]
+
+		if (!spoller.classList.contains('_active')) {
+			spoller.nextElementSibling.hidden = true;
+		} else {
+			spoller.nextElementSibling.hidden = false;
+		}
+		spoller.addEventListener('click', function(e){
+			const el = e.target;
+			if (el.hasAttribute('data-spoller') || el.closest('[data-spoller]')) {
+				const spollerTitle = el.hasAttribute('data-spoller') ? el : el.closest('[data-spoller]');
+				const spollersBlock = spollerTitle.closest('[data-spollers]');
+				const oneSpoller = spollersBlock.hasAttribute('data-one-spollers') ? true : false;
+
+				if (!spollersBlock.querySelectorAll('._slide').length) {
+					if(oneSpoller && !spollerTitle.classList.contains('_active')) {
+						hideSpollersBody(spollersBlock);
+					}
+					spollerTitle.classList.toggle('_active');
+					_slideToggle(spollerTitle.nextElementSibling, 200)
+					
+				}
+				e.preventDefault();
+			}
+		})
+	}
+
+	function hideSpollersBody(spollersBlock) {
+		const spollerActiveTitle = spollersBlock.querySelector('[data-spoller]._active');
+		if (spollerActiveTitle) {
+			spollerActiveTitle.classList.remove('_active');
+			_slideUp(spollerActiveTitle.nextElementSibling, 300)
+		}
+	}
+}
 	
 	
 let _slideUp = (target, duration = 500) => {
