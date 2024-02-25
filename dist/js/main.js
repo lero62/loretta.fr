@@ -3,14 +3,11 @@
 
 document.addEventListener('DOMContentLoaded', function (event) {
 
-	const menuToggle = document.querySelectorAll('._toggle')
 
-	menuToggle.forEach(item => {
-		item.addEventListener('click', function (e) {
-			e.preventDefault();
-			item.classList.toggle('_active')
-
-		})
+	$('._toggle').on('click', function (e) { 
+		e.preventDefault();
+		$(this).toggleClass('_active').next().slideToggle();
+		$(this).closest('.menu-toggle').find('._toggle').not($(this)).removeClass('_active').next().slideUp();
 	})
 
 	const toggleBlock = document.querySelectorAll('._toggle-block')
