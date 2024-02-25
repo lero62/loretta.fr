@@ -5,7 +5,7 @@
 	<title>Home</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="format-detection" content="telephone=no">
-	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
 	<!-- <link rel="icon" type="image/png" href="img/favicon.png" /> -->
 	<link rel="stylesheet" type="text/css" href="css/style.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/vendors.css" />
@@ -104,31 +104,6 @@
 			<div class="container">
 				<div class="main__wrap">
 					<div class="main__content">
-						<div class="box about-block">
-							<div class="box__head justify-content-center">
-								<div class="box__title">Колготки и чулки - доставка по всей России</div>
-							</div>
-							<div class="box__body">
-								<div class="style-text">
-									<p>Самая лучшая проверка - проверка временем. Поэтому мы гордимся тем, что нам доверяют уже 19 лет. В январе 2005 года мы впервые предложили купить колготки и чулки онлайн не выходя из дома. Добро пожаловать в мир колготок и чулок!
-									</p>
-									<ul>
-										<li>"Лоретта" - розничный интернет-магазин, в котором вы можете заказать колготки, чулки и нижнее белье на любой вкус с доставкой по всей России. Минимальная сумма заказа: 1000 руб.</li>
-										<li>Более 10000 моделей колготок, чулок и нижнего белья на любой случай: от классики до авангарда от самых популярных торговых марок: Sisi, Omsa, Oroblu, Philippe Matignon, Filodoro, Trasparenze, Pretty Polly, Aristoc, MissO, Cecilia de Rafael и многих других.</li>
-										<li>Накопительная скидка от 3% до 7% доступна после регистрации</li>
-										<li>Курьерская доставка во все регионы</li>
-										<li>Постаматы и почтоматы: СДЭК и Халва</li>
-										<li>Почтовые отправления</li>
-										<li>Различные способы оплаты</li>
-									</ul>
-									<p>Желаем вам приятных покупок!</p>
-								</div>
-							</div>
-						</div>
-
-						<div class="promo">
-							<img src="img/kolgotky.webp" alt="">
-						</div>
 
 						<div class="box">
 							<div class="box__head">
@@ -340,6 +315,9 @@
 								</div>
 							</div>
 						</div>
+						<div class="promo">
+							<img src="img/kolgotky.webp" alt="">
+						</div>
 						<div class="box">
 							<div class="box__head">
 								<div class="box__icon">
@@ -530,11 +508,32 @@
 								</div>
 							</div>
 						</div>
+						<div class="box about-block">
+							<div class="box__head justify-content-center">
+								<div class="box__title">Колготки и чулки - доставка по всей России</div>
+							</div>
+							<div class="box__body">
+								<div class="style-text">
+									<p>Самая лучшая проверка - проверка временем. Поэтому мы гордимся тем, что нам доверяют уже 19 лет. В январе 2005 года мы впервые предложили купить колготки и чулки онлайн не выходя из дома. Добро пожаловать в мир колготок и чулок!
+									</p>
+									<ul>
+										<li>"Лоретта" - розничный интернет-магазин, в котором вы можете заказать колготки, чулки и нижнее белье на любой вкус с доставкой по всей России. Минимальная сумма заказа: 1000 руб.</li>
+										<li>Более 10000 моделей колготок, чулок и нижнего белья на любой случай: от классики до авангарда от самых популярных торговых марок: Sisi, Omsa, Oroblu, Philippe Matignon, Filodoro, Trasparenze, Pretty Polly, Aristoc, MissO, Cecilia de Rafael и многих других.</li>
+										<li>Накопительная скидка от 3% до 7% доступна после регистрации</li>
+										<li>Курьерская доставка во все регионы</li>
+										<li>Постаматы и почтоматы: СДЭК и Халва</li>
+										<li>Почтовые отправления</li>
+										<li>Различные способы оплаты</li>
+									</ul>
+									<p>Желаем вам приятных покупок!</p>
+								</div>
+							</div>
+						</div>
 
 					</div>
-					<aside class="main__aside hidden-md">
+					<aside class="main__aside ">
 
-						<div class="box ">
+						<div class="box hidden-md">
 							<div class="box__head">
 								<div class="box__icon">
 									<svg class="icon icon-login">
@@ -568,7 +567,7 @@
 							</div>
 						</div>
 
-						<div class="box">
+						<div class="box hidden-md">
 							<div class="box__head">
 								<div class="box__icon">
 									<svg class="icon icon-voice">
@@ -638,12 +637,14 @@
 										<img src="img/certificate.png" alt="">
 
 									</div>
-									<div class="certificate__title">
-										Подарочные сертификаты на
-										любую сумму
-									</div>
-									<div class="certificate__button">
-										<a href="#" class="btn btn--block">УЗНАТЬ ПОДРОБНЕЕ</a>
+									<div class="certificate__content">
+										<div class="certificate__title">
+											Подарочные сертификаты на
+											любую сумму
+										</div>
+										<div class="certificate__button">
+											<a href="#" class="btn">УЗНАТЬ ПОДРОБНЕЕ</a>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -1027,7 +1028,7 @@
 						</p>
 					</div>
 					<div class="footer-wrap__left">
-						<div class="d-flex align-items-center flex-wrap  gap-4">
+						<div class="d-flex flex-column flex-lg-row align-items-lg-center flex-wrap gap-4">
 							<div class="">Напишите нам в мессенджеры</div>
 							<div class="social social--active">
 								<a href="#" class="social__link">
@@ -1044,7 +1045,7 @@
 						</div>
 					</div>
 					<div class="footer-wrap__center">
-						<div class="d-flex align-items-center flex-wrap gap-4">
+						<div class="d-flex flex-column flex-lg-row align-items-lg-center flex-wrap gap-4">
 							<div class="">Мы в социальных сетях</div>
 							<div class="social ">
 								<a href="#" class="social__link">
