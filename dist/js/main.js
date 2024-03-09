@@ -75,6 +75,11 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
 	$('.form-select').select2({
 		minimumResultsForSearch: 10,
+		language: {
+			"noResults": function(){
+					return "Не найдено";
+			}	
+		},
 
 	});
 
@@ -118,6 +123,17 @@ document.addEventListener('DOMContentLoaded', function (event) {
 	$('.js-filter-toggle').on('click', function () { 
 		$(this).toggleClass('is-active');
 		$('.filter-block').toggleClass('is-show');
+	})
+
+	$('.js-collapse-text-toggle').on('click', function (e) { 
+		e.preventDefault();
+		const id = $(this).attr('href');
+		$(id).toggleClass('is-open')
+		if ($(this).text() == 'читать полностью') {
+			$(this).text('Скрыть')
+		} else { 
+			$(this).text('читать полностью')
+		}
 	})
 
 	// offcanvass
@@ -436,7 +452,39 @@ if(spollers.length > 0) {
 		}
 	}
 }
-	
+	// Swiper Slider
+// ----------------------------------------------
+
+if (document.querySelector('.reviews-swiper')) {
+  new Swiper('.reviews-swiper ', {
+    // Optional parameters
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    watchOverflow: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    navigation: {
+      nextEl: '.reviews-swiper-next',
+      prevEl: '.reviews-swiper-prev',
+    },
+    pagination: {
+      el: '.reviews-swiper-pagination',
+    },
+    breakpoints: {
+      100: {
+        slidesPerView: 1.1,
+      },
+      370: {
+        slidesPerView: 1.33,
+      },
+      576: {
+        slidesPerView: 1,
+      },
+    },
+  });
+}
+
 	
 let _slideUp = (target, duration = 500) => {
 	if(!target.classList.contains('_slide')){
