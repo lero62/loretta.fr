@@ -101,6 +101,25 @@ document.addEventListener('DOMContentLoaded', function (event) {
 		}
 	})
 	
+	$('.js-search-input').on('focus', function () { 
+		$(this).closest('.search-block').find('.search-block__clear').addClass('is-show');
+	})
+
+	$('.js-search-input').on('blur', function () { 
+		if ($(this).val() == '') {
+			$(this).closest('.search-block').find('.search-block__clear').removeClass('is-show');
+		}
+	})
+
+	$('.js-search-clear').on('click', function () { 
+		$(this).removeClass('is-show');
+	})
+
+	$('.js-filter-toggle').on('click', function () { 
+		$(this).toggleClass('is-active');
+		$('.filter-block').toggleClass('is-show');
+	})
+
 	// offcanvass
 // ----------------------------------------------
 const offcanvasLinks = document.querySelectorAll("._open-modal");
