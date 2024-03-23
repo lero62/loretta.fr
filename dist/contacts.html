@@ -128,8 +128,8 @@
 								<div class="box__title"><a href="#">Главная</a> > Контакты</div>
 							</div>
 							<div class="box__body">
-								<div class="row g-xxl-6 g-4">
-									<div class="col-xxl-5 col-lg-6 col-md-5">
+								<div class="row g-xxl-6 g-xxl-4 g-3">
+									<div class="col-md-5">
 										<h3 class="font-500 size-lg mb-5">Контакты</h3>
 
 										<div class="mb-6 pt-2">
@@ -163,7 +163,7 @@
 											</a>
 										</div>
 									</div>
-									<div class="col-xxl-7 col-lg-12 col-md-7">
+									<div class="col-md-7">
 										<h3 class="font-500 size-lg mb-5">Обратная связь</h3>
 
 										<form action="#">
@@ -171,7 +171,12 @@
 												<input type="text" class="form-input" placeholder="Ваше имя*" required>
 											</div>
 											<div class="form-field">
-												<input type="email" class="form-input" placeholder="Ваш e-mail*" required>
+												<input type="email" class="form-input _error" placeholder="Ваш e-mail*" required>
+												<div class="form-message _error">
+													<svg class="icon icon-close-circle">
+														<use xlink:href="img/sprite.svg#close-circle"></use>
+													</svg> заполните поле
+												</div>
 											</div>
 											<div class="form-field">
 												<textarea class="form-input" placeholder="Ваш вопрос"></textarea>
@@ -188,37 +193,40 @@
 
 								<hr class="mt-6 mb-6">
 
-								<div class="row g-xxl-6 g-4">
-									<div class="col-xxl-5 col-lg-6 col-md-5">
-										<h3 class="font-500 size-lg mb-4">Присоединяйтесь к нам в социальных сетях!</h3>
+								<div class="row g-xxl-6 g-xxl-4 g-3">
+									<div class="col-md-5">
+										<div class="row-form">
+											<h3 class="font-500 size-lg mb-4 row-form__title">Присоединяйтесь к нам в социальных сетях!</h3>
 
-										<div class="contact-buttons ">
-											<a href="#" class="btn btn--block">
-												<svg class="icon icon-vk">
-													<use xlink:href="img/sprite.svg#vk"></use>
-												</svg>
-												НАША ГРУППА ВК
-											</a>
-											<a href="#" class="btn btn--block">
-												<svg class="icon icon-telegram">
-													<use xlink:href="img/sprite.svg#telegram"></use>
-												</svg>
-												НАШ TELEGRAM КАНАЛ
-											</a>
+											<div class="contact-buttons ">
+												<a href="#" class="btn btn--block">
+													<svg class="icon icon-vk">
+														<use xlink:href="img/sprite.svg#vk"></use>
+													</svg>
+													НАША ГРУППА ВК
+												</a>
+												<a href="#" class="btn btn--block">
+													<svg class="icon icon-telegram">
+														<use xlink:href="img/sprite.svg#telegram"></use>
+													</svg>
+													НАШ TELEGRAM КАНАЛ
+												</a>
+											</div>
 										</div>
 									</div>
-									<div class="col-xxl-5 col-lg-6 col-md-5">
+									<div class="col-md-7">
+										<div class="row-form">
+											<h3 class="font-500 size-lg mb-4 row-form__title">Подпишитесь на скидки и акции</h3>
 
-										<h3 class="font-500 size-lg mb-4">Подпишитесь на скидки и акции</h3>
+											<form action="#" class="subs-form">
+												<div class="form-field">
+													<input type="email" class="form-input text-center" placeholder="Введите ваш e-mail" required>
+												</div>
 
-										<form action="#" class="subs-form">
-											<div class="form-field">
-												<input type="email" class="form-input" placeholder="Введите ваш e-mail" required>
-											</div>
+												<button type="submit" class="btn btn--block">ПОДПИСАТЬСЯ</button>
 
-											<button type="submit" class="btn btn--block">ПОДПИСАТЬСЯ</button>
-
-										</form>
+											</form>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -973,16 +981,16 @@
 							<p>Введите E-mail, который был указан при регистрации и вам будет отправлен логин и пароль.</p>
 
 							<form action="#" class="mt-5 mb-5">
-								<div class="d-flex flex-md-row flex-column align-items-center gap-3">
-									<div class="form-field flex-md-1 w-full mb-0">
+								<div class="d-flex flex-sm-row flex-column align-items-center gap-3">
+									<div class="form-field flex-sm-1 w-full mb-0">
 										<input type="email" class="form-input form-input--warning" placeholder="Ваш e-mail" required>
 									</div>
-									<button class="btn btn-sm-block" type="submit">ОТПРАВИТЬ</button>
+									<button class="btn btn-xs-block" type="submit">ОТПРАВИТЬ</button>
 								</div>
 
 							</form>
 
-							<a href="#" class="link size-lg">Регистрация</a>
+							<a href="#" class="link ">Регистрация</a>
 						</div>
 						<div class="fg-password__step-2" style="display: none;">
 							<h3 class="font-500 size-lg mb-4">На ваш почтовый ящик выслано письмо, <br>содержащее ваш логин и пароль</h3>
