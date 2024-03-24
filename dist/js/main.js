@@ -136,6 +136,10 @@ document.addEventListener('DOMContentLoaded', function (event) {
 		}
 	})
 
+	$('.js-close-alert').on('click', function () { 
+		$(this).closest('.alert').hide();
+	})
+
 	// offcanvass
 // ----------------------------------------------
 const offcanvasLinks = document.querySelectorAll("._open-modal");
