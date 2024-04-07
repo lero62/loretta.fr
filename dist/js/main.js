@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 		})
 	})
 
-
+	// tabs
 	const tabsButtons = document.querySelectorAll('[data-tabs-button]')
 	const tabs = document.querySelectorAll('[data-tabs]')
 
@@ -59,7 +59,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
 		}
 	}
 
-
 	// gallery 
 	const thubnails = document.querySelectorAll('.thumbnails')
 
@@ -73,6 +72,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 		})
 	})
 
+	// select
 	$('.form-select').select2({
 		minimumResultsForSearch: 10,
 		language: {
@@ -80,9 +80,10 @@ document.addEventListener('DOMContentLoaded', function (event) {
 					return "Не найдено";
 			}	
 		},
-
 	});
 
+
+	// plus minus
 	$('[data-counter-minus]').click(function () {
 		var $input = $(this).parent().find('[data-counter-val]');
 		var count = parseInt($input.text()) - 1;
@@ -125,17 +126,19 @@ document.addEventListener('DOMContentLoaded', function (event) {
 		$('.filter-block').toggleClass('is-show');
 	})
 
+	// more text
 	$('.js-collapse-text-toggle').on('click', function (e) { 
 		e.preventDefault();
 		const id = $(this).attr('href');
 		$(id).toggleClass('is-open')
-		if ($(this).text() == 'читать полностью') {
-			$(this).text('Скрыть')
+		if ($(id).hasClass('is-open')) {
+			$(this).text('cкрыть')
 		} else { 
 			$(this).text('читать полностью')
 		}
 	})
 
+	// alert
 	$('.js-close-alert').on('click', function () { 
 		$(this).closest('.alert').hide();
 	})
@@ -474,6 +477,15 @@ if (document.querySelector('.reviews-swiper')) {
     },
     pagination: {
       el: '.reviews-swiper-pagination',
+    },
+    on: {
+      slideChangeTransitionStart: function (swiper) {
+        if (document.querySelector('.reviews-swiper').querySelector('.js-collapse-text.is-open')) {
+          const collapseBlock = document.querySelector('.reviews-swiper').querySelector('.js-collapse-text.is-open');
+          collapseBlock.classList.remove('is-open');
+          document.querySelector(`a[href="#${collapseBlock.id}"]`).innerText = 'читать полностью';
+        }
+      },
     },
     breakpoints: {
       100: {

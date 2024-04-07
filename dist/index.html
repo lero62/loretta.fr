@@ -472,7 +472,7 @@
 												<img src="img/medal.svg" alt="">
 											</div>
 											<div class="list-icon__content">
-												первый интернет-магазин колготок в России. Мы открыты с 2005 года
+												первый онлайн-магазин колготок - открыты с 2005 года
 											</div>
 										</li>
 										<li class="list-icon__item">
@@ -480,7 +480,8 @@
 												<img src="img/calendar.svg" alt="">
 											</div>
 											<div class="list-icon__content">
-												более 30 лет работы в сфере колготок и чулок
+												более 30 лет работы в области колготок и чулок
+
 											</div>
 										</li>
 										<li class="list-icon__item">
@@ -488,7 +489,8 @@
 												<img src="img/bag.svg" alt="">
 											</div>
 											<div class="list-icon__content">
-												более 300 000 выполненных заказов
+												свыше 300 тыс. выполненных заказов по всей России
+
 											</div>
 										</li>
 
@@ -915,6 +917,23 @@
 										<use xlink:href="img/sprite.svg#list"></use>
 									</svg>
 								</div>
+								<div class="box__title">Опрос</div>
+							</div>
+							<div class="box__body">
+								<div class="mb-3 font-500">Ваши пожелания</div>
+
+								<p class="mb-4">Что по Вашему мнению необходимо улучшить, изменить на сайте? Мы будем рады узнать ваше мнение!</p>
+								<button class="btn btn--block _open-modal" data-href="#popup-survey">ПРОЙТИ ОПРОС</button>
+							</div>
+						</div>
+
+						<div class="box ">
+							<div class="box__head">
+								<div class="box__icon">
+									<svg class="icon icon-list">
+										<use xlink:href="img/sprite.svg#list"></use>
+									</svg>
+								</div>
 								<div class="box__title">Сертификаты</div>
 							</div>
 							<div class="box__body">
@@ -1193,6 +1212,15 @@
 								Статус /
 								Оплата заказа</a>
 						</li>
+						<li class="m-menu__item visible-md">
+							<a href="#popup-survey" class="m-menu__link _open-modal">
+								<span class="m-menu__icon">
+									<svg class="icon icon-list">
+										<use xlink:href="img/sprite.svg#list"></use>
+									</svg>
+								</span>
+								Опрос</a>
+						</li>
 						<li class="m-menu__item">
 							<a href="#" class="m-menu__link">
 								<span class="m-menu__icon">
@@ -1325,6 +1353,33 @@
 					</button>
 				</form>
 
+			</div>
+		</div>
+	</div>
+	<div id="popup-survey" class="_modal popup" style="--popup-width: 72rem">
+		<div class="popup__body">
+			<div class="popup__content _modal__content">
+				<div class="popup__close _close-modal">
+					<svg class="icon icon-close">
+						<use xlink:href="img/sprite.svg#close"></use>
+					</svg>
+				</div>
+				<h2 class="popup__title">Опрос</h2>
+				<p class="mb-4">Что по Вашему мнению необходимо улучшить и/или изменить на сайте? Пожалуйста, оставьте Ваш e-mail для ответа.</p>
+
+				<form action="#">
+					<div class="row g-md-2 g-1">
+						<div class="col-12">
+							<textarea class="form-input" placeholder="Ваш ответ" rows="6"></textarea>
+						</div>
+						<div class="col-sm-6">
+							<input type="text" class="form-input form-input--lg" placeholder="Ваш e-mail*">
+						</div>
+						<div class="col-sm-6">
+							<button class="btn btn--block btn--lg" type="submit">ОТПРАВИТЬ</button>
+						</div>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>
