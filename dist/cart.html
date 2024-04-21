@@ -691,9 +691,22 @@
 									<img src="img/certificate.svg" alt="">
 								</div>
 
+								<div class="promocode d-flex align-items-start gap-2 size-sm  mb-4">
+									<div class="promocode__icon">
+										<svg class="icon icon-voucher">
+											<use xlink:href="img/sprite.svg#voucher"></use>
+										</svg>
+									</div>
+									<div class="promocode__content">
+										<div class="font-700 mb-1">Ваш промокод на новый заказ</div>
+										<div class="mb-1">NEW199901</div>
+										<div class="color-gray italic">действует до 01.02.2025</div>
+									</div>
+								</div>
+
 								<ul class="user-menu">
 									<li><a href="#">Мои данные</a></li>
-									<li><a href="#">Подписка sms</a></li>
+									<li><a href="#popup-subscribe" class="_open-modal">Подписка sms</a></li>
 									<li><a href="#">Мои Заказы</a></li>
 									<li><a href="#">Партнерская программа</a></li>
 									<li><a href="#">Избранное</a></li>
@@ -1001,27 +1014,24 @@
 				</div>
 				<div class="popup__head">
 					<div class="fg-password">
-						<div class="fg-password__step-1">
-							<h3 class="font-500 size-lg mb-4">Забыли пароль?</h3>
 
-							<p>Введите E-mail, который был указан при регистрации и вам будет отправлен логин и пароль.</p>
+						<h3 class="font-500 size-lg mb-4">Забыли пароль?</h3>
 
-							<form action="#" class="mt-5 mb-5">
-								<div class="d-flex flex-sm-row flex-column align-items-center gap-3">
-									<div class="form-field flex-sm-1 w-full mb-0">
-										<input type="email" class="form-input form-input--warning" placeholder="Ваш e-mail" required>
-									</div>
-									<button class="btn btn-xs-block" type="submit">ОТПРАВИТЬ</button>
+						<p>Введите E-mail, который был указан при регистрации и вам будет отправлен логин и пароль.</p>
+
+						<form action="#" class="mt-5 mb-5">
+							<div class="d-flex flex-sm-row flex-column align-items-center gap-3">
+								<div class="form-field flex-sm-1 w-full mb-0">
+									<input type="email" class="form-input form-input--warning" placeholder="Ваш e-mail" required>
 								</div>
+								<button class="btn btn-xs-block" type="submit">ОТПРАВИТЬ</button>
+							</div>
+						</form>
+						<a href="#" class="link ">Регистрация</a>
+					</div>
 
-							</form>
-
-							<a href="#" class="link ">Регистрация</a>
-						</div>
-						<div class="fg-password__step-2" style="display: none;">
-							<h3 class="font-500 size-lg mb-4">На ваш почтовый ящик выслано письмо, <br>содержащее ваш логин и пароль</h3>
-						</div>
-
+					<div class="feedback-message" style="display: none;">
+						<h3 class="font-500 size-lg ">На ваш почтовый ящик выслано письмо, содержащее ваш логин и пароль</h3>
 					</div>
 
 				</div>
