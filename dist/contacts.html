@@ -453,22 +453,24 @@
 					<div class="main__content">
 						<div class="box">
 							<div class="box__head">
-								<div class="box__crumbs crumbs">
-									<a href="#">Главная</a>
-									<img src="img/caret-right.svg" alt="">
-									<span>Контакты</span>
+								<div class="box__icon">
+									<svg class="icon icon-contact">
+										<use xlink:href="img/sprite.svg#contact"></use>
+									</svg>
 								</div>
+								<h1 class="box__title">Контакты</h1>
 							</div>
 							<div class="box__body">
+								<div class="head gap-4 d-flex align-items-center justify-content-between " data-da="main__content, first, 767">
+									<div class="breadcrumbs">
+										<a href="#" class="breadcrumbs__link">Главная</a>
+										<span class="breadcrumbs__devider">&gt;</span>
+										<span class="breadcrumbs__item">Контакты</span>
+									</div>
+
+								</div>
 								<div class="row g-xxl-6 g-xxl-4 g-3">
 									<div class="col-xxl-5 col-xl-7 col-lg-5">
-										<div class="d-flex align-items-center gap-2 mb-4">
-											<svg class="icon icon-contact icon-w-title">
-												<use xlink:href="img/sprite.svg#contact"></use>
-											</svg>
-											<h1 class="font-500 size-xl ">Контакты</h1>
-										</div>
-
 										<div class="mb-6 pt-2">
 											<a href="tel:+74996080853" class="contact-item  mb-4 d-flex align-items-center  gap-2">
 												<svg class="icon icon-tel">
@@ -501,6 +503,7 @@
 										</div>
 									</div>
 									<div class="col-xxl-7 col-xl-12 col-lg-7">
+
 										<h2 class="font-500 size-lg mb-5">Обратная связь</h2>
 
 										<form action="#">
@@ -528,6 +531,23 @@
 											<button type="submit" class="btn btn--lg btn--block">ОТПРАВИТЬ</button>
 
 										</form>
+
+										<div style="display: none;">
+											<div class="alert alert--success d-flex align-items-start gap-2">
+												<div class="alert__icon">
+													<svg class="icon icon-check-circle">
+														<use xlink:href="img/sprite.svg#check-circle"></use>
+													</svg>
+												</div>
+												<div class="alert__body align-self-center">
+													<div class="mb-1"><strong>Ваше сообщение отправлено</strong></div>
+													Ваш вопрос отправлен и будет рассмотрен
+													в ближайшее время
+												</div>
+
+											</div>
+										</div>
+
 									</div>
 								</div>
 
@@ -693,7 +713,7 @@
 								<div class="certificate">
 									<div class="certificate__img">
 
-										<img src="img/certificate.png" alt="">
+										<img src="img/certificate.webp" alt="">
 
 									</div>
 									<div class="certificate__content">
@@ -728,6 +748,18 @@
 							</div>
 							<button class="btn btn-sm-block" type="submit">ПОДПИСАТЬСЯ</button>
 						</form>
+						<div style="display: none;">
+							<div class="alert d-flex align-items-start gap-2">
+								<div class="alert__icon">
+									<img src="img/flash-sale-not-alt.svg" alt="">
+								</div>
+								<div class="alert__body align-self-center">
+									<div class="mb-1"><strong>Спасибо за подписку!</strong></div>
+									Проверьте почту — отправили письмо-подтверждение
+								</div>
+
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

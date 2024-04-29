@@ -143,6 +143,23 @@ document.addEventListener('DOMContentLoaded', function (event) {
 		$(this).closest('.alert').hide();
 	})
 
+	// Counter
+	$('[data-counter-minus]').click(function () {
+		var $input = $(this).parent().find('[data-counter-val]');
+		var count = parseInt($input.val()) - 1;
+		count = count < 1 ? 1 : count;
+		$input.val(count);
+
+		return false;
+	});
+
+	$('[data-counter-plus]').click(function () {
+		var $input = $(this).parent().find('[data-counter-val]');
+		$input.val(parseInt($input.val()) + 1);
+
+		return false;
+	});
+
 	// offcanvass
 // ----------------------------------------------
 const offcanvasLinks = document.querySelectorAll("._open-modal");
