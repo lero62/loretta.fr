@@ -476,13 +476,22 @@
 								<div class="card">
 									<div class="card__left">
 										<div class="card__img">
-											<img src="img/product-img.jpg" id="gallery-img" alt="">
-
-											<div class="card__img-thubnails">
-												<img src="img/product-img.jpg" class="thumbnails _active" alt="">
-												<img src="img/product-img2.png" class="thumbnails" alt="">
-												<img src="img/product-img.jpg" class="thumbnails" alt="">
-												<img src="img/product-img.jpg" class="thumbnails" alt="">
+											<div class="_open-modal" id="card-img" data-href="#popup-card-slider">
+												<img src="img/img-1.jpg" id="gallery-img" alt="">
+											</div>
+											<div class="card__img-thubnails js-gallery">
+												<div class="js-gallery-item _active">
+													<img src="img/img-1.jpg" class="thumbnails " alt="">
+												</div>
+												<div class="js-gallery-item">
+													<img src="img/product-img2.png" class="thumbnails" alt="">
+												</div>
+												<div class="js-gallery-item">
+													<img src="img/product-img.jpg" class="thumbnails" alt="">
+												</div>
+												<div class="js-gallery-item">
+													<img src="img/product-img.jpg" class="thumbnails" alt="">
+												</div>
 											</div>
 										</div>
 
@@ -491,7 +500,7 @@
 									<div class="card__content">
 										<div class="card__head mb-4 d-flex flex-md-row flex-column flex-wrap gap-3 alig-items-start justify-content-between">
 											<h1 class="card__title">Fiore Palome</h1>
-											<span class="card__price">450 руб.</span>
+											<span class="card__price">450 <span class="rub">э</span></span>
 										</div>
 
 										<div class="card-actions__button d-md-none d-flex gap-4 alig-items-center ">
@@ -529,6 +538,11 @@
 														<option>белый</option>
 														<option>чорный</option>
 													</select>
+													<div class="form-message _error">
+														<svg class="icon icon-info-circle">
+															<use xlink:href="img/sprite.svg#info-circle"></use>
+														</svg> заполните поле
+													</div>
 												</div>
 												<div class="min-250 flex-1">
 													<select class="form-select" data-placeholder="Выберите размер">
@@ -1414,6 +1428,62 @@
 						<h3 class="font-500 size-lg ">На ваш почтовый ящик выслано письмо, содержащее ваш логин и пароль</h3>
 					</div>
 
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="popup-card-slider" class="_modal popup popup--image ">
+		<div class="popup__body _modal__content">
+			<div class="popup__close _close-modal">
+				<svg class="icon icon-close">
+					<use xlink:href="img/sprite.svg#close"></use>
+				</svg>
+			</div>
+			<div class="popup__container">
+				<div class="popup-swiper">
+					<div class="swiper ">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<figure>
+									<img src="img/img-1.jpg" alt="">
+								</figure>
+							</div>
+							<div class="swiper-slide">
+								<figure>
+									<img src="img/product-img2.png" alt="">
+								</figure>
+							</div>
+							<div class="swiper-slide">
+								<figure>
+									<img src="img/product-img.jpg" alt="">
+								</figure>
+							</div>
+							<div class="swiper-slide">
+								<figure>
+									<img src="img/product-img.jpg" alt="">
+								</figure>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-button-prev popup-swiper__prev hidden-iphone"></div>
+					<div class="swiper-button-next popup-swiper__next hidden-iphone"></div>
+				</div>
+
+				<div class="swiper popup-swiper-thumbs">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img src="img/img-1.jpg" alt="">
+						</div>
+						<div class="swiper-slide">
+							<img src="img/product-img2.png" alt="">
+						</div>
+						<div class="swiper-slide">
+							<img src="img/product-img.jpg" alt="">
+						</div>
+						<div class="swiper-slide">
+							<img src="img/product-img.jpg" alt="">
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

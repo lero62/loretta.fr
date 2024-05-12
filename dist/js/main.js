@@ -59,18 +59,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 		}
 	}
 
-	// gallery 
-	const thubnails = document.querySelectorAll('.thumbnails')
-
-	thubnails.forEach(item => {
-		item.addEventListener('click', function (e) {
-			thubnails.forEach(el => {
-				el.classList.remove('_active')
-			})
-			item.classList.add('_active')
-			document.getElementById('gallery-img').src = item.src
-		})
-	})
+	
 
 	// select
 	$('.form-select').select2({
@@ -515,6 +504,81 @@ if (document.querySelector('.reviews-swiper')) {
         slidesPerView: 1,
       },
     },
+  });
+}
+
+const popupSwiperThumbs = new Swiper('.popup-swiper-thumbs', {
+  // Optional parameters
+  loop: false,
+  direction: 'vertical',
+  slidesPerView: 7,
+  spaceBetween: 10,
+  observer: true,
+  observeParents: true,
+  observeSlideChildren: true,
+  watchOverflow: true,
+  watchSlidesVisibility: true,
+  watchSlidesProgress: true,
+  slideToClickedSlide: true,
+  breakpoints: {
+    100: {
+      slidesPerView: 'auto',
+      direction: 'horizontal',
+    },
+
+    992: {
+      slidesPerView: 7,
+      direction: 'vertical',
+    },
+  },
+});
+
+const popupSwiper = new Swiper('.popup-swiper .swiper', {
+  // Optional parameters
+  loop: false,
+  slidesPerView: 1,
+  spaceBetween: 0,
+  observer: true,
+  observeParents: true,
+  observeSlideChildren: true,
+  watchOverflow: true,
+  watchSlidesVisibility: true,
+  watchSlidesProgress: true,
+  thumbs: {
+    swiper: popupSwiperThumbs,
+  },
+  navigation: {
+    nextEl: '.popup-swiper__next',
+    prevEl: '.popup-swiper__prev',
+  },
+
+  on: {
+    transitionStart: function () {
+      var videos = document.querySelectorAll('.popup-swiper video');
+      videos.forEach((videos) => {
+        videos.pause();
+      });
+    },
+
+    transitionEnd: function () {
+      var video = document.querySelector('.popup-swiper .swiper-slide-active video');
+      if (video) {
+        video.play();
+      }
+    },
+  },
+});
+
+// const swiperSlides = document.querySelector('.card-swiper').querySelectorAll('.swiper-slide');
+$('.js-gallery-item').on('click', function () {
+  $(this).closest('.js-gallery').find('.js-gallery-item').not($(this)).removeClass('_active');
+  $(this).addClass('_active');
+  $('#gallery-img').attr('src', $(this).find('img').attr('src'));
+});
+if ($('.card__img-thubnails div').length > 0) {
+  $('#card-img').on('click', function () {
+    const index = $('.card__img-thubnails div._active').index();
+    popupSwiper.slideTo(index, 0, false);
   });
 }
 
