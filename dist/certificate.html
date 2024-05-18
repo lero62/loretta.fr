@@ -53,7 +53,7 @@
 							</div>
 							<div class="top-shopping-bag__content">
 								<div class="top-shopping-bag__title">Ваша корзина:</div>
-								<div class="top-shopping-bag__price">20 шт. на сумму <span class="nowrap">100.000 руб.</span></div>
+								<div class="top-shopping-bag__price">20 шт. на сумму <span class="rub">100.000</span></div>
 							</div>
 							<div class="top-shopping-bag__text">
 								Работаем для вас 19 лет!
@@ -505,19 +505,34 @@
 									<form action="#">
 										<div class="row g-2">
 											<div class="col-md-6">
-												<input type="text" name="" class="form-input" placeholder="Сумма сертификата*" required />
+												<div class="form-wrapper">
+													<span class="form-placeholder">Сумма сертификата <span>*</span></span>
+													<input type="text" name="" class="form-input" placeholder="" required />
+												</div>
 											</div>
 											<div class="col-md-6">
-												<input type="text" name="name" class="form-input" placeholder="Ваше имя*" required />
+												<div class="form-wrapper">
+													<span class="form-placeholder">Ваше имя <span>*</span></span>
+													<input type="text" name="name" class="form-input" placeholder="" required />
+												</div>
 											</div>
 											<div class="col-md-6">
-												<input type="tel" name="phone" class="form-input" placeholder="Телефон*" required />
+												<div class="form-wrapper">
+													<span class="form-placeholder">Телефон <span>*</span></span>
+													<input type="tel" name="phone" class="form-input" placeholder="" required />
+												</div>
 											</div>
 											<div class="col-md-6">
-												<input type="email" name="mail" class="form-input" placeholder="Ваш e-mail*" required />
+												<div class="form-wrapper">
+													<span class="form-placeholder">Ваш e-mail <span>*</span></span>
+													<input type="email" name="mail" class="form-input" placeholder="" required />
+												</div>
 											</div>
 											<div class="col-12">
-												<input type="text" name="" class="form-input" placeholder="Кому отправить сертификат?*" required />
+												<div class="form-wrapper">
+													<span class="form-placeholder">Кому отправить сертификат? <span>*</span></span>
+													<input type="text" name="" class="form-input" placeholder="" required />
+												</div>
 											</div>
 											<div class="col-12">
 												<textarea class="form-input" placeholder="Комментарий"></textarea>
@@ -975,6 +990,8 @@
 	<!-- POPUPS EOF   -->
 
 	<script src="js/vendors.js"></script>
+	<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+	<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
 	<script src="js/main.js"></script>
 
 </body>

@@ -53,7 +53,7 @@
 							</div>
 							<div class="top-shopping-bag__content">
 								<div class="top-shopping-bag__title">Ваша корзина:</div>
-								<div class="top-shopping-bag__price">20 шт. на сумму <span class="nowrap">100.000 руб.</span></div>
+								<div class="top-shopping-bag__price">20 шт. на сумму <span class="rub">100.000</span></div>
 							</div>
 							<div class="top-shopping-bag__text">
 								Работаем для вас 19 лет!
@@ -503,28 +503,46 @@
 									<form action="#">
 										<div class="row g-2">
 											<div class="col-xxl-7 col-xl-8 col-md-8">
-												<input type="text" name="" class="form-input" placeholder="Ваш логин*" required />
+												<div class="form-wrapper">
+													<span class="form-placeholder">Ваш логин <span>*</span></span>
+													<input type="text" name="" class="form-input" placeholder="" required />
+												</div>
 											</div>
 											<div class="col-xxl-7 col-xl-8 col-md-8">
-												<select class="form-select" data-placeholder="Способ рекламы*">
-													<option></option>
-													<option>1</option>
-													<option>2</option>
-													<option>3</option>
-												</select>
+												<div class="form-wrapper">
+													<span class="form-placeholder">Способ рекламы <span>*</span></span>
+													<select class="form-select" data-placeholder="">
+														<option></option>
+														<option>1</option>
+														<option>2</option>
+														<option>3</option>
+													</select>
+												</div>
 
 											</div>
 											<div class="col-xxl-7 col-xl-8 col-md-8">
-												<input type="tel" name="text" class="form-input" placeholder="Название сайта / форума / блога *" required />
+												<div class="form-wrapper">
+													<span class="form-placeholder">Название сайта / форума / блога <span>*</span></span>
+													<input type="tel" name="text" class="form-input" placeholder="" required />
+												</div>
 											</div>
 											<div class="col-xxl-7 col-xl-8 col-md-8">
-												<input type="email" name="mail" class="form-input" placeholder="Ваш e-mail*" required />
+												<div class="form-wrapper">
+													<span class="form-placeholder">Ваш e-mail <span>*</span></span>
+													<input type="email" name="mail" class="form-input" placeholder="" required />
+												</div>
 											</div>
 											<div class="col-xxl-7 col-xl-8 col-md-8">
-												<input type="text" name="" class="form-input" placeholder="Контактное лицо*" required />
+												<div class="form-wrapper">
+													<span class="form-placeholder">Контактное лицо <span>*</span></span>
+													<input type="text" name="" class="form-input" placeholder="" required />
+												</div>
 											</div>
 											<div class="col-xxl-7 col-xl-8 col-md-8">
-												<input type="text" name="" class="form-input" placeholder="Промокод*" required />
+												<div class="form-wrapper">
+													<span class="form-placeholder">Промокод <span>*</span></span>
+													<input type="text" name="" class="form-input" placeholder="" required />
+												</div>
 											</div>
 
 											<div class="col-xxl-7 col-xl-8 col-md-8">
@@ -983,6 +1001,8 @@
 	<!-- POPUPS EOF   -->
 
 	<script src="js/vendors.js"></script>
+	<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+	<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
 	<script src="js/main.js"></script>
 
 </body>

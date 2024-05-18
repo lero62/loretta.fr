@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* mixin ============================================== */
 @font-face {
   font-family: pt;
@@ -236,12 +237,6 @@ body {
 
 .font-100 {
   font-weight: 100;
-}
-
-.rub {
-  font-family: var(--font-pt);
-  font-weight: 400;
-  font-size: 88%;
 }
 
 .color-gray {
@@ -574,14 +569,9 @@ a:hover {
   width: 100%;
 }
 .table th, .table td {
-  border: 1px solid #AFAFAF;
-  padding: 2rem;
-}
-@media screen and (max-width: 767px) {
-  .table th, .table td {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
+  border-top: 1px solid #afafaf;
+  border-bottom: 1px solid #afafaf;
+  padding: 2rem 1.5rem;
 }
 .table th {
   padding-top: 2.5rem;
@@ -592,6 +582,13 @@ a:hover {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
   }
+}
+.table--vertical-top td {
+  vertical-align: top;
+}
+
+.tb-order {
+  width: 200px;
 }
 
 .order-number {
@@ -606,6 +603,25 @@ a:hover {
 .order-number .icon {
   color: var(--accentColorActive);
   font-size: 2.6rem;
+}
+
+.order-status {
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.rub {
+  white-space: nowrap;
+  font-weight: 700;
+}
+.rub:after {
+  content: "э";
+  font-family: var(--font-pt);
+  font-weight: 400;
+  font-size: 90%;
+  margin-left: 4px;
 }
 
 /* Elements ============ */
@@ -991,6 +1007,23 @@ a:hover {
 
 /* Crumbs */
 /* --------------------------------------------------------------- */
+.head {
+  border-bottom: 1px solid #AFAFAF;
+  padding-bottom: 2rem;
+  margin-bottom: 3rem;
+}
+@media screen and (max-width: 767px) {
+  .head {
+    border: none;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0;
+  }
+}
+.head--without-line {
+  border: none;
+  padding-bottom: 0;
+}
+
 .breadcrumbs {
   font-size: 1.2rem;
   font-weight: 300;
@@ -1337,13 +1370,25 @@ button.btn--block {
   margin-bottom: 1.5rem;
   position: relative;
 }
+.form-wrapper {
+  position: relative;
+}
+.form-wrapper:has(input:not(:-moz-placeholder-shown)) .form-placeholder {
+  opacity: 0;
+}
+.form-wrapper:has(input:not(:-ms-input-placeholder)) .form-placeholder {
+  opacity: 0;
+}
+.form-wrapper:has(input:focus) .form-placeholder, .form-wrapper:has(input:not(:placeholder-shown)) .form-placeholder, .form-wrapper:has(.select2-container):not(:has(.select2-selection__placeholder)) .form-placeholder {
+  opacity: 0;
+}
 .form-input {
   display: block;
   width: 100%;
   height: var(--input-height, 4.4rem);
   padding: 0 2rem;
-  color: #282828;
-  font: 700 1.6rem "Ubuntu", Arial, sans-serif;
+  color: #797979;
+  font: 500 1.6rem "Ubuntu", Arial, sans-serif;
   line-height: normal;
   border: 0.2rem solid #AFAFAF;
   background: transparent;
@@ -1371,6 +1416,9 @@ button.btn--block {
 .form-input::placeholder {
   color: #797979;
   font-weight: 400;
+}
+.form-input:hover {
+  border-color: var(--accentColorActive);
 }
 .form-input:focus::-webkit-input-placeholder {
   color: transparent;
@@ -1403,27 +1451,47 @@ button.btn--block {
   }
 }
 .form-input._error {
-  border-color: #C00000;
+  border-color: #FF0000;
   border-width: 0.1rem;
-  color: #C00000;
+  color: #FF0000;
 }
 .form-input._error::-webkit-input-placeholder {
-  color: #C00000;
+  color: #FF0000;
 }
 .form-input._error::-moz-placeholder {
-  color: #C00000;
+  color: #FF0000;
 }
 .form-input._error:-ms-input-placeholder {
-  color: #C00000;
+  color: #FF0000;
 }
 .form-input._error::-ms-input-placeholder {
-  color: #C00000;
+  color: #FF0000;
 }
 .form-input._error::placeholder {
-  color: #C00000;
+  color: #FF0000;
 }
 .form-input._valid {
-  border-color: green;
+  border-color: #797979;
+}
+.form-placeholder {
+  color: #797979;
+  font-weight: 400;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  pointer-events: none;
+  white-space: nowrap;
+  width: calc(100% - 40px);
+  overflow: hidden;
+}
+.form-placeholder:has(+ .form-input--lg) {
+  font-size: 1.8rem;
+}
+.form-placeholder span {
+  color: #DA287E;
 }
 .form-select--max-content + .select2 {
   max-width: 31.5rem;
@@ -1454,7 +1522,7 @@ button.btn--block {
   top: -1px;
 }
 .form-message._error {
-  color: #C00000;
+  color: #FF0000;
 }
 
 [type=search]::-webkit-search-cancel-button {
@@ -1493,6 +1561,42 @@ label {
   display: block;
   font-weight: 600;
   margin-bottom: 0.5rem;
+}
+
+.form-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.form-content__input {
+  width: 100%;
+  max-width: 302px;
+}
+@media screen and (max-width: 767px) {
+  .form-content__input {
+    max-width: none;
+  }
+}
+.form-content__button {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+}
+@media screen and (max-width: 767px) {
+  .form-content__button {
+    width: 100%;
+  }
+}
+.form-content__button .btn {
+  min-width: 160px;
+}
+@media screen and (max-width: 767px) {
+  .form-content__button .btn {
+    width: 100%;
+  }
 }
 
 .price-form__title {
@@ -1550,8 +1654,8 @@ label {
   line-height: 4rem;
   padding: 0 0.5rem 0 2rem;
   font-size: 1.6rem;
-  color: #282828;
-  font-weight: 700;
+  color: #797979;
+  font-weight: 500;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
@@ -1628,7 +1732,7 @@ label {
   padding: 0 2rem;
   height: 3.4rem;
   margin-top: -1rem;
-  color: #282828;
+  color: #797979;
 }
 
 .select2-search--hide {
@@ -1718,8 +1822,8 @@ label {
   -o-text-overflow: ellipsis;
      text-overflow: ellipsis;
   white-space: nowrap;
-  font: 700 1.6rem "Ubuntu", Arial, sans-serif;
-  color: #282828;
+  font: 500 1.6rem "Ubuntu", Arial, sans-serif;
+  color: #797979;
   line-height: 4.4rem-0.2rem;
 }
 .selectbox__caret {
@@ -1849,9 +1953,9 @@ label {
       -ms-flex-order: 1;
           order: 1;
   text-decoration: underline;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 1.6rem;
-  color: #282828;
+  color: #797979;
   -webkit-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
@@ -2808,16 +2912,6 @@ label {
   margin-top: -2rem;
   margin-bottom: -2rem;
 }
-.box .table-container {
-  margin-left: -3rem;
-  margin-right: -3rem;
-}
-@media screen and (max-width: 1500px) {
-  .box .table-container {
-    margin-left: -2.5rem;
-    margin-right: -2.5rem;
-  }
-}
 @media screen and (max-width: 767px) {
   .box .table-container {
     margin-left: -2rem;
@@ -3145,11 +3239,7 @@ label {
 .promocode {
   padding: 1.4rem;
   border-radius: 1rem;
-  border: 2px solid #AFAFAF;
-}
-.promocode__icon .icon {
-  color: var(--accentColorActive);
-  font-size: 2.8rem;
+  border: 2px solid var(--accentColorActive);
 }
 
 @media screen and (max-width: 1320px) {
@@ -3522,19 +3612,6 @@ label {
 .show-more:hover {
   text-decoration: none;
   color: var(--accentColorActive);
-}
-
-.head {
-  border-bottom: 1px solid #AFAFAF;
-  padding-bottom: 2rem;
-  margin-bottom: 3rem;
-}
-@media screen and (max-width: 767px) {
-  .head {
-    border: none;
-    margin-bottom: 0.5rem;
-    padding-bottom: 0;
-  }
 }
 
 .products-count {
@@ -4274,7 +4351,6 @@ label {
 }
 
 .payment-method__item {
-  border-top: 0.1rem solid #797979;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4285,13 +4361,9 @@ label {
     display: block;
   }
 }
-.payment-method__item:last-child {
-  border-bottom: 0.1rem solid #797979;
-}
 .payment-method__left {
   width: 40%;
   padding: 1.5rem 2rem 1.5rem 0;
-  border-right: 1px solid #797979;
 }
 @media screen and (max-width: 767px) {
   .payment-method__left {

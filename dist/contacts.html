@@ -53,7 +53,7 @@
 							</div>
 							<div class="top-shopping-bag__content">
 								<div class="top-shopping-bag__title">Ваша корзина:</div>
-								<div class="top-shopping-bag__price">20 шт. на сумму <span class="nowrap">100.000 руб.</span></div>
+								<div class="top-shopping-bag__price">20 шт. на сумму <span class="rub">100.000</span></div>
 							</div>
 							<div class="top-shopping-bag__text">
 								Работаем для вас 19 лет!
@@ -508,10 +508,16 @@
 
 										<form action="#">
 											<div class="form-field">
-												<input type="text" class="form-input form-input--lg" placeholder="Ваше имя*" required>
+												<div class="form-wrapper">
+													<span class="form-placeholder">Ваше имя <span>*</span></span>
+													<input type="text" class="form-input form-input--lg" required placeholder="">
+												</div>
 											</div>
 											<div class="form-field">
-												<input type="email" class="form-input form-input--lg _error" placeholder="Ваш e-mail*" required>
+												<div class="form-wrapper">
+													<span class="form-placeholder">Ваш e-mail <span>*</span></span>
+													<input type="email" class="form-input form-input--lg _error" placeholder="" required>
+												</div>
 												<div class="form-message _error">
 													<svg class="icon icon-info-circle">
 														<use xlink:href="img/sprite.svg#info-circle"></use>
@@ -529,7 +535,6 @@
 											</div>
 
 											<button type="submit" class="btn btn--lg btn--block">ОТПРАВИТЬ</button>
-
 										</form>
 
 										<div style="display: none;">
@@ -1067,6 +1072,8 @@
 	<!-- POPUPS EOF   -->
 
 	<script src="js/vendors.js"></script>
+	<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+	<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
 	<script src="js/main.js"></script>
 
 </body>

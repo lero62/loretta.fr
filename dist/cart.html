@@ -53,7 +53,7 @@
 							</div>
 							<div class="top-shopping-bag__content">
 								<div class="top-shopping-bag__title">Ваша корзина:</div>
-								<div class="top-shopping-bag__price">20 шт. на сумму <span class="nowrap">100.000 руб.</span></div>
+								<div class="top-shopping-bag__price">20 шт. на сумму <span class="rub">100.000</span></div>
 							</div>
 							<div class="top-shopping-bag__text">
 								Работаем для вас 19 лет!
@@ -536,20 +536,22 @@
 											</div>
 											<div class="cart-table__info">
 												<div class="cart-buy">
-													<span class="cart-price">364 <span class="rub">э</span></span>
+													<span class="cart-price rub">364</span>
 													<div class="counter" data-counter>
 														<button class="counter__btn counter__btn--minus" data-counter-minus type="button">–</button>
 														<input class="counter__val form-input form-input--warning" data-counter-val value="1" />
 														<button class="counter__btn counter__btn--plus" data-counter-plus type="button">+</button>
 													</div>
-													<span class="cart-count">544 <span class="rub">э</span> / 1 шт.</span>
+													<span class="cart-count">
+														<span class="rub">544</span> / 1 шт.
+													</span>
 												</div>
 												<div class="info-text pt-3 mt-auto d-flex alig-items-center">
 													<div class="me-2">
 														<span class="font-500">Доставка:</span>
 														21.02.2024
 													</div>
-													<span class="i-block">?</span>
+													<span class="i-block" data-tippy-content="Write title here asd sadsad ad">?</span>
 												</div>
 											</div>
 										</div>
@@ -602,7 +604,7 @@
 											</div>
 											<div class="cart-table__info">
 												<div class="cart-buy">
-													<span class="cart-price color-gray">364 <span class="rub">э</span></span>
+													<span class="cart-price color-gray rub">364</span>
 													<div class="counter" data-counter>
 														<button class="counter__btn counter__btn--minus" data-counter-minus type="button" disabled>–</button>
 														<input class="counter__val form-input form-input--warning _error" data-counter-val value="0" disabled />
@@ -665,7 +667,7 @@
 											</div>
 											<div class="cart-table__info">
 												<div class="cart-buy">
-													<span class="cart-price color-gray">364 <span class="rub">э</span></span>
+													<span class="cart-price color-gray rub">364</span>
 													<div class="counter" data-counter>
 														<button class="counter__btn counter__btn--minus" data-counter-minus type="button" disabled>–</button>
 														<input class="counter__val form-input form-input--warning _error" data-counter-val value="0" disabled />
@@ -682,7 +684,7 @@
 														<span class="font-500">Доставка:</span>
 														21.02.2024
 													</div>
-													<span class="i-block">?</span>
+													<span class="i-block" data-tippy-content="Write title here asd sadsad ad">?</span>
 												</div>
 											</div>
 										</div>
@@ -691,13 +693,19 @@
 									<div class="cart-total mt-4">
 										<span class="cart-total__val">
 											<span class="font-500">Итого:</span>
-											<span class="nowrap">1341464 руб.</span>
+											<span class="rub">1341464</span>
 										</span>
 
 									</div>
 									<div class="cart-delivery text-end mt-3">
 										Ориентировочная дата доставки: 23 Января
-										<span class="i-block">?</span>
+										<span class="i-block" data-tippy-content-popover data-template="one" data-tippy-placement="left">?</span>
+										<div style="display: none;">
+											<div id="one">
+												<div><strong>Tooltip title</strong></div>
+												Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+											</div>
+										</div>
 									</div>
 
 									<div class="alert alert--danger alert--max-content d-flex align-items-start gap-2 mt-4 ms-auto">
@@ -873,8 +881,8 @@
 													<li>Товары: 1229 руб. </li>
 													<li>Доставка: 150 руб.</li>
 													<li>Скидка: 10% (129 руб.) </li>
-													<li>Доставка: 06.06.2024 <span class="i-block">?</span></li>
-													<li><strong>Всего: 1341464 руб.</strong></li>
+													<li>Доставка: 06.06.2024 <span class="i-block" data-tippy-content="Write title here asd sadsad ad">?</span></li>
+													<li><strong>Всего: <span class="rub">1341464</span></strong></li>
 												</ul>
 											</div>
 										</div>
@@ -1004,17 +1012,10 @@
 									<img src="img/certificate.webp" alt="">
 								</div>
 
-								<div class="promocode d-flex align-items-start gap-2 size-sm  mb-4">
-									<div class="promocode__icon">
-										<svg class="icon icon-voucher">
-											<use xlink:href="img/sprite.svg#voucher"></use>
-										</svg>
-									</div>
-									<div class="promocode__content">
-										<div class="font-700 mb-1">Ваш промокод на новый заказ</div>
-										<div class="mb-1">NEW199901</div>
-										<div class="color-gray italic">действует до 01.02.2025</div>
-									</div>
+								<div class="promocode size-sm  mb-4 text-center">
+									<div class="font-700 mb-1 ttu">Ваш промокод</div>
+									<div class="mb-1">new199901</div>
+									<div class="color-gray italic">действует до 01.02.2025</div>
 								</div>
 
 								<ul class="user-menu">
@@ -1366,6 +1367,8 @@
 	<!-- POPUPS EOF   -->
 
 	<script src="js/vendors.js"></script>
+	<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+	<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
 	<script src="js/main.js"></script>
 
 </body>

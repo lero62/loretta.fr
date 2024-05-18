@@ -149,6 +149,28 @@ document.addEventListener('DOMContentLoaded', function (event) {
 		return false;
 	});
 
+
+	// Tippy
+	tippy('[data-tippy-content]', {
+		placement: 'top',
+		theme: 'light',
+		trigger: 'click',
+
+	});
+	tippy('[data-tippy-content-popover]', {
+		content(reference) {
+			const id = reference.getAttribute('data-template');
+			const template = document.getElementById(id);
+			return template.innerHTML;
+		},
+		allowHTML: true,
+		placement: 'top',
+		theme: 'light',
+		trigger: 'click',
+	});
+
+
+
 	// offcanvass
 // ----------------------------------------------
 const offcanvasLinks = document.querySelectorAll("._open-modal");

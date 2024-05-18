@@ -53,7 +53,7 @@
 							</div>
 							<div class="top-shopping-bag__content">
 								<div class="top-shopping-bag__title">Ваша корзина:</div>
-								<div class="top-shopping-bag__price">20 шт. на сумму <span class="nowrap">100.000 руб.</span></div>
+								<div class="top-shopping-bag__price">20 шт. на сумму <span class="rub">100.000</span></div>
 							</div>
 							<div class="top-shopping-bag__text">
 								Работаем для вас 19 лет!
@@ -472,13 +472,19 @@
 								<form>
 									<div class="row g-md-2 g-1">
 										<div class="col-12">
-											<input type="text" class="form-input" placeholder="ФИО*">
+											<div class="form-wrapper">
+												<span class="form-placeholder">ФИО <span>*</span></span>
+												<input type="text" class="form-input" placeholder="">
+											</div>
 										</div>
 										<div class="col-xxl-6 col-xl-12 col-md-6">
 											<input type="text" class="form-input" placeholder="Почтовый индекс">
 										</div>
 										<div class="col-xxl-6 col-xl-12 col-md-6">
-											<input type="text" class="form-input" placeholder="Страна*">
+											<div class="form-wrapper">
+												<span class="form-placeholder">Страна <span>*</span></span>
+												<input type="text" class="form-input" placeholder="">
+											</div>
 										</div>
 										<div class="col-xxl-6 col-xl-12 col-md-6">
 											<input type="text" class="form-input" placeholder="Область">
@@ -487,16 +493,28 @@
 											<input type="text" class="form-input" placeholder="Район">
 										</div>
 										<div class="col-xxl-6 col-xl-12 col-md-6">
-											<input type="text" class="form-input" placeholder="Город*">
+											<div class="form-wrapper">
+												<span class="form-placeholder">Город <span>*</span></span>
+												<input type="text" class="form-input" placeholder="">
+											</div>
 										</div>
 										<div class="col-xxl-6 col-xl-12 col-md-6">
-											<input type="text" class="form-input" placeholder="Адрес*">
+											<div class="form-wrapper">
+												<span class="form-placeholder">Адрес <span>*</span></span>
+												<input type="text" class="form-input" placeholder="">
+											</div>
 										</div>
 										<div class="col-xxl-6 col-xl-12 col-md-6">
-											<input type="tel" class="form-input" placeholder="Телефон*">
+											<div class="form-wrapper">
+												<span class="form-placeholder">Телефон <span>*</span></span>
+												<input type="tel" class="form-input" placeholder="">
+											</div>
 										</div>
 										<div class="col-xxl-6 col-xl-12 col-md-6">
-											<input type="email" class="form-input" placeholder="E-mail*">
+											<div class="form-wrapper">
+												<span class="form-placeholder">E-mail <span>*</span></span>
+												<input type="email" class="form-input" placeholder="">
+											</div>
 										</div>
 
 										<div class="col-12 ">
@@ -538,17 +556,10 @@
 									<img src="img/certificate.webp" alt="">
 								</div>
 
-								<div class="promocode d-flex align-items-start gap-2 size-sm  mb-4">
-									<div class="promocode__icon">
-										<svg class="icon icon-voucher">
-											<use xlink:href="img/sprite.svg#voucher"></use>
-										</svg>
-									</div>
-									<div class="promocode__content">
-										<div class="font-700 mb-1">Ваш промокод на новый заказ</div>
-										<div class="mb-1">NEW199901</div>
-										<div class="color-gray italic">действует до 01.02.2025</div>
-									</div>
+								<div class="promocode size-sm  mb-4 text-center">
+									<div class="font-700 mb-1 ttu">Ваш промокод</div>
+									<div class="mb-1">new199901</div>
+									<div class="color-gray italic">действует до 01.02.2025</div>
 								</div>
 
 								<ul class="user-menu">
@@ -927,6 +938,8 @@
 	<!-- POPUPS EOF   -->
 
 	<script src="js/vendors.js"></script>
+	<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+	<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
 	<script src="js/main.js"></script>
 
 </body>
