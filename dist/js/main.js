@@ -154,8 +154,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
 	tippy('[data-tippy-content]', {
 		placement: 'top',
 		theme: 'light',
-		trigger: 'click',
-
 	});
 	tippy('[data-tippy-content-popover]', {
 		content(reference) {
@@ -166,7 +164,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
 		allowHTML: true,
 		placement: 'top',
 		theme: 'light',
-		trigger: 'click',
 	});
 
 

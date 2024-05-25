@@ -1518,6 +1518,14 @@ button.btn--block {
     max-width: none;
   }
 }
+.form-select--max-content3 + .select2 {
+  max-width: 63rem;
+}
+@media screen and (max-width: 767px) {
+  .form-select--max-content3 + .select2 {
+    max-width: none;
+  }
+}
 .form-button {
   margin-top: 2rem;
 }
@@ -4360,6 +4368,7 @@ label {
 }
 
 .payment-method__item {
+  border-top: 1px solid #AFAFAF;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4369,6 +4378,9 @@ label {
   .payment-method__item {
     display: block;
   }
+}
+.payment-method__item:last-child {
+  border-bottom: 1px solid #AFAFAF;
 }
 .payment-method__left {
   width: 40%;
@@ -4667,6 +4679,11 @@ label {
 .remove-btn .icon {
   font-size: 2.4rem;
   color: #797979;
+}
+@media screen and (max-width: 767px) {
+  .remove-btn .icon {
+    font-size: 2.2rem;
+  }
 }
 
 .cart-table {
