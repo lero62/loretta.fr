@@ -2029,6 +2029,9 @@ label {
 .icon-check-circle {
   fill: none;
 }
+.icon-langs {
+  stroke: red;
+}
 
 .icon-w-title {
   color: var(--accentColorActive);
@@ -4636,11 +4639,6 @@ label {
 .remove-btn .icon {
   font-size: 2.4rem;
   color: #797979;
-}
-@media screen and (max-width: 767px) {
-  .remove-btn .icon {
-    font-size: 2.2rem;
-  }
 }
 
 .cart-table {
