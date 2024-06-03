@@ -510,7 +510,7 @@
 											<div class="form-field">
 												<div class="form-wrapper">
 													<span class="form-placeholder">Ваше имя <span>*</span></span>
-													<input type="text" class="form-input " required placeholder="">
+													<input type="text" class="form-input" required placeholder="">
 												</div>
 											</div>
 											<div class="form-field">
@@ -525,7 +525,16 @@
 												</div>
 											</div>
 											<div class="form-field">
-												<textarea class="form-input " placeholder="Ваш вопрос"></textarea>
+												<div class="form-wrapper">
+													<span class="form-placeholder">Ваш вопрос <span>*</span></span>
+													<textarea class="form-input _error" placeholder=""></textarea>
+												</div>
+												<div class="form-message _error">
+													<svg class="icon icon-info-circle">
+														<use xlink:href="img/sprite.svg#info-circle"></use>
+													</svg> заполните поле
+												</div>
+
 											</div>
 											<div class="form-field">
 												<label class="checkbox">
