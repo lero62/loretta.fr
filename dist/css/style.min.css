@@ -628,13 +628,10 @@ a:hover {
 
 .rub {
   white-space: nowrap;
-  font-weight: 700;
 }
 .rub:after {
-  content: "э";
-  font-family: var(--font-pt);
-  font-weight: 400;
-  font-size: 90%;
+  content: "₽";
+  font-size: 95%;
   margin-left: 4px;
 }
 
@@ -1042,8 +1039,9 @@ a:hover {
 @media screen and (max-width: 767px) {
   .head {
     border: none;
-    margin-bottom: 0.5rem;
     padding-bottom: 0;
+    margin-top: 1.5rem;
+    margin-bottom: 0;
   }
 }
 .head--without-line {
@@ -1406,14 +1404,35 @@ button.btn--block {
 .form-wrapper {
   position: relative;
 }
+.form-wrapper:has(.form-input:not(:-moz-placeholder-shown)) .form-input {
+  border-color: var(--accentColorActive);
+}
+.form-wrapper:has(.form-input:not(:-ms-input-placeholder)) .form-input {
+  border-color: var(--accentColorActive);
+}
+.form-wrapper:has(.form-input:focus) .form-input, .form-wrapper:has(.form-input:focus) .form-input, .form-wrapper:has(.form-input:not(:placeholder-shown)) .form-input, .form-wrapper:has(.select2-container):not(:has(.select2-selection__placeholder)) .form-input {
+  border-color: var(--accentColorActive);
+}
 .form-wrapper:has(.form-input:not(:-moz-placeholder-shown)) .form-placeholder {
-  opacity: 0;
+  top: -7px;
+  font-size: 12px;
+  padding: 0 5px;
+  left: 15px;
+  background: #F5F5F5;
 }
 .form-wrapper:has(.form-input:not(:-ms-input-placeholder)) .form-placeholder {
-  opacity: 0;
+  top: -7px;
+  font-size: 12px;
+  padding: 0 5px;
+  left: 15px;
+  background: #F5F5F5;
 }
 .form-wrapper:has(.form-input:focus) .form-placeholder, .form-wrapper:has(.form-input:focus) .form-placeholder, .form-wrapper:has(.form-input:not(:placeholder-shown)) .form-placeholder, .form-wrapper:has(.select2-container):not(:has(.select2-selection__placeholder)) .form-placeholder {
-  opacity: 0;
+  top: -7px;
+  font-size: 12px;
+  padding: 0 5px;
+  left: 15px;
+  background: #F5F5F5;
 }
 .form-input {
   display: block;
@@ -1450,7 +1469,7 @@ button.btn--block {
   color: #797979;
   font-weight: 400;
 }
-.form-input:hover {
+.form-input:hover, .form-input:focus {
   border-color: var(--accentColorActive);
 }
 .form-input:focus::-webkit-input-placeholder {
@@ -1484,7 +1503,7 @@ button.btn--block {
   }
 }
 .form-input._error {
-  border-color: #FF0000;
+  border-color: #FF0000 !important;
   border-width: 0.1rem;
   color: #FF0000;
 }
@@ -1514,7 +1533,7 @@ button.btn--block {
   left: 20px;
   pointer-events: none;
   white-space: nowrap;
-  width: calc(100% - 40px);
+  max-width: calc(100% - 40px);
   overflow: hidden;
 }
 .form-placeholder:has(+ .form-input--lg) {
@@ -1522,7 +1541,7 @@ button.btn--block {
   top: 15px;
 }
 .form-placeholder span {
-  color: #DA287E;
+  color: #FF0000;
 }
 .form-select--max-content + .select2 {
   max-width: 31.5rem;
@@ -2070,9 +2089,9 @@ label {
       flex-shrink: 0;
   margin-bottom: 2.4rem;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1320px) {
   .header {
-    margin-bottom: 2rem;
+    margin-bottom: 0;
   }
 }
 .header__top {
@@ -2081,11 +2100,12 @@ label {
 }
 @media screen and (max-width: 1320px) {
   .header__top {
-    height: 15vw;
-    min-height: 12.7rem;
-    padding: 0;
-    margin-top: 7rem;
-    background-position: center top;
+    height: 9rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header__top {
+    height: 7rem;
   }
 }
 .header__container {
@@ -2110,12 +2130,17 @@ label {
     width: 100% !important;
     z-index: 20;
     background: #fff;
-    height: 7rem;
+    height: 9rem;
     padding-top: 0;
     padding-bottom: 0;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header__container {
+    height: 7rem;
   }
 }
 .header__info {
@@ -2142,6 +2167,24 @@ label {
 @media screen and (max-width: 1320px) {
   .header__logo {
     margin-top: 0;
+  }
+}
+
+body.home-page .header {
+  margin-bottom: 2.4rem;
+}
+@media screen and (max-width: 1320px) {
+  body.home-page .header__top {
+    height: 15vw;
+    min-height: 12.7rem;
+    padding: 0;
+    margin-top: 9rem;
+    background-position: center top;
+  }
+}
+@media screen and (max-width: 767px) {
+  body.home-page .header__top {
+    margin-top: 7rem;
   }
 }
 
@@ -2901,6 +2944,9 @@ label {
   -webkit-transform: scale(0.8);
       -ms-transform: scale(0.8);
           transform: scale(0.8);
+}
+.box__icon .icon-heart {
+  fill: none;
 }
 .box__title {
   font-weight: 500;
@@ -3787,8 +3833,6 @@ label {
 }
 .card-item__title, .card-item__price {
   font-size: 1.6rem;
-}
-.card-item__title {
   font-weight: 700;
 }
 .card-item__title a {
@@ -4911,9 +4955,28 @@ label {
     margin-top: 0;
   }
 }
+.cart-buy:not(:has(.counter)) .cart-price {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  margin-left: auto;
+}
+.cart-buy:not(:has(.counter)) .cart-count-num {
+  margin-left: 0;
+}
+.cart-buy:not(:has(.counter)) .cart-count {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+@media screen and (max-width: 767px) {
+  .cart-buy:not(:has(.counter)) .cart-price {
+    margin-left: 0;
+  }
+}
 .cart-buy .counter {
   margin-left: auto;
-  width: 15rem;
+  width: 13.3rem;
 }
 @media screen and (max-width: 1500px) {
   .cart-buy .counter {
@@ -4925,7 +4988,7 @@ label {
   }
 }
 .cart-buy .cart-count {
-  width: 15rem;
+  width: 13.3rem;
   margin-left: auto;
 }
 @media screen and (max-width: 1500px) {
@@ -4937,11 +5000,11 @@ label {
 
 .cart-price {
   font-size: 1.6rem;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .cart-count {
-  font-weight: 500;
+  font-weight: 400;
   color: #AFAFAF;
 }
 
@@ -4965,6 +5028,7 @@ label {
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
   gap: 10px 50px;
+  font-weight: 700;
 }
 .cart-total__val {
   width: 250px;

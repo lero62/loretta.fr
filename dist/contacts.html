@@ -594,7 +594,10 @@
 
 											<form action="#" class="subs-form">
 												<div class="form-field">
-													<input type="email" class="form-input  text-center" placeholder="Введите ваш e-mail" required>
+													<div class="form-wrapper">
+														<span class="form-placeholder">Введите ваш e-mail</span>
+														<input type="email" class="form-input  " placeholder="" required>
+													</div>
 												</div>
 
 												<button type="submit" class="btn  btn--block">ПОДПИСАТЬСЯ</button>
@@ -612,8 +615,8 @@
 						<div class="box hidden-md">
 							<div class="box__head">
 								<div class="box__icon">
-									<svg class="icon icon-login">
-										<use xlink:href="img/sprite.svg#login"></use>
+									<svg class="icon icon-user">
+										<use xlink:href="img/sprite.svg#user"></use>
 									</svg>
 								</div>
 								<div class="box__title">Личный кабинет</div>
@@ -621,10 +624,16 @@
 							<div class="box__body">
 								<form action="#">
 									<div class="form-field">
-										<input type="text" placeholder="Логин" class="form-input form-input--warning">
+										<div class="form-wrapper">
+											<span class="form-placeholder">Логин</span>
+											<input type="text" placeholder="" class="form-input form-input--warning">
+										</div>
 									</div>
 									<div class="form-field">
-										<input type="password" placeholder="Пароль" class="form-input form-input--warning">
+										<div class="form-wrapper">
+											<span class="form-placeholder">Пароль</span>
+											<input type="password" placeholder="" class="form-input form-input--warning">
+										</div>
 									</div>
 									<div class="d-flex align-items-center justify-content-between mt-3">
 										<label class="checkbox checkbox--warning">
@@ -655,10 +664,16 @@
 							<div class="box__body">
 								<form action="#">
 									<div class="form-field">
-										<input type="text" placeholder="Заказ №" class="form-input form-input--warning">
+										<div class="form-wrapper">
+											<span class="form-placeholder">Заказ №</span>
+											<input type="text" placeholder="" class="form-input form-input--warning">
+										</div>
 									</div>
 									<div class="form-field">
-										<input type="tel" placeholder="Телефон" class="form-input form-input--warning">
+										<div class="form-wrapper">
+											<span class="form-placeholder">Телефон</span>
+											<input type="tel" placeholder="" class="form-input form-input--warning">
+										</div>
 									</div>
 									<div class="d-flex align-items-center justify-content-between mt-3 gap-2">
 										<button type="submit" class="btn">
@@ -991,7 +1006,7 @@
 						<li class="m-menu__item">
 							<a href="#" class="m-menu__link">КОНТАКТЫ</a>
 						</li>
-						<li class="m-menu__item visible-md">
+						<li class="m-menu__item ">
 							<a href="#popup-login" class="m-menu__link _open-modal">
 								<span class="m-menu__icon">
 									<svg class="icon icon-login">
@@ -1000,7 +1015,7 @@
 								</span>
 								ЛИЧНЫЙ КАБИНЕТ</a>
 						</li>
-						<li class="m-menu__item visible-md">
+						<li class="m-menu__item ">
 							<a href="#popup-status" class="m-menu__link _open-modal">
 								<span class="m-menu__icon">
 									<svg class="icon icon-voice">
@@ -1010,7 +1025,16 @@
 								Статус /
 								Оплата заказа</a>
 						</li>
-						<li class="m-menu__item visible-md">
+						<li class="m-menu__item ">
+							<a href="#" class="m-menu__link ">
+								<span class="m-menu__icon">
+									<svg class="icon icon-heart">
+										<use xlink:href="img/sprite.svg#heart"></use>
+									</svg>
+								</span>
+								ИЗБРАННОЕ</a>
+						</li>
+						<li class="m-menu__item ">
 							<a href="#popup-survey" class="m-menu__link _open-modal">
 								<span class="m-menu__icon">
 									<svg class="icon icon-list">
@@ -1019,16 +1043,7 @@
 								</span>
 								Опрос</a>
 						</li>
-						<li class="m-menu__item">
-							<a href="#" class="m-menu__link">
-								<span class="m-menu__icon">
-									<svg class="icon icon-heart">
-										<use xlink:href="img/sprite.svg#heart"></use>
-									</svg>
-								</span>
-								ИЗБРАННОЕ
-							</a>
-						</li>
+
 					</ul>
 
 					<div class="m-button mt-4">
