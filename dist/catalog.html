@@ -61,6 +61,11 @@
 						</a>
 					</div>
 					<div class="header__actions top-actions">
+						<a href="#" class="top-action">
+							<svg class="icon icon-heart">
+								<use xlink:href="img/sprite.svg#heart"></use>
+							</svg>
+						</a>
 						<button class="top-action _open-modal" data-href="#offcanvas-search">
 							<svg class="icon icon-zoom">
 								<use xlink:href="img/sprite.svg#zoom"></use>
@@ -480,53 +485,74 @@
 								<div class="filter-block lines">
 									<div class="row g-xl-2 g-1">
 										<div class="col-xxl-4 col-xl-6 col-lg-4 col-sm-6">
-											<select class="form-select" data-placeholder="Марка">
-												<option></option>
-												<option>Марка 1</option>
-												<option>Марка 2</option>
-											</select>
+											<div class="form-wrapper">
+												<span class="form-placeholder">Марка</span>
+												<select class="form-select" data-placeholder="">
+													<option></option>
+													<option>Марка 1</option>
+													<option>Марка 2</option>
+												</select>
+											</div>
 										</div>
 										<div class="col-xxl-4 col-xl-6 col-lg-4 col-sm-6">
-											<select class="form-select" data-placeholder="Размер">
-												<option></option>
-												<option>Марка</option>
-												<option>Марка 2</option>
-											</select>
+											<div class="form-wrapper">
+												<span class="form-placeholder">Размер</span>
+												<select class="form-select" data-placeholder="">
+													<option></option>
+													<option>Марка</option>
+													<option>Марка 2</option>
+												</select>
+											</div>
 										</div>
 										<div class="col-xxl-4 col-xl-6 col-lg-4 col-sm-6">
-											<select class="form-select" data-placeholder="Цвет">
-												<option></option>
-												<option>Марка</option>
-												<option>Марка 2</option>
-											</select>
+											<div class="form-wrapper">
+												<span class="form-placeholder">Цвет</span>
+												<select class="form-select" data-placeholder="">
+													<option></option>
+													<option>Марка</option>
+													<option>Марка 2</option>
+												</select>
+											</div>
 										</div>
 										<div class="col-xxl-4 col-xl-6 col-lg-4 col-sm-6">
-											<select class="form-select" data-placeholder="Составы">
-												<option></option>
-												<option>Марка</option>
-												<option>Марка 2</option>
-											</select>
+											<div class="form-wrapper">
+												<span class="form-placeholder">Составы</span>
+												<select class="form-select" data-placeholder="">
+													<option></option>
+													<option>Марка</option>
+													<option>Марка 2</option>
+												</select>
+											</div>
 										</div>
 										<div class="col-xxl-4 col-xl-6 col-lg-4 col-sm-6">
-											<select class="form-select" data-placeholder="Цена">
-												<option></option>
-												<option>Марка</option>
-												<option>Марка 2</option>
-											</select>
+											<div class="form-wrapper">
+												<span class="form-placeholder">Цена</span>
+												<select class="form-select" data-placeholder="">
+													<option></option>
+													<option>Марка</option>
+													<option>Марка 2</option>
+												</select>
+											</div>
 										</div>
 										<div class="col-xxl-4 col-xl-6 col-lg-4 col-sm-6">
-											<select class="form-select" data-placeholder="Подкатегория">
-												<option></option>
-												<option>Марка</option>
-												<option>Марка 2</option>
-											</select>
+											<div class="form-wrapper">
+												<span class="form-placeholder">Подкатегория</span>
+												<select class="form-select" data-placeholder="">
+													<option></option>
+													<option>Марка</option>
+													<option>Марка 2</option>
+												</select>
+											</div>
 										</div>
 										<div class="col-xxl-4 col-xl-6 col-lg-4 col-sm-6">
-											<select class="form-select" data-placeholder="Сортировать по">
-												<option></option>
-												<option>Марка</option>
-												<option>Марка 2</option>
-											</select>
+											<div class="form-wrapper">
+												<span class="form-placeholder">Сортировать по</span>
+												<select class="form-select" data-placeholder="">
+													<option></option>
+													<option>Марка</option>
+													<option>Марка 2</option>
+												</select>
+											</div>
 										</div>
 										<div class="col-xxl-4 col-xl-6 col-lg-4 col-sm-6">
 											<button class="btn btn--block">ПОКАЗАТЬ</button>
@@ -558,7 +584,7 @@
 												<strong>Цена:</strong>
 												<span class="rub">1343</span>
 											</div>
-											<div class="card-item__details visible-sm">
+											<div class="card-item__details card-details visible-sm">
 												<ul>
 													<li><strong>Плотность:</strong> 20 den</li>
 													<li><strong>Состав:</strong> 82% полиамид, 14% эластан, 4% хлопок</li>
@@ -571,7 +597,7 @@
 											<div class="card-item__text">
 												Тонкие прозрачные элегантные колготки, большого размера, с классической посадкой - на талии.
 											</div>
-											<div class="card-item__details hidden-sm">
+											<div class="card-item__details card-details hidden-sm">
 												<ul>
 													<li><strong>Плотность:</strong> 20 den</li>
 													<li><strong>Состав:</strong> 82% полиамид, 14% эластан, 4% хлопок</li>
@@ -587,11 +613,14 @@
 										<div class="card-item__actions">
 											<div class="d-flex flex-wrap gap-2 mb-3">
 												<div class="min-250 flex-1">
-													<select class="form-select _error" data-placeholder="Выберите цвет">
-														<option></option>
-														<option>белый</option>
-														<option>чорный</option>
-													</select>
+													<div class="form-wrapper">
+														<span class="form-placeholder">Выберите цвет</span>
+														<select class="form-select _error" data-placeholder="">
+															<option></option>
+															<option>белый</option>
+															<option>чорный</option>
+														</select>
+													</div>
 													<div class="form-message _error">
 														<svg class="icon icon-info-circle">
 															<use xlink:href="img/sprite.svg#info-circle"></use>
@@ -599,11 +628,14 @@
 													</div>
 												</div>
 												<div class="min-250 flex-1">
-													<select class="form-select" data-placeholder="Выберите размер">
-														<option></option>
-														<option>13</option>
-														<option>14</option>
-													</select>
+													<div class="form-wrapper">
+														<span class="form-placeholder">Выберите размер</span>
+														<select class="form-select" data-placeholder="">
+															<option></option>
+															<option>13</option>
+															<option>14</option>
+														</select>
+													</div>
 												</div>
 											</div>
 											<div class="card-item__count count">
@@ -641,7 +673,7 @@
 												<strong>Цена:</strong>
 												<span class="rub">1343</span>
 											</div>
-											<div class="card-item__details visible-sm">
+											<div class="card-item__details card-details visible-sm">
 												<ul>
 													<li><strong>Плотность:</strong> 20 den</li>
 													<li><strong>Состав:</strong> 82% полиамид, 14% эластан, 4% хлопок</li>
@@ -654,7 +686,7 @@
 											<div class="card-item__text">
 												Тонкие прозрачные элегантные колготки, большого размера, с классической посадкой - на талии.
 											</div>
-											<div class="card-item__details hidden-sm">
+											<div class="card-item__details card-details hidden-sm">
 												<ul>
 													<li><strong>Плотность:</strong> 20 den</li>
 													<li><strong>Состав:</strong> 82% полиамид, 14% эластан, 4% хлопок</li>
@@ -670,11 +702,14 @@
 										<div class="card-item__actions">
 											<div class="d-flex flex-wrap gap-2 mb-3">
 												<div class="min-250 flex-1">
-													<select class="form-select _error" data-placeholder="Выберите цвет">
-														<option></option>
-														<option>белый</option>
-														<option>чорный</option>
-													</select>
+													<div class="form-wrapper">
+														<span class="form-placeholder">Выберите цвет</span>
+														<select class="form-select _error" data-placeholder="">
+															<option></option>
+															<option>белый</option>
+															<option>чорный</option>
+														</select>
+													</div>
 													<div class="form-message _error">
 														<svg class="icon icon-info-circle">
 															<use xlink:href="img/sprite.svg#info-circle"></use>
@@ -682,11 +717,14 @@
 													</div>
 												</div>
 												<div class="min-250 flex-1">
-													<select class="form-select" data-placeholder="Выберите размер">
-														<option></option>
-														<option>13</option>
-														<option>14</option>
-													</select>
+													<div class="form-wrapper">
+														<span class="form-placeholder">Выберите размер</span>
+														<select class="form-select" data-placeholder="">
+															<option></option>
+															<option>13</option>
+															<option>14</option>
+														</select>
+													</div>
 												</div>
 											</div>
 											<div class="card-item__count count">
@@ -724,7 +762,7 @@
 												<strong>Цена:</strong>
 												<span class="rub">1343</span>
 											</div>
-											<div class="card-item__details visible-sm">
+											<div class="card-item__details card-details visible-sm">
 												<ul>
 													<li><strong>Плотность:</strong> 20 den</li>
 													<li><strong>Состав:</strong> 82% полиамид, 14% эластан, 4% хлопок</li>
@@ -737,7 +775,7 @@
 											<div class="card-item__text">
 												Тонкие прозрачные элегантные колготки, большого размера, с классической посадкой - на талии.
 											</div>
-											<div class="card-item__details hidden-sm">
+											<div class="card-item__details card-details hidden-sm">
 												<ul>
 													<li><strong>Плотность:</strong> 20 den</li>
 													<li><strong>Состав:</strong> 82% полиамид, 14% эластан, 4% хлопок</li>
@@ -753,11 +791,14 @@
 										<div class="card-item__actions">
 											<div class="d-flex flex-wrap gap-2 mb-3">
 												<div class="min-250 flex-1">
-													<select class="form-select _error" data-placeholder="Выберите цвет">
-														<option></option>
-														<option>белый</option>
-														<option>чорный</option>
-													</select>
+													<div class="form-wrapper">
+														<span class="form-placeholder">Выберите цвет</span>
+														<select class="form-select _error" data-placeholder="">
+															<option></option>
+															<option>белый</option>
+															<option>чорный</option>
+														</select>
+													</div>
 													<div class="form-message _error">
 														<svg class="icon icon-info-circle">
 															<use xlink:href="img/sprite.svg#info-circle"></use>
@@ -765,11 +806,14 @@
 													</div>
 												</div>
 												<div class="min-250 flex-1">
-													<select class="form-select" data-placeholder="Выберите размер">
-														<option></option>
-														<option>13</option>
-														<option>14</option>
-													</select>
+													<div class="form-wrapper">
+														<span class="form-placeholder">Выберите размер</span>
+														<select class="form-select" data-placeholder="">
+															<option></option>
+															<option>13</option>
+															<option>14</option>
+														</select>
+													</div>
 												</div>
 											</div>
 											<div class="card-item__count count">
@@ -807,7 +851,7 @@
 												<strong>Цена:</strong>
 												<span class="rub">1343</span>
 											</div>
-											<div class="card-item__details visible-sm">
+											<div class="card-item__details card-details visible-sm">
 												<ul>
 													<li><strong>Плотность:</strong> 20 den</li>
 													<li><strong>Состав:</strong> 82% полиамид, 14% эластан, 4% хлопок</li>
@@ -820,7 +864,7 @@
 											<div class="card-item__text">
 												Тонкие прозрачные элегантные колготки, большого размера, с классической посадкой - на талии.
 											</div>
-											<div class="card-item__details hidden-sm">
+											<div class="card-item__details card-details hidden-sm">
 												<ul>
 													<li><strong>Плотность:</strong> 20 den</li>
 													<li><strong>Состав:</strong> 82% полиамид, 14% эластан, 4% хлопок</li>
@@ -836,11 +880,14 @@
 										<div class="card-item__actions">
 											<div class="d-flex flex-wrap gap-2 mb-3">
 												<div class="min-250 flex-1">
-													<select class="form-select _error" data-placeholder="Выберите цвет">
-														<option></option>
-														<option>белый</option>
-														<option>чорный</option>
-													</select>
+													<div class="form-wrapper">
+														<span class="form-placeholder">Выберите цвет</span>
+														<select class="form-select _error" data-placeholder="">
+															<option></option>
+															<option>белый</option>
+															<option>чорный</option>
+														</select>
+													</div>
 													<div class="form-message _error">
 														<svg class="icon icon-info-circle">
 															<use xlink:href="img/sprite.svg#info-circle"></use>
@@ -848,11 +895,14 @@
 													</div>
 												</div>
 												<div class="min-250 flex-1">
-													<select class="form-select" data-placeholder="Выберите размер">
-														<option></option>
-														<option>13</option>
-														<option>14</option>
-													</select>
+													<div class="form-wrapper">
+														<span class="form-placeholder">Выберите размер</span>
+														<select class="form-select" data-placeholder="">
+															<option></option>
+															<option>13</option>
+															<option>14</option>
+														</select>
+													</div>
 												</div>
 											</div>
 											<div class="card-item__count count">
@@ -890,7 +940,7 @@
 												<strong>Цена:</strong>
 												<span class="rub">1343</span>
 											</div>
-											<div class="card-item__details visible-sm">
+											<div class="card-item__details card-details visible-sm">
 												<ul>
 													<li><strong>Плотность:</strong> 20 den</li>
 													<li><strong>Состав:</strong> 82% полиамид, 14% эластан, 4% хлопок</li>
@@ -903,7 +953,7 @@
 											<div class="card-item__text">
 												Тонкие прозрачные элегантные колготки, большого размера, с классической посадкой - на талии.
 											</div>
-											<div class="card-item__details hidden-sm">
+											<div class="card-item__details card-details hidden-sm">
 												<ul>
 													<li><strong>Плотность:</strong> 20 den</li>
 													<li><strong>Состав:</strong> 82% полиамид, 14% эластан, 4% хлопок</li>
@@ -919,11 +969,14 @@
 										<div class="card-item__actions">
 											<div class="d-flex flex-wrap gap-2 mb-3">
 												<div class="min-250 flex-1">
-													<select class="form-select _error" data-placeholder="Выберите цвет">
-														<option></option>
-														<option>белый</option>
-														<option>чорный</option>
-													</select>
+													<div class="form-wrapper">
+														<span class="form-placeholder">Выберите цвет</span>
+														<select class="form-select _error" data-placeholder="">
+															<option></option>
+															<option>белый</option>
+															<option>чорный</option>
+														</select>
+													</div>
 													<div class="form-message _error">
 														<svg class="icon icon-info-circle">
 															<use xlink:href="img/sprite.svg#info-circle"></use>
@@ -931,11 +984,14 @@
 													</div>
 												</div>
 												<div class="min-250 flex-1">
-													<select class="form-select" data-placeholder="Выберите размер">
-														<option></option>
-														<option>13</option>
-														<option>14</option>
-													</select>
+													<div class="form-wrapper">
+														<span class="form-placeholder">Выберите размер</span>
+														<select class="form-select" data-placeholder="">
+															<option></option>
+															<option>13</option>
+															<option>14</option>
+														</select>
+													</div>
 												</div>
 											</div>
 											<div class="card-item__count count">
@@ -973,7 +1029,7 @@
 												<strong>Цена:</strong>
 												<span class="rub">1343</span>
 											</div>
-											<div class="card-item__details visible-sm">
+											<div class="card-item__details card-details visible-sm">
 												<ul>
 													<li><strong>Плотность:</strong> 20 den</li>
 													<li><strong>Состав:</strong> 82% полиамид, 14% эластан, 4% хлопок</li>
@@ -986,7 +1042,7 @@
 											<div class="card-item__text">
 												Тонкие прозрачные элегантные колготки, большого размера, с классической посадкой - на талии.
 											</div>
-											<div class="card-item__details hidden-sm">
+											<div class="card-item__details card-details hidden-sm">
 												<ul>
 													<li><strong>Плотность:</strong> 20 den</li>
 													<li><strong>Состав:</strong> 82% полиамид, 14% эластан, 4% хлопок</li>
@@ -1002,11 +1058,14 @@
 										<div class="card-item__actions">
 											<div class="d-flex flex-wrap gap-2 mb-3">
 												<div class="min-250 flex-1">
-													<select class="form-select _error" data-placeholder="Выберите цвет">
-														<option></option>
-														<option>белый</option>
-														<option>чорный</option>
-													</select>
+													<div class="form-wrapper">
+														<span class="form-placeholder">Выберите цвет</span>
+														<select class="form-select _error" data-placeholder="">
+															<option></option>
+															<option>белый</option>
+															<option>чорный</option>
+														</select>
+													</div>
 													<div class="form-message _error">
 														<svg class="icon icon-info-circle">
 															<use xlink:href="img/sprite.svg#info-circle"></use>
@@ -1014,11 +1073,14 @@
 													</div>
 												</div>
 												<div class="min-250 flex-1">
-													<select class="form-select" data-placeholder="Выберите размер">
-														<option></option>
-														<option>13</option>
-														<option>14</option>
-													</select>
+													<div class="form-wrapper">
+														<span class="form-placeholder">Выберите размер</span>
+														<select class="form-select" data-placeholder="">
+															<option></option>
+															<option>13</option>
+															<option>14</option>
+														</select>
+													</div>
 												</div>
 											</div>
 											<div class="card-item__count count">
@@ -1056,7 +1118,7 @@
 												<strong>Цена:</strong>
 												<span class="rub">1343</span>
 											</div>
-											<div class="card-item__details visible-sm">
+											<div class="card-item__details card-details visible-sm">
 												<ul>
 													<li><strong>Плотность:</strong> 20 den</li>
 													<li><strong>Состав:</strong> 82% полиамид, 14% эластан, 4% хлопок</li>
@@ -1069,7 +1131,7 @@
 											<div class="card-item__text">
 												Тонкие прозрачные элегантные колготки, большого размера, с классической посадкой - на талии.
 											</div>
-											<div class="card-item__details hidden-sm">
+											<div class="card-item__details card-details hidden-sm">
 												<ul>
 													<li><strong>Плотность:</strong> 20 den</li>
 													<li><strong>Состав:</strong> 82% полиамид, 14% эластан, 4% хлопок</li>
@@ -1085,11 +1147,14 @@
 										<div class="card-item__actions">
 											<div class="d-flex flex-wrap gap-2 mb-3">
 												<div class="min-250 flex-1">
-													<select class="form-select _error" data-placeholder="Выберите цвет">
-														<option></option>
-														<option>белый</option>
-														<option>чорный</option>
-													</select>
+													<div class="form-wrapper">
+														<span class="form-placeholder">Выберите цвет</span>
+														<select class="form-select _error" data-placeholder="">
+															<option></option>
+															<option>белый</option>
+															<option>чорный</option>
+														</select>
+													</div>
 													<div class="form-message _error">
 														<svg class="icon icon-info-circle">
 															<use xlink:href="img/sprite.svg#info-circle"></use>
@@ -1097,11 +1162,14 @@
 													</div>
 												</div>
 												<div class="min-250 flex-1">
-													<select class="form-select" data-placeholder="Выберите размер">
-														<option></option>
-														<option>13</option>
-														<option>14</option>
-													</select>
+													<div class="form-wrapper">
+														<span class="form-placeholder">Выберите размер</span>
+														<select class="form-select" data-placeholder="">
+															<option></option>
+															<option>13</option>
+															<option>14</option>
+														</select>
+													</div>
 												</div>
 											</div>
 											<div class="card-item__count count">
@@ -1139,7 +1207,7 @@
 												<strong>Цена:</strong>
 												<span class="rub">1343</span>
 											</div>
-											<div class="card-item__details visible-sm">
+											<div class="card-item__details card-details visible-sm">
 												<ul>
 													<li><strong>Плотность:</strong> 20 den</li>
 													<li><strong>Состав:</strong> 82% полиамид, 14% эластан, 4% хлопок</li>
@@ -1152,7 +1220,7 @@
 											<div class="card-item__text">
 												Тонкие прозрачные элегантные колготки, большого размера, с классической посадкой - на талии.
 											</div>
-											<div class="card-item__details hidden-sm">
+											<div class="card-item__details card-details hidden-sm">
 												<ul>
 													<li><strong>Плотность:</strong> 20 den</li>
 													<li><strong>Состав:</strong> 82% полиамид, 14% эластан, 4% хлопок</li>
@@ -1168,11 +1236,14 @@
 										<div class="card-item__actions">
 											<div class="d-flex flex-wrap gap-2 mb-3">
 												<div class="min-250 flex-1">
-													<select class="form-select _error" data-placeholder="Выберите цвет">
-														<option></option>
-														<option>белый</option>
-														<option>чорный</option>
-													</select>
+													<div class="form-wrapper">
+														<span class="form-placeholder">Выберите цвет</span>
+														<select class="form-select _error" data-placeholder="">
+															<option></option>
+															<option>белый</option>
+															<option>чорный</option>
+														</select>
+													</div>
 													<div class="form-message _error">
 														<svg class="icon icon-info-circle">
 															<use xlink:href="img/sprite.svg#info-circle"></use>
@@ -1180,11 +1251,14 @@
 													</div>
 												</div>
 												<div class="min-250 flex-1">
-													<select class="form-select" data-placeholder="Выберите размер">
-														<option></option>
-														<option>13</option>
-														<option>14</option>
-													</select>
+													<div class="form-wrapper">
+														<span class="form-placeholder">Выберите размер</span>
+														<select class="form-select" data-placeholder="">
+															<option></option>
+															<option>13</option>
+															<option>14</option>
+														</select>
+													</div>
 												</div>
 											</div>
 											<div class="card-item__count count">
@@ -1222,7 +1296,7 @@
 												<strong>Цена:</strong>
 												<span class="rub">1343</span>
 											</div>
-											<div class="card-item__details visible-sm">
+											<div class="card-item__details card-details visible-sm">
 												<ul>
 													<li><strong>Плотность:</strong> 20 den</li>
 													<li><strong>Состав:</strong> 82% полиамид, 14% эластан, 4% хлопок</li>
@@ -1235,7 +1309,7 @@
 											<div class="card-item__text">
 												Тонкие прозрачные элегантные колготки, большого размера, с классической посадкой - на талии.
 											</div>
-											<div class="card-item__details hidden-sm">
+											<div class="card-item__details card-details hidden-sm">
 												<ul>
 													<li><strong>Плотность:</strong> 20 den</li>
 													<li><strong>Состав:</strong> 82% полиамид, 14% эластан, 4% хлопок</li>
@@ -1251,11 +1325,14 @@
 										<div class="card-item__actions">
 											<div class="d-flex flex-wrap gap-2 mb-3">
 												<div class="min-250 flex-1">
-													<select class="form-select _error" data-placeholder="Выберите цвет">
-														<option></option>
-														<option>белый</option>
-														<option>чорный</option>
-													</select>
+													<div class="form-wrapper">
+														<span class="form-placeholder">Выберите цвет</span>
+														<select class="form-select _error" data-placeholder="">
+															<option></option>
+															<option>белый</option>
+															<option>чорный</option>
+														</select>
+													</div>
 													<div class="form-message _error">
 														<svg class="icon icon-info-circle">
 															<use xlink:href="img/sprite.svg#info-circle"></use>
@@ -1263,11 +1340,14 @@
 													</div>
 												</div>
 												<div class="min-250 flex-1">
-													<select class="form-select" data-placeholder="Выберите размер">
-														<option></option>
-														<option>13</option>
-														<option>14</option>
-													</select>
+													<div class="form-wrapper">
+														<span class="form-placeholder">Выберите размер</span>
+														<select class="form-select" data-placeholder="">
+															<option></option>
+															<option>13</option>
+															<option>14</option>
+														</select>
+													</div>
 												</div>
 											</div>
 											<div class="card-item__count count">
@@ -1305,7 +1385,7 @@
 												<strong>Цена:</strong>
 												<span class="rub">1343</span>
 											</div>
-											<div class="card-item__details visible-sm">
+											<div class="card-item__details card-details visible-sm">
 												<ul>
 													<li><strong>Плотность:</strong> 20 den</li>
 													<li><strong>Состав:</strong> 82% полиамид, 14% эластан, 4% хлопок</li>
@@ -1318,7 +1398,7 @@
 											<div class="card-item__text">
 												Тонкие прозрачные элегантные колготки, большого размера, с классической посадкой - на талии.
 											</div>
-											<div class="card-item__details hidden-sm">
+											<div class="card-item__details card-details hidden-sm">
 												<ul>
 													<li><strong>Плотность:</strong> 20 den</li>
 													<li><strong>Состав:</strong> 82% полиамид, 14% эластан, 4% хлопок</li>
@@ -1334,11 +1414,14 @@
 										<div class="card-item__actions">
 											<div class="d-flex flex-wrap gap-2 mb-3">
 												<div class="min-250 flex-1">
-													<select class="form-select _error" data-placeholder="Выберите цвет">
-														<option></option>
-														<option>белый</option>
-														<option>чорный</option>
-													</select>
+													<div class="form-wrapper">
+														<span class="form-placeholder">Выберите цвет</span>
+														<select class="form-select _error" data-placeholder="">
+															<option></option>
+															<option>белый</option>
+															<option>чорный</option>
+														</select>
+													</div>
 													<div class="form-message _error">
 														<svg class="icon icon-info-circle">
 															<use xlink:href="img/sprite.svg#info-circle"></use>
@@ -1346,11 +1429,14 @@
 													</div>
 												</div>
 												<div class="min-250 flex-1">
-													<select class="form-select" data-placeholder="Выберите размер">
-														<option></option>
-														<option>13</option>
-														<option>14</option>
-													</select>
+													<div class="form-wrapper">
+														<span class="form-placeholder">Выберите размер</span>
+														<select class="form-select" data-placeholder="">
+															<option></option>
+															<option>13</option>
+															<option>14</option>
+														</select>
+													</div>
 												</div>
 											</div>
 											<div class="card-item__count count">
@@ -1536,7 +1622,10 @@
 					<div class="subscribe__form">
 						<form action="#" class="d-flex flex-md-row flex-column  align-items-center gap-3">
 							<div class="form-field mb-0">
-								<input type="text" class="form-input form-input--warning" placeholder="введите ваш e-mail">
+								<div class="form-wrapper">
+									<span class="form-placeholder form-placeholder--bg-white">введите ваш e-mail</span>
+									<input type="text" class="form-input form-input--warning" placeholder="">
+								</div>
 							</div>
 							<button class="btn btn-sm-block" type="submit">ПОДПИСАТЬСЯ</button>
 						</form>

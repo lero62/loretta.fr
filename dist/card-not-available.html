@@ -61,6 +61,11 @@
 						</a>
 					</div>
 					<div class="header__actions top-actions">
+						<a href="#" class="top-action">
+							<svg class="icon icon-heart">
+								<use xlink:href="img/sprite.svg#heart"></use>
+							</svg>
+						</a>
 						<button class="top-action _open-modal" data-href="#offcanvas-search">
 							<svg class="icon icon-zoom">
 								<use xlink:href="img/sprite.svg#zoom"></use>
@@ -643,29 +648,43 @@
 												<button class="btn _toggle-block" data-href="card-review">НАПИСАТЬ ОТЗЫВ</button>
 											</div>
 
-											<div class="mt-5" id="card-review">
+											<div class="mt-5 toggle-show" id="card-review">
 												<form action="#">
-													<h3 class="ttu font-500 size-xl text-center mb-5">НАПИСАТЬ ОТЗЫВ</h3>
 
 													<div class="row gy-0">
 														<div class="col-xxl-6 col-xl-12 col-md-6">
 															<div class="mb-2">
-																<input type="text" class="form-input" placeholder="Имя*">
+																<div class="form-wrapper">
+																	<span class="form-placeholder form-placeholder--bg-white">Имя<span>*</span></span>
+																	<input type="text" class="form-input" placeholder="">
+																</div>
 															</div>
 															<div class="mb-2">
-																<input type="text" class="form-input" placeholder="Город*">
+																<div class="form-wrapper">
+																	<span class="form-placeholder form-placeholder--bg-white">Город<span>*</span></span>
+																	<input type="text" class="form-input" placeholder="">
+																</div>
 															</div>
 															<div class="mb-2">
-																<input type="number" class="form-input" placeholder="Номер заказа">
+																<div class="form-wrapper">
+																	<span class="form-placeholder form-placeholder--bg-white">Номер заказа</span>
+																	<input type="number" class="form-input" placeholder="">
+																</div>
 															</div>
 															<div class="mb-2">
-																<input type="email" class="form-input" placeholder="E-mail">
+																<div class="form-wrapper">
+																	<span class="form-placeholder form-placeholder--bg-white">E-mail</span>
+																	<input type="email" class="form-input" placeholder="">
+																</div>
 															</div>
 
 														</div>
 														<div class="col-xxl-6 col-xl-12 col-md-6">
 															<div class="mb-2">
-																<textarea class="form-input" style="--input-height: 15.2rem" placeholder="Напишите Ваш отзыв"></textarea>
+																<div class="form-wrapper">
+																	<span class="form-placeholder form-placeholder--bg-white">Напишите Ваш отзыв</span>
+																	<textarea class="form-input" style="--input-height: 15.2rem" placeholder=""></textarea>
+																</div>
 															</div>
 															<button type="submit" class="btn btn--block">ОТПРАВИТЬ</button>
 														</div>
@@ -706,7 +725,43 @@
 											</div>
 
 											<div class="mt-4">
-												<button class="btn ">НАПИСАТЬ Вопрос</button>
+												<button class="btn _toggle-block" data-href="card-question">НАПИСАТЬ Вопрос</button>
+											</div>
+
+											<div class="mt-5 toggle-show" id="card-question">
+												<form action="#">
+													<div class="row gy-0">
+														<div class="col-xxl-6 col-xl-12 col-md-6">
+															<div class="mb-2">
+																<div class="form-wrapper">
+																	<span class="form-placeholder form-placeholder--bg-white">Имя<span>*</span></span>
+																	<input type="text" class="form-input" placeholder="">
+																</div>
+															</div>
+															<div class="mb-2">
+																<div class="form-wrapper">
+																	<span class="form-placeholder form-placeholder--bg-white">E-mail<span>*</span></span>
+																	<input type="email" class="form-input" placeholder="">
+																</div>
+															</div>
+															<div class="mb-2">
+																<button type="submit" class="btn btn--block">ОТПРАВИТЬ</button>
+															</div>
+
+														</div>
+														<div class="col-xxl-6 col-xl-12 col-md-6">
+															<div class="mb-2">
+																<div class="form-wrapper">
+																	<span class="form-placeholder form-placeholder--bg-white">Напишите Ваш отзыв<span>*</span></span>
+																	<textarea class="form-input" style="--input-height: 15.2rem" placeholder=""></textarea>
+																</div>
+															</div>
+
+														</div>
+													</div>
+
+													<p class="mt-4">Если отзыв отрицательный, пожалуйста, укажите номер заказа. Без указания номера, отзыв не будет опубликован.</p>
+												</form>
 											</div>
 
 										</div>
@@ -1104,7 +1159,10 @@
 					<div class="subscribe__form">
 						<form action="#" class="d-flex flex-md-row flex-column  align-items-center gap-3">
 							<div class="form-field mb-0">
-								<input type="text" class="form-input form-input--warning" placeholder="введите ваш e-mail">
+								<div class="form-wrapper">
+									<span class="form-placeholder form-placeholder--bg-white">введите ваш e-mail</span>
+									<input type="text" class="form-input form-input--warning" placeholder="">
+								</div>
 							</div>
 							<button class="btn btn-sm-block" type="submit">ПОДПИСАТЬСЯ</button>
 						</form>

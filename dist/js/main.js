@@ -149,6 +149,14 @@ document.addEventListener('DOMContentLoaded', function (event) {
 		return false;
 	});
 
+	// Copy text 
+	$('._copy').click(function () {
+		$(this).closest('._copy-wrapper').find('._copy-show').show();
+		$(this).closest('._copy-wrapper').find('._copy-text').hide();
+		$(this).hide();
+		navigator.clipboard.writeText($(this).closest('._copy-wrapper').find('._copy-text').text());
+		return false;
+	});
 
 	// Tippy
 	tippy('[data-tippy-content]', {

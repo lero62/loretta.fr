@@ -61,6 +61,11 @@
 						</a>
 					</div>
 					<div class="header__actions top-actions">
+						<a href="#" class="top-action">
+							<svg class="icon icon-heart">
+								<use xlink:href="img/sprite.svg#heart"></use>
+							</svg>
+						</a>
 						<button class="top-action _open-modal" data-href="#offcanvas-search">
 							<svg class="icon icon-zoom">
 								<use xlink:href="img/sprite.svg#zoom"></use>
@@ -458,7 +463,17 @@
 										<use xlink:href="img/sprite.svg#magazine"></use>
 									</svg>
 								</div>
-								<div class="box__title">Партнерская программа</div>
+								<h1 class="box__title">
+
+									<span class="visible-md">Личный кабинет</span>
+									<span class="hidden-md">Партнерская программа</span>
+								</h1>
+								<button class="out-btn ms-auto visible-md">
+									<svg class="icon icon-out">
+										<use xlink:href="img/sprite.svg?2#out"></use>
+									</svg>
+									<span>Выйти</span>
+								</button>
 
 							</div>
 							<div class="box__body">
@@ -470,7 +485,35 @@
 									</div>
 
 								</div>
-								<h1 class="mb-3 font-500 size-lg">Партнерская программа</h1>
+
+								<nav class="tab-block__nav tab-block__nav--mobile visible-md mb-4">
+									<a href="#" class="tab-block__navitem ">
+										<svg class="icon icon-order">
+											<use xlink:href="img/sprite.svg?4#order"></use>
+										</svg>
+										<span>Мои заказы</span>
+									</a>
+									<a href="#" class="tab-block__navitem ">
+										<svg class="icon icon-user">
+											<use xlink:href="img/sprite.svg#user"></use>
+										</svg>
+										<span>Мой профиль</span>
+									</a>
+
+									<a href="#" class="tab-block__navitem">
+										<svg class="icon icon-sale">
+											<use xlink:href="img/sprite.svg#sale"></use>
+										</svg>
+										<span>Мои скидки</span>
+									</a>
+									<a href="#" class="tab-block__navitem _active">
+										<svg class="icon icon-list">
+											<use xlink:href="img/sprite.svg#list"></use>
+										</svg>
+										<span>Партнерка</span>
+									</a>
+								</nav>
+
 								<div class="style-text">
 									<p>В партнерской программе могут участвовать:</p>
 									<ul>
@@ -723,7 +766,10 @@
 					<div class="subscribe__form">
 						<form action="#" class="d-flex flex-md-row flex-column  align-items-center gap-3">
 							<div class="form-field mb-0">
-								<input type="text" class="form-input form-input--warning" placeholder="введите ваш e-mail">
+								<div class="form-wrapper">
+									<span class="form-placeholder form-placeholder--bg-white">введите ваш e-mail</span>
+									<input type="text" class="form-input form-input--warning" placeholder="">
+								</div>
 							</div>
 							<button class="btn btn-sm-block" type="submit">ПОДПИСАТЬСЯ</button>
 						</form>
