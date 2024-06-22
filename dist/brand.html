@@ -53,7 +53,7 @@
 							</div>
 							<div class="top-shopping-bag__content">
 								<div class="top-shopping-bag__title">Ваша корзина:</div>
-								<div class="top-shopping-bag__price">20 шт. на сумму <span class="rub">100.000</span></div>
+								<div class="top-shopping-bag__price ">20 шт. на сумму <span class="rub font-500">100.000</span></div>
 							</div>
 							<div class="top-shopping-bag__text">
 								Работаем для вас 19 лет!
@@ -582,13 +582,13 @@
 									<div class="card-item">
 										<div class="card-item__img">
 											<a href="#"><img src="img/product-img.jpg" alt=""></a>
-											<div class="card-item__buttons hidden-sm">
+											<div class="card-item__buttons ">
 												<button class="size-btn ">
-													<img src="img/size.svg" alt="">
-
+													<img src="img/size.svg" alt="" class="hidden-sm">
+													<img src="img/size-white.svg" alt="" class="visible-sm">
 												</button>
 
-												<button class="favorite-btn _toggle-action">
+												<button class="favorite-btn _toggle-action hidden-sm">
 													<svg class="icon icon-heart">
 														<use xlink:href="img/sprite.svg#heart"></use>
 													</svg>
@@ -597,28 +597,11 @@
 										</div>
 										<div class="card-item__head">
 											<div class="card-item__title"><a href="#">Trasparenze Rosy 20 maxi</a></div>
-											<div class="card-item__price">
+											<div class="card-item__price hidden-sm">
 												<strong>Цена:</strong>
-												<span class="rub">1343</span>
+												<span class="rub font-700">1343</span>
 											</div>
-
-											<div class="card-item__buttons visible-sm">
-												<button class="size-btn ">
-													<img src="img/size.svg" alt="">
-												</button>
-
-												<button class="favorite-btn _toggle-action">
-													<svg class="icon icon-heart">
-														<use xlink:href="img/sprite.svg#heart"></use>
-													</svg>
-												</button>
-											</div>
-										</div>
-										<div class="card-item__content">
-											<div class="card-item__text">
-												Тонкие прозрачные элегантные колготки, большого размера, с классической посадкой - на талии.
-											</div>
-											<div class="card-item__details">
+											<div class="card-item__details card-details visible-sm">
 												<ul>
 													<li><strong>Плотность:</strong> 20 den</li>
 													<li><strong>Состав:</strong> 82% полиамид, 14% эластан, 4% хлопок</li>
@@ -627,21 +610,54 @@
 											</div>
 
 										</div>
+										<div class="card-item__content">
+											<div class="card-item__text">
+												Тонкие прозрачные элегантные колготки, большого размера, с классической посадкой - на талии.
+											</div>
+											<div class="card-item__details card-details hidden-sm">
+												<ul>
+													<li><strong>Плотность:</strong> 20 den</li>
+													<li><strong>Состав:</strong> 82% полиамид, 14% эластан, 4% хлопок</li>
+													<li><strong>Производство:</strong> Италия</li>
+												</ul>
+											</div>
+											<div class="card-item__price visible-sm">
+												<strong class="hidden-sm">Цена:</strong>
+												<span class="rub font-700">1343</span>
+											</div>
+
+										</div>
 										<div class="card-item__actions">
-											<div class="card-item__selects">
-												<select class="form-select" data-placeholder="Выберите цвет">
-													<option></option>
-													<option>белый</option>
-													<option>чорный</option>
-												</select>
-												<select class="form-select" data-placeholder="Выберите размер">
-													<option></option>
-													<option>13</option>
-													<option>14</option>
-												</select>
+											<div class="d-flex flex-wrap gap-3 mb-3">
+												<div class="min-250 flex-1">
+													<div class="form-wrapper">
+														<span class="form-placeholder">Выберите цвет</span>
+														<select class="form-select " data-placeholder="">
+															<option></option>
+															<option>белый</option>
+															<option>чорный</option>
+														</select>
+													</div>
+
+												</div>
+												<div class="min-250 flex-1">
+													<div class="form-wrapper">
+														<span class="form-placeholder">Выберите размер</span>
+														<select class="form-select" data-placeholder="">
+															<option></option>
+															<option>13</option>
+															<option>14</option>
+														</select>
+													</div>
+												</div>
 											</div>
 											<div class="card-item__count count">
-												<span class="count__title">Кол-во</span>
+												<button class="favorite-btn _toggle-action visible-sm">
+													<svg class="icon icon-heart">
+														<use xlink:href="img/sprite.svg#heart"></use>
+													</svg>
+												</button>
+												<span class="count__title hidden-sm">Кол-во</span>
 												<input type="number" value="1" class="count__value form-input" />
 												<button class="btn btn--block">В КОРЗИНУ</button>
 											</div>
@@ -651,13 +667,13 @@
 									<div class="card-item">
 										<div class="card-item__img">
 											<a href="#"><img src="img/product-img.jpg" alt=""></a>
-											<div class="card-item__buttons hidden-sm">
+											<div class="card-item__buttons ">
 												<button class="size-btn ">
-													<img src="img/size.svg" alt="">
-
+													<img src="img/size.svg" alt="" class="hidden-sm">
+													<img src="img/size-white.svg" alt="" class="visible-sm">
 												</button>
 
-												<button class="favorite-btn _toggle-action">
+												<button class="favorite-btn _toggle-action hidden-sm">
 													<svg class="icon icon-heart">
 														<use xlink:href="img/sprite.svg#heart"></use>
 													</svg>
@@ -666,28 +682,11 @@
 										</div>
 										<div class="card-item__head">
 											<div class="card-item__title"><a href="#">Trasparenze Rosy 20 maxi</a></div>
-											<div class="card-item__price">
+											<div class="card-item__price hidden-sm">
 												<strong>Цена:</strong>
-												<span class="rub">1343</span>
+												<span class="rub font-700">1343</span>
 											</div>
-
-											<div class="card-item__buttons visible-sm">
-												<button class="size-btn ">
-													<img src="img/size.svg" alt="">
-												</button>
-
-												<button class="favorite-btn _toggle-action">
-													<svg class="icon icon-heart">
-														<use xlink:href="img/sprite.svg#heart"></use>
-													</svg>
-												</button>
-											</div>
-										</div>
-										<div class="card-item__content">
-											<div class="card-item__text">
-												Тонкие прозрачные элегантные колготки, большого размера, с классической посадкой - на талии.
-											</div>
-											<div class="card-item__details">
+											<div class="card-item__details card-details visible-sm">
 												<ul>
 													<li><strong>Плотность:</strong> 20 den</li>
 													<li><strong>Состав:</strong> 82% полиамид, 14% эластан, 4% хлопок</li>
@@ -696,21 +695,54 @@
 											</div>
 
 										</div>
+										<div class="card-item__content">
+											<div class="card-item__text">
+												Тонкие прозрачные элегантные колготки, большого размера, с классической посадкой - на талии.
+											</div>
+											<div class="card-item__details card-details hidden-sm">
+												<ul>
+													<li><strong>Плотность:</strong> 20 den</li>
+													<li><strong>Состав:</strong> 82% полиамид, 14% эластан, 4% хлопок</li>
+													<li><strong>Производство:</strong> Италия</li>
+												</ul>
+											</div>
+											<div class="card-item__price visible-sm">
+												<strong class="hidden-sm">Цена:</strong>
+												<span class="rub font-700">1343</span>
+											</div>
+
+										</div>
 										<div class="card-item__actions">
-											<div class="card-item__selects">
-												<select class="form-select" data-placeholder="Выберите цвет">
-													<option></option>
-													<option>белый</option>
-													<option>чорный</option>
-												</select>
-												<select class="form-select" data-placeholder="Выберите размер">
-													<option></option>
-													<option>13</option>
-													<option>14</option>
-												</select>
+											<div class="d-flex flex-wrap gap-3 mb-3">
+												<div class="min-250 flex-1">
+													<div class="form-wrapper">
+														<span class="form-placeholder">Выберите цвет</span>
+														<select class="form-select " data-placeholder="">
+															<option></option>
+															<option>белый</option>
+															<option>чорный</option>
+														</select>
+													</div>
+
+												</div>
+												<div class="min-250 flex-1">
+													<div class="form-wrapper">
+														<span class="form-placeholder">Выберите размер</span>
+														<select class="form-select" data-placeholder="">
+															<option></option>
+															<option>13</option>
+															<option>14</option>
+														</select>
+													</div>
+												</div>
 											</div>
 											<div class="card-item__count count">
-												<span class="count__title">Кол-во</span>
+												<button class="favorite-btn _toggle-action visible-sm">
+													<svg class="icon icon-heart">
+														<use xlink:href="img/sprite.svg#heart"></use>
+													</svg>
+												</button>
+												<span class="count__title hidden-sm">Кол-во</span>
 												<input type="number" value="1" class="count__value form-input" />
 												<button class="btn btn--block">В КОРЗИНУ</button>
 											</div>
@@ -720,13 +752,13 @@
 									<div class="card-item">
 										<div class="card-item__img">
 											<a href="#"><img src="img/product-img.jpg" alt=""></a>
-											<div class="card-item__buttons hidden-sm">
+											<div class="card-item__buttons ">
 												<button class="size-btn ">
-													<img src="img/size.svg" alt="">
-
+													<img src="img/size.svg" alt="" class="hidden-sm">
+													<img src="img/size-white.svg" alt="" class="visible-sm">
 												</button>
 
-												<button class="favorite-btn _toggle-action">
+												<button class="favorite-btn _toggle-action hidden-sm">
 													<svg class="icon icon-heart">
 														<use xlink:href="img/sprite.svg#heart"></use>
 													</svg>
@@ -735,28 +767,11 @@
 										</div>
 										<div class="card-item__head">
 											<div class="card-item__title"><a href="#">Trasparenze Rosy 20 maxi</a></div>
-											<div class="card-item__price">
+											<div class="card-item__price hidden-sm">
 												<strong>Цена:</strong>
-												<span class="rub">1343</span>
+												<span class="rub font-700">1343</span>
 											</div>
-
-											<div class="card-item__buttons visible-sm">
-												<button class="size-btn ">
-													<img src="img/size.svg" alt="">
-												</button>
-
-												<button class="favorite-btn _toggle-action">
-													<svg class="icon icon-heart">
-														<use xlink:href="img/sprite.svg#heart"></use>
-													</svg>
-												</button>
-											</div>
-										</div>
-										<div class="card-item__content">
-											<div class="card-item__text">
-												Тонкие прозрачные элегантные колготки, большого размера, с классической посадкой - на талии.
-											</div>
-											<div class="card-item__details">
+											<div class="card-item__details card-details visible-sm">
 												<ul>
 													<li><strong>Плотность:</strong> 20 den</li>
 													<li><strong>Состав:</strong> 82% полиамид, 14% эластан, 4% хлопок</li>
@@ -765,21 +780,54 @@
 											</div>
 
 										</div>
+										<div class="card-item__content">
+											<div class="card-item__text">
+												Тонкие прозрачные элегантные колготки, большого размера, с классической посадкой - на талии.
+											</div>
+											<div class="card-item__details card-details hidden-sm">
+												<ul>
+													<li><strong>Плотность:</strong> 20 den</li>
+													<li><strong>Состав:</strong> 82% полиамид, 14% эластан, 4% хлопок</li>
+													<li><strong>Производство:</strong> Италия</li>
+												</ul>
+											</div>
+											<div class="card-item__price visible-sm">
+												<strong class="hidden-sm">Цена:</strong>
+												<span class="rub font-700">1343</span>
+											</div>
+
+										</div>
 										<div class="card-item__actions">
-											<div class="card-item__selects">
-												<select class="form-select" data-placeholder="Выберите цвет">
-													<option></option>
-													<option>белый</option>
-													<option>чорный</option>
-												</select>
-												<select class="form-select" data-placeholder="Выберите размер">
-													<option></option>
-													<option>13</option>
-													<option>14</option>
-												</select>
+											<div class="d-flex flex-wrap gap-3 mb-3">
+												<div class="min-250 flex-1">
+													<div class="form-wrapper">
+														<span class="form-placeholder">Выберите цвет</span>
+														<select class="form-select " data-placeholder="">
+															<option></option>
+															<option>белый</option>
+															<option>чорный</option>
+														</select>
+													</div>
+
+												</div>
+												<div class="min-250 flex-1">
+													<div class="form-wrapper">
+														<span class="form-placeholder">Выберите размер</span>
+														<select class="form-select" data-placeholder="">
+															<option></option>
+															<option>13</option>
+															<option>14</option>
+														</select>
+													</div>
+												</div>
 											</div>
 											<div class="card-item__count count">
-												<span class="count__title">Кол-во</span>
+												<button class="favorite-btn _toggle-action visible-sm">
+													<svg class="icon icon-heart">
+														<use xlink:href="img/sprite.svg#heart"></use>
+													</svg>
+												</button>
+												<span class="count__title hidden-sm">Кол-во</span>
 												<input type="number" value="1" class="count__value form-input" />
 												<button class="btn btn--block">В КОРЗИНУ</button>
 											</div>
@@ -789,13 +837,13 @@
 									<div class="card-item">
 										<div class="card-item__img">
 											<a href="#"><img src="img/product-img.jpg" alt=""></a>
-											<div class="card-item__buttons hidden-sm">
+											<div class="card-item__buttons ">
 												<button class="size-btn ">
-													<img src="img/size.svg" alt="">
-
+													<img src="img/size.svg" alt="" class="hidden-sm">
+													<img src="img/size-white.svg" alt="" class="visible-sm">
 												</button>
 
-												<button class="favorite-btn _toggle-action">
+												<button class="favorite-btn _toggle-action hidden-sm">
 													<svg class="icon icon-heart">
 														<use xlink:href="img/sprite.svg#heart"></use>
 													</svg>
@@ -804,28 +852,11 @@
 										</div>
 										<div class="card-item__head">
 											<div class="card-item__title"><a href="#">Trasparenze Rosy 20 maxi</a></div>
-											<div class="card-item__price">
+											<div class="card-item__price hidden-sm">
 												<strong>Цена:</strong>
-												<span class="rub">1343</span>
+												<span class="rub font-700">1343</span>
 											</div>
-
-											<div class="card-item__buttons visible-sm">
-												<button class="size-btn ">
-													<img src="img/size.svg" alt="">
-												</button>
-
-												<button class="favorite-btn _toggle-action">
-													<svg class="icon icon-heart">
-														<use xlink:href="img/sprite.svg#heart"></use>
-													</svg>
-												</button>
-											</div>
-										</div>
-										<div class="card-item__content">
-											<div class="card-item__text">
-												Тонкие прозрачные элегантные колготки, большого размера, с классической посадкой - на талии.
-											</div>
-											<div class="card-item__details">
+											<div class="card-item__details card-details visible-sm">
 												<ul>
 													<li><strong>Плотность:</strong> 20 den</li>
 													<li><strong>Состав:</strong> 82% полиамид, 14% эластан, 4% хлопок</li>
@@ -834,21 +865,54 @@
 											</div>
 
 										</div>
+										<div class="card-item__content">
+											<div class="card-item__text">
+												Тонкие прозрачные элегантные колготки, большого размера, с классической посадкой - на талии.
+											</div>
+											<div class="card-item__details card-details hidden-sm">
+												<ul>
+													<li><strong>Плотность:</strong> 20 den</li>
+													<li><strong>Состав:</strong> 82% полиамид, 14% эластан, 4% хлопок</li>
+													<li><strong>Производство:</strong> Италия</li>
+												</ul>
+											</div>
+											<div class="card-item__price visible-sm">
+												<strong class="hidden-sm">Цена:</strong>
+												<span class="rub font-700">1343</span>
+											</div>
+
+										</div>
 										<div class="card-item__actions">
-											<div class="card-item__selects">
-												<select class="form-select" data-placeholder="Выберите цвет">
-													<option></option>
-													<option>белый</option>
-													<option>чорный</option>
-												</select>
-												<select class="form-select" data-placeholder="Выберите размер">
-													<option></option>
-													<option>13</option>
-													<option>14</option>
-												</select>
+											<div class="d-flex flex-wrap gap-3 mb-3">
+												<div class="min-250 flex-1">
+													<div class="form-wrapper">
+														<span class="form-placeholder">Выберите цвет</span>
+														<select class="form-select " data-placeholder="">
+															<option></option>
+															<option>белый</option>
+															<option>чорный</option>
+														</select>
+													</div>
+
+												</div>
+												<div class="min-250 flex-1">
+													<div class="form-wrapper">
+														<span class="form-placeholder">Выберите размер</span>
+														<select class="form-select" data-placeholder="">
+															<option></option>
+															<option>13</option>
+															<option>14</option>
+														</select>
+													</div>
+												</div>
 											</div>
 											<div class="card-item__count count">
-												<span class="count__title">Кол-во</span>
+												<button class="favorite-btn _toggle-action visible-sm">
+													<svg class="icon icon-heart">
+														<use xlink:href="img/sprite.svg#heart"></use>
+													</svg>
+												</button>
+												<span class="count__title hidden-sm">Кол-во</span>
 												<input type="number" value="1" class="count__value form-input" />
 												<button class="btn btn--block">В КОРЗИНУ</button>
 											</div>
@@ -858,13 +922,13 @@
 									<div class="card-item">
 										<div class="card-item__img">
 											<a href="#"><img src="img/product-img.jpg" alt=""></a>
-											<div class="card-item__buttons hidden-sm">
+											<div class="card-item__buttons ">
 												<button class="size-btn ">
-													<img src="img/size.svg" alt="">
-
+													<img src="img/size.svg" alt="" class="hidden-sm">
+													<img src="img/size-white.svg" alt="" class="visible-sm">
 												</button>
 
-												<button class="favorite-btn _toggle-action">
+												<button class="favorite-btn _toggle-action hidden-sm">
 													<svg class="icon icon-heart">
 														<use xlink:href="img/sprite.svg#heart"></use>
 													</svg>
@@ -873,28 +937,11 @@
 										</div>
 										<div class="card-item__head">
 											<div class="card-item__title"><a href="#">Trasparenze Rosy 20 maxi</a></div>
-											<div class="card-item__price">
+											<div class="card-item__price hidden-sm">
 												<strong>Цена:</strong>
-												<span class="rub">1343</span>
+												<span class="rub font-700">1343</span>
 											</div>
-
-											<div class="card-item__buttons visible-sm">
-												<button class="size-btn ">
-													<img src="img/size.svg" alt="">
-												</button>
-
-												<button class="favorite-btn _toggle-action">
-													<svg class="icon icon-heart">
-														<use xlink:href="img/sprite.svg#heart"></use>
-													</svg>
-												</button>
-											</div>
-										</div>
-										<div class="card-item__content">
-											<div class="card-item__text">
-												Тонкие прозрачные элегантные колготки, большого размера, с классической посадкой - на талии.
-											</div>
-											<div class="card-item__details">
+											<div class="card-item__details card-details visible-sm">
 												<ul>
 													<li><strong>Плотность:</strong> 20 den</li>
 													<li><strong>Состав:</strong> 82% полиамид, 14% эластан, 4% хлопок</li>
@@ -903,21 +950,54 @@
 											</div>
 
 										</div>
+										<div class="card-item__content">
+											<div class="card-item__text">
+												Тонкие прозрачные элегантные колготки, большого размера, с классической посадкой - на талии.
+											</div>
+											<div class="card-item__details card-details hidden-sm">
+												<ul>
+													<li><strong>Плотность:</strong> 20 den</li>
+													<li><strong>Состав:</strong> 82% полиамид, 14% эластан, 4% хлопок</li>
+													<li><strong>Производство:</strong> Италия</li>
+												</ul>
+											</div>
+											<div class="card-item__price visible-sm">
+												<strong class="hidden-sm">Цена:</strong>
+												<span class="rub font-700">1343</span>
+											</div>
+
+										</div>
 										<div class="card-item__actions">
-											<div class="card-item__selects">
-												<select class="form-select" data-placeholder="Выберите цвет">
-													<option></option>
-													<option>белый</option>
-													<option>чорный</option>
-												</select>
-												<select class="form-select" data-placeholder="Выберите размер">
-													<option></option>
-													<option>13</option>
-													<option>14</option>
-												</select>
+											<div class="d-flex flex-wrap gap-3 mb-3">
+												<div class="min-250 flex-1">
+													<div class="form-wrapper">
+														<span class="form-placeholder">Выберите цвет</span>
+														<select class="form-select " data-placeholder="">
+															<option></option>
+															<option>белый</option>
+															<option>чорный</option>
+														</select>
+													</div>
+
+												</div>
+												<div class="min-250 flex-1">
+													<div class="form-wrapper">
+														<span class="form-placeholder">Выберите размер</span>
+														<select class="form-select" data-placeholder="">
+															<option></option>
+															<option>13</option>
+															<option>14</option>
+														</select>
+													</div>
+												</div>
 											</div>
 											<div class="card-item__count count">
-												<span class="count__title">Кол-во</span>
+												<button class="favorite-btn _toggle-action visible-sm">
+													<svg class="icon icon-heart">
+														<use xlink:href="img/sprite.svg#heart"></use>
+													</svg>
+												</button>
+												<span class="count__title hidden-sm">Кол-во</span>
 												<input type="number" value="1" class="count__value form-input" />
 												<button class="btn btn--block">В КОРЗИНУ</button>
 											</div>
@@ -927,13 +1007,13 @@
 									<div class="card-item">
 										<div class="card-item__img">
 											<a href="#"><img src="img/product-img.jpg" alt=""></a>
-											<div class="card-item__buttons hidden-sm">
+											<div class="card-item__buttons ">
 												<button class="size-btn ">
-													<img src="img/size.svg" alt="">
-
+													<img src="img/size.svg" alt="" class="hidden-sm">
+													<img src="img/size-white.svg" alt="" class="visible-sm">
 												</button>
 
-												<button class="favorite-btn _toggle-action">
+												<button class="favorite-btn _toggle-action hidden-sm">
 													<svg class="icon icon-heart">
 														<use xlink:href="img/sprite.svg#heart"></use>
 													</svg>
@@ -942,28 +1022,11 @@
 										</div>
 										<div class="card-item__head">
 											<div class="card-item__title"><a href="#">Trasparenze Rosy 20 maxi</a></div>
-											<div class="card-item__price">
+											<div class="card-item__price hidden-sm">
 												<strong>Цена:</strong>
-												<span class="rub">1343</span>
+												<span class="rub font-700">1343</span>
 											</div>
-
-											<div class="card-item__buttons visible-sm">
-												<button class="size-btn ">
-													<img src="img/size.svg" alt="">
-												</button>
-
-												<button class="favorite-btn _toggle-action">
-													<svg class="icon icon-heart">
-														<use xlink:href="img/sprite.svg#heart"></use>
-													</svg>
-												</button>
-											</div>
-										</div>
-										<div class="card-item__content">
-											<div class="card-item__text">
-												Тонкие прозрачные элегантные колготки, большого размера, с классической посадкой - на талии.
-											</div>
-											<div class="card-item__details">
+											<div class="card-item__details card-details visible-sm">
 												<ul>
 													<li><strong>Плотность:</strong> 20 den</li>
 													<li><strong>Состав:</strong> 82% полиамид, 14% эластан, 4% хлопок</li>
@@ -972,21 +1035,54 @@
 											</div>
 
 										</div>
+										<div class="card-item__content">
+											<div class="card-item__text">
+												Тонкие прозрачные элегантные колготки, большого размера, с классической посадкой - на талии.
+											</div>
+											<div class="card-item__details card-details hidden-sm">
+												<ul>
+													<li><strong>Плотность:</strong> 20 den</li>
+													<li><strong>Состав:</strong> 82% полиамид, 14% эластан, 4% хлопок</li>
+													<li><strong>Производство:</strong> Италия</li>
+												</ul>
+											</div>
+											<div class="card-item__price visible-sm">
+												<strong class="hidden-sm">Цена:</strong>
+												<span class="rub font-700">1343</span>
+											</div>
+
+										</div>
 										<div class="card-item__actions">
-											<div class="card-item__selects">
-												<select class="form-select" data-placeholder="Выберите цвет">
-													<option></option>
-													<option>белый</option>
-													<option>чорный</option>
-												</select>
-												<select class="form-select" data-placeholder="Выберите размер">
-													<option></option>
-													<option>13</option>
-													<option>14</option>
-												</select>
+											<div class="d-flex flex-wrap gap-3 mb-3">
+												<div class="min-250 flex-1">
+													<div class="form-wrapper">
+														<span class="form-placeholder">Выберите цвет</span>
+														<select class="form-select " data-placeholder="">
+															<option></option>
+															<option>белый</option>
+															<option>чорный</option>
+														</select>
+													</div>
+
+												</div>
+												<div class="min-250 flex-1">
+													<div class="form-wrapper">
+														<span class="form-placeholder">Выберите размер</span>
+														<select class="form-select" data-placeholder="">
+															<option></option>
+															<option>13</option>
+															<option>14</option>
+														</select>
+													</div>
+												</div>
 											</div>
 											<div class="card-item__count count">
-												<span class="count__title">Кол-во</span>
+												<button class="favorite-btn _toggle-action visible-sm">
+													<svg class="icon icon-heart">
+														<use xlink:href="img/sprite.svg#heart"></use>
+													</svg>
+												</button>
+												<span class="count__title hidden-sm">Кол-во</span>
 												<input type="number" value="1" class="count__value form-input" />
 												<button class="btn btn--block">В КОРЗИНУ</button>
 											</div>
@@ -996,13 +1092,13 @@
 									<div class="card-item">
 										<div class="card-item__img">
 											<a href="#"><img src="img/product-img.jpg" alt=""></a>
-											<div class="card-item__buttons hidden-sm">
+											<div class="card-item__buttons ">
 												<button class="size-btn ">
-													<img src="img/size.svg" alt="">
-
+													<img src="img/size.svg" alt="" class="hidden-sm">
+													<img src="img/size-white.svg" alt="" class="visible-sm">
 												</button>
 
-												<button class="favorite-btn _toggle-action">
+												<button class="favorite-btn _toggle-action hidden-sm">
 													<svg class="icon icon-heart">
 														<use xlink:href="img/sprite.svg#heart"></use>
 													</svg>
@@ -1011,28 +1107,11 @@
 										</div>
 										<div class="card-item__head">
 											<div class="card-item__title"><a href="#">Trasparenze Rosy 20 maxi</a></div>
-											<div class="card-item__price">
+											<div class="card-item__price hidden-sm">
 												<strong>Цена:</strong>
-												<span class="rub">1343</span>
+												<span class="rub font-700">1343</span>
 											</div>
-
-											<div class="card-item__buttons visible-sm">
-												<button class="size-btn ">
-													<img src="img/size.svg" alt="">
-												</button>
-
-												<button class="favorite-btn _toggle-action">
-													<svg class="icon icon-heart">
-														<use xlink:href="img/sprite.svg#heart"></use>
-													</svg>
-												</button>
-											</div>
-										</div>
-										<div class="card-item__content">
-											<div class="card-item__text">
-												Тонкие прозрачные элегантные колготки, большого размера, с классической посадкой - на талии.
-											</div>
-											<div class="card-item__details">
+											<div class="card-item__details card-details visible-sm">
 												<ul>
 													<li><strong>Плотность:</strong> 20 den</li>
 													<li><strong>Состав:</strong> 82% полиамид, 14% эластан, 4% хлопок</li>
@@ -1041,21 +1120,54 @@
 											</div>
 
 										</div>
+										<div class="card-item__content">
+											<div class="card-item__text">
+												Тонкие прозрачные элегантные колготки, большого размера, с классической посадкой - на талии.
+											</div>
+											<div class="card-item__details card-details hidden-sm">
+												<ul>
+													<li><strong>Плотность:</strong> 20 den</li>
+													<li><strong>Состав:</strong> 82% полиамид, 14% эластан, 4% хлопок</li>
+													<li><strong>Производство:</strong> Италия</li>
+												</ul>
+											</div>
+											<div class="card-item__price visible-sm">
+												<strong class="hidden-sm">Цена:</strong>
+												<span class="rub font-700">1343</span>
+											</div>
+
+										</div>
 										<div class="card-item__actions">
-											<div class="card-item__selects">
-												<select class="form-select" data-placeholder="Выберите цвет">
-													<option></option>
-													<option>белый</option>
-													<option>чорный</option>
-												</select>
-												<select class="form-select" data-placeholder="Выберите размер">
-													<option></option>
-													<option>13</option>
-													<option>14</option>
-												</select>
+											<div class="d-flex flex-wrap gap-3 mb-3">
+												<div class="min-250 flex-1">
+													<div class="form-wrapper">
+														<span class="form-placeholder">Выберите цвет</span>
+														<select class="form-select " data-placeholder="">
+															<option></option>
+															<option>белый</option>
+															<option>чорный</option>
+														</select>
+													</div>
+
+												</div>
+												<div class="min-250 flex-1">
+													<div class="form-wrapper">
+														<span class="form-placeholder">Выберите размер</span>
+														<select class="form-select" data-placeholder="">
+															<option></option>
+															<option>13</option>
+															<option>14</option>
+														</select>
+													</div>
+												</div>
 											</div>
 											<div class="card-item__count count">
-												<span class="count__title">Кол-во</span>
+												<button class="favorite-btn _toggle-action visible-sm">
+													<svg class="icon icon-heart">
+														<use xlink:href="img/sprite.svg#heart"></use>
+													</svg>
+												</button>
+												<span class="count__title hidden-sm">Кол-во</span>
 												<input type="number" value="1" class="count__value form-input" />
 												<button class="btn btn--block">В КОРЗИНУ</button>
 											</div>
@@ -1065,13 +1177,13 @@
 									<div class="card-item">
 										<div class="card-item__img">
 											<a href="#"><img src="img/product-img.jpg" alt=""></a>
-											<div class="card-item__buttons hidden-sm">
+											<div class="card-item__buttons ">
 												<button class="size-btn ">
-													<img src="img/size.svg" alt="">
-
+													<img src="img/size.svg" alt="" class="hidden-sm">
+													<img src="img/size-white.svg" alt="" class="visible-sm">
 												</button>
 
-												<button class="favorite-btn _toggle-action">
+												<button class="favorite-btn _toggle-action hidden-sm">
 													<svg class="icon icon-heart">
 														<use xlink:href="img/sprite.svg#heart"></use>
 													</svg>
@@ -1080,28 +1192,11 @@
 										</div>
 										<div class="card-item__head">
 											<div class="card-item__title"><a href="#">Trasparenze Rosy 20 maxi</a></div>
-											<div class="card-item__price">
+											<div class="card-item__price hidden-sm">
 												<strong>Цена:</strong>
-												<span class="rub">1343</span>
+												<span class="rub font-700">1343</span>
 											</div>
-
-											<div class="card-item__buttons visible-sm">
-												<button class="size-btn ">
-													<img src="img/size.svg" alt="">
-												</button>
-
-												<button class="favorite-btn _toggle-action">
-													<svg class="icon icon-heart">
-														<use xlink:href="img/sprite.svg#heart"></use>
-													</svg>
-												</button>
-											</div>
-										</div>
-										<div class="card-item__content">
-											<div class="card-item__text">
-												Тонкие прозрачные элегантные колготки, большого размера, с классической посадкой - на талии.
-											</div>
-											<div class="card-item__details">
+											<div class="card-item__details card-details visible-sm">
 												<ul>
 													<li><strong>Плотность:</strong> 20 den</li>
 													<li><strong>Состав:</strong> 82% полиамид, 14% эластан, 4% хлопок</li>
@@ -1110,21 +1205,54 @@
 											</div>
 
 										</div>
+										<div class="card-item__content">
+											<div class="card-item__text">
+												Тонкие прозрачные элегантные колготки, большого размера, с классической посадкой - на талии.
+											</div>
+											<div class="card-item__details card-details hidden-sm">
+												<ul>
+													<li><strong>Плотность:</strong> 20 den</li>
+													<li><strong>Состав:</strong> 82% полиамид, 14% эластан, 4% хлопок</li>
+													<li><strong>Производство:</strong> Италия</li>
+												</ul>
+											</div>
+											<div class="card-item__price visible-sm">
+												<strong class="hidden-sm">Цена:</strong>
+												<span class="rub font-700">1343</span>
+											</div>
+
+										</div>
 										<div class="card-item__actions">
-											<div class="card-item__selects">
-												<select class="form-select" data-placeholder="Выберите цвет">
-													<option></option>
-													<option>белый</option>
-													<option>чорный</option>
-												</select>
-												<select class="form-select" data-placeholder="Выберите размер">
-													<option></option>
-													<option>13</option>
-													<option>14</option>
-												</select>
+											<div class="d-flex flex-wrap gap-3 mb-3">
+												<div class="min-250 flex-1">
+													<div class="form-wrapper">
+														<span class="form-placeholder">Выберите цвет</span>
+														<select class="form-select " data-placeholder="">
+															<option></option>
+															<option>белый</option>
+															<option>чорный</option>
+														</select>
+													</div>
+
+												</div>
+												<div class="min-250 flex-1">
+													<div class="form-wrapper">
+														<span class="form-placeholder">Выберите размер</span>
+														<select class="form-select" data-placeholder="">
+															<option></option>
+															<option>13</option>
+															<option>14</option>
+														</select>
+													</div>
+												</div>
 											</div>
 											<div class="card-item__count count">
-												<span class="count__title">Кол-во</span>
+												<button class="favorite-btn _toggle-action visible-sm">
+													<svg class="icon icon-heart">
+														<use xlink:href="img/sprite.svg#heart"></use>
+													</svg>
+												</button>
+												<span class="count__title hidden-sm">Кол-во</span>
 												<input type="number" value="1" class="count__value form-input" />
 												<button class="btn btn--block">В КОРЗИНУ</button>
 											</div>
@@ -1134,13 +1262,13 @@
 									<div class="card-item">
 										<div class="card-item__img">
 											<a href="#"><img src="img/product-img.jpg" alt=""></a>
-											<div class="card-item__buttons hidden-sm">
+											<div class="card-item__buttons ">
 												<button class="size-btn ">
-													<img src="img/size.svg" alt="">
-
+													<img src="img/size.svg" alt="" class="hidden-sm">
+													<img src="img/size-white.svg" alt="" class="visible-sm">
 												</button>
 
-												<button class="favorite-btn _toggle-action">
+												<button class="favorite-btn _toggle-action hidden-sm">
 													<svg class="icon icon-heart">
 														<use xlink:href="img/sprite.svg#heart"></use>
 													</svg>
@@ -1149,28 +1277,11 @@
 										</div>
 										<div class="card-item__head">
 											<div class="card-item__title"><a href="#">Trasparenze Rosy 20 maxi</a></div>
-											<div class="card-item__price">
+											<div class="card-item__price hidden-sm">
 												<strong>Цена:</strong>
-												<span class="rub">1343</span>
+												<span class="rub font-700">1343</span>
 											</div>
-
-											<div class="card-item__buttons visible-sm">
-												<button class="size-btn ">
-													<img src="img/size.svg" alt="">
-												</button>
-
-												<button class="favorite-btn _toggle-action">
-													<svg class="icon icon-heart">
-														<use xlink:href="img/sprite.svg#heart"></use>
-													</svg>
-												</button>
-											</div>
-										</div>
-										<div class="card-item__content">
-											<div class="card-item__text">
-												Тонкие прозрачные элегантные колготки, большого размера, с классической посадкой - на талии.
-											</div>
-											<div class="card-item__details">
+											<div class="card-item__details card-details visible-sm">
 												<ul>
 													<li><strong>Плотность:</strong> 20 den</li>
 													<li><strong>Состав:</strong> 82% полиамид, 14% эластан, 4% хлопок</li>
@@ -1179,21 +1290,54 @@
 											</div>
 
 										</div>
+										<div class="card-item__content">
+											<div class="card-item__text">
+												Тонкие прозрачные элегантные колготки, большого размера, с классической посадкой - на талии.
+											</div>
+											<div class="card-item__details card-details hidden-sm">
+												<ul>
+													<li><strong>Плотность:</strong> 20 den</li>
+													<li><strong>Состав:</strong> 82% полиамид, 14% эластан, 4% хлопок</li>
+													<li><strong>Производство:</strong> Италия</li>
+												</ul>
+											</div>
+											<div class="card-item__price visible-sm">
+												<strong class="hidden-sm">Цена:</strong>
+												<span class="rub font-700">1343</span>
+											</div>
+
+										</div>
 										<div class="card-item__actions">
-											<div class="card-item__selects">
-												<select class="form-select" data-placeholder="Выберите цвет">
-													<option></option>
-													<option>белый</option>
-													<option>чорный</option>
-												</select>
-												<select class="form-select" data-placeholder="Выберите размер">
-													<option></option>
-													<option>13</option>
-													<option>14</option>
-												</select>
+											<div class="d-flex flex-wrap gap-3 mb-3">
+												<div class="min-250 flex-1">
+													<div class="form-wrapper">
+														<span class="form-placeholder">Выберите цвет</span>
+														<select class="form-select " data-placeholder="">
+															<option></option>
+															<option>белый</option>
+															<option>чорный</option>
+														</select>
+													</div>
+
+												</div>
+												<div class="min-250 flex-1">
+													<div class="form-wrapper">
+														<span class="form-placeholder">Выберите размер</span>
+														<select class="form-select" data-placeholder="">
+															<option></option>
+															<option>13</option>
+															<option>14</option>
+														</select>
+													</div>
+												</div>
 											</div>
 											<div class="card-item__count count">
-												<span class="count__title">Кол-во</span>
+												<button class="favorite-btn _toggle-action visible-sm">
+													<svg class="icon icon-heart">
+														<use xlink:href="img/sprite.svg#heart"></use>
+													</svg>
+												</button>
+												<span class="count__title hidden-sm">Кол-во</span>
 												<input type="number" value="1" class="count__value form-input" />
 												<button class="btn btn--block">В КОРЗИНУ</button>
 											</div>
@@ -1203,13 +1347,13 @@
 									<div class="card-item">
 										<div class="card-item__img">
 											<a href="#"><img src="img/product-img.jpg" alt=""></a>
-											<div class="card-item__buttons hidden-sm">
+											<div class="card-item__buttons ">
 												<button class="size-btn ">
-													<img src="img/size.svg" alt="">
-
+													<img src="img/size.svg" alt="" class="hidden-sm">
+													<img src="img/size-white.svg" alt="" class="visible-sm">
 												</button>
 
-												<button class="favorite-btn _toggle-action">
+												<button class="favorite-btn _toggle-action hidden-sm">
 													<svg class="icon icon-heart">
 														<use xlink:href="img/sprite.svg#heart"></use>
 													</svg>
@@ -1218,28 +1362,11 @@
 										</div>
 										<div class="card-item__head">
 											<div class="card-item__title"><a href="#">Trasparenze Rosy 20 maxi</a></div>
-											<div class="card-item__price">
+											<div class="card-item__price hidden-sm">
 												<strong>Цена:</strong>
-												<span class="rub">1343</span>
+												<span class="rub font-700">1343</span>
 											</div>
-
-											<div class="card-item__buttons visible-sm">
-												<button class="size-btn ">
-													<img src="img/size.svg" alt="">
-												</button>
-
-												<button class="favorite-btn _toggle-action">
-													<svg class="icon icon-heart">
-														<use xlink:href="img/sprite.svg#heart"></use>
-													</svg>
-												</button>
-											</div>
-										</div>
-										<div class="card-item__content">
-											<div class="card-item__text">
-												Тонкие прозрачные элегантные колготки, большого размера, с классической посадкой - на талии.
-											</div>
-											<div class="card-item__details">
+											<div class="card-item__details card-details visible-sm">
 												<ul>
 													<li><strong>Плотность:</strong> 20 den</li>
 													<li><strong>Состав:</strong> 82% полиамид, 14% эластан, 4% хлопок</li>
@@ -1248,21 +1375,54 @@
 											</div>
 
 										</div>
+										<div class="card-item__content">
+											<div class="card-item__text">
+												Тонкие прозрачные элегантные колготки, большого размера, с классической посадкой - на талии.
+											</div>
+											<div class="card-item__details card-details hidden-sm">
+												<ul>
+													<li><strong>Плотность:</strong> 20 den</li>
+													<li><strong>Состав:</strong> 82% полиамид, 14% эластан, 4% хлопок</li>
+													<li><strong>Производство:</strong> Италия</li>
+												</ul>
+											</div>
+											<div class="card-item__price visible-sm">
+												<strong class="hidden-sm">Цена:</strong>
+												<span class="rub font-700">1343</span>
+											</div>
+
+										</div>
 										<div class="card-item__actions">
-											<div class="card-item__selects">
-												<select class="form-select" data-placeholder="Выберите цвет">
-													<option></option>
-													<option>белый</option>
-													<option>чорный</option>
-												</select>
-												<select class="form-select" data-placeholder="Выберите размер">
-													<option></option>
-													<option>13</option>
-													<option>14</option>
-												</select>
+											<div class="d-flex flex-wrap gap-3 mb-3">
+												<div class="min-250 flex-1">
+													<div class="form-wrapper">
+														<span class="form-placeholder">Выберите цвет</span>
+														<select class="form-select " data-placeholder="">
+															<option></option>
+															<option>белый</option>
+															<option>чорный</option>
+														</select>
+													</div>
+
+												</div>
+												<div class="min-250 flex-1">
+													<div class="form-wrapper">
+														<span class="form-placeholder">Выберите размер</span>
+														<select class="form-select" data-placeholder="">
+															<option></option>
+															<option>13</option>
+															<option>14</option>
+														</select>
+													</div>
+												</div>
 											</div>
 											<div class="card-item__count count">
-												<span class="count__title">Кол-во</span>
+												<button class="favorite-btn _toggle-action visible-sm">
+													<svg class="icon icon-heart">
+														<use xlink:href="img/sprite.svg#heart"></use>
+													</svg>
+												</button>
+												<span class="count__title hidden-sm">Кол-во</span>
 												<input type="number" value="1" class="count__value form-input" />
 												<button class="btn btn--block">В КОРЗИНУ</button>
 											</div>

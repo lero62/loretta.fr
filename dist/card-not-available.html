@@ -53,7 +53,7 @@
 							</div>
 							<div class="top-shopping-bag__content">
 								<div class="top-shopping-bag__title">Ваша корзина:</div>
-								<div class="top-shopping-bag__price">20 шт. на сумму <span class="rub">100.000</span></div>
+								<div class="top-shopping-bag__price ">20 шт. на сумму <span class="rub font-500">100.000</span></div>
 							</div>
 							<div class="top-shopping-bag__text">
 								Работаем для вас 19 лет!
@@ -518,11 +518,11 @@
 													<li><strong>Состав:</strong> 82% полиамид, 14% эластан, 4% хлопок</li>
 												</ul>
 											</div>
-											<span class="card__price rub">450</span>
+											<span class="card__price rub font-700">450</span>
 										</div>
 
 										<div class="card-actions mt-md-5" data-da="card__foot, first, 767">
-											<div class="d-flex flex-wrap gap-2 mb-3">
+											<div class="d-flex flex-wrap gap-3 mb-3">
 												<div class="min-250 flex-1">
 													<select class="form-select" data-placeholder="Выберите цвет">
 														<option></option>
@@ -620,20 +620,26 @@
 														Другой город:
 													</div>
 													<div class="delivery-list__labeled">
-														<div class="d-flex flex-wrap gap-2 mb-3">
+														<div class="d-flex flex-wrap gap-3 mb-3">
 															<div class="min-250 flex-1">
-																<select class="form-select" data-placeholder="Выберите регион">
-																	<option></option>
-																	<option>белый</option>
-																	<option>чорный</option>
-																</select>
+																<div class="form-wrapper">
+																	<span class="form-placeholder">Выберите регион</span>
+																	<select class="form-select form-select--light" data-placeholder="">
+																		<option></option>
+																		<option>белый</option>
+																		<option>чорный</option>
+																	</select>
+																</div>
 															</div>
 															<div class="min-250 flex-1">
-																<select class="form-select" data-placeholder="Выберите город">
-																	<option></option>
-																	<option selected>Ростов-на-Дону</option>
-																	<option>14</option>
-																</select>
+																<div class="form-wrapper">
+																	<span class="form-placeholder">Выберите город</span>
+																	<select class="form-select form-select--light" data-placeholder="">
+																		<option></option>
+																		<option selected>Ростов-на-Дону</option>
+																		<option>14</option>
+																	</select>
+																</div>
 															</div>
 														</div>
 														<p>С Четверг, 25 Января</p>

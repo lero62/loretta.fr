@@ -1,6 +1,13 @@
 @charset "UTF-8";
 /* mixin ============================================== */
 @font-face {
+  font-family: Ubuntu;
+  font-display: swap;
+  src: url("../fonts/Ubuntu-Light.woff2") format("woff2"), url("../fonts/Ubuntu-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
   font-family: pt;
   font-display: swap;
   src: url("../fonts/pt-rouble-sans.woff2") format("woff2"), url("../fonts/pt-rouble-sans.woff") format("woff");
@@ -10,22 +17,8 @@
 @font-face {
   font-family: Ubuntu;
   font-display: swap;
-  src: url("../fonts/Ubuntu-Italic.woff2") format("woff2"), url("../fonts/Ubuntu-Italic.woff") format("woff");
-  font-weight: 400;
-  font-style: italic;
-}
-@font-face {
-  font-family: Ubuntu;
-  font-display: swap;
   src: url("../fonts/Ubuntu-Medium.woff2") format("woff2"), url("../fonts/Ubuntu-Medium.woff") format("woff");
   font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: Ubuntu;
-  font-display: swap;
-  src: url("../fonts/Ubuntu-Regular.woff2") format("woff2"), url("../fonts/Ubuntu-Regular.woff") format("woff");
-  font-weight: 400;
   font-style: normal;
 }
 @font-face {
@@ -38,9 +31,16 @@
 @font-face {
   font-family: Ubuntu;
   font-display: swap;
-  src: url("../fonts/Ubuntu-Light.woff2") format("woff2"), url("../fonts/Ubuntu-Light.woff") format("woff");
-  font-weight: 300;
+  src: url("../fonts/Ubuntu-Regular.woff2") format("woff2"), url("../fonts/Ubuntu-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
+}
+@font-face {
+  font-family: Ubuntu;
+  font-display: swap;
+  src: url("../fonts/Ubuntu-Italic.woff2") format("woff2"), url("../fonts/Ubuntu-Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
 }
 /* mixin ============================================== */
 :root {
@@ -633,9 +633,17 @@ a:hover {
   white-space: nowrap;
 }
 .rub:after {
-  content: "₽";
+  content: "у";
+  font-family: pt;
   font-size: 95%;
   margin-left: 4px;
+  font-weight: 400;
+}
+.rub.font-500:after {
+  content: "е";
+}
+.rub.font-700:after {
+  content: "э";
 }
 
 [data-href=card-review]._active,
@@ -1496,6 +1504,9 @@ button.btn--block {
 .form-wrapper:has(.form-input:hover) .form-placeholder, .form-wrapper:has(.select2-container:hover) .form-placeholder {
   color: #797979;
 }
+.form-wrapper:has(.form-select--light) .form-placeholder {
+  background: #fff !important;
+}
 .form-input {
   display: block;
   width: 100%;
@@ -1814,6 +1825,7 @@ body:has(.form-select--light + .select2-container--open) .select2-dropdown {
   padding: 0.8rem 2rem;
   font-size: 1.6rem;
   color: #797979;
+  cursor: pointer;
 }
 .select2-results__option:hover, .select2-results__option--selected {
   background: var(--accentColorActive);
@@ -4211,7 +4223,7 @@ body.home-page .header {
     grid-template-columns: 30% auto;
   }
 }
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 767px) {
   .card {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
@@ -4283,7 +4295,7 @@ body.home-page .header {
   -ms-grid-column-span: 1;
   grid-column: 2/3;
 }
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 767px) {
   .card__content {
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
@@ -4323,7 +4335,7 @@ body.home-page .header {
   -ms-grid-column-span: 2;
   grid-column: 1/3;
 }
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 767px) {
   .card__foot {
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
@@ -4916,15 +4928,10 @@ body.home-page .header {
   grid-template-columns: 2rem var(--_img-width) 1fr var(--_info-width);
   gap: 2.5rem;
 }
-@media screen and (max-width: 1600px) {
-  .cart-table__item {
-    --_img-width: 8.3rem;
-  }
-}
 @media screen and (max-width: 1500px) {
   .cart-table__item {
     --_info-width: 21rem;
-    --_img-width: 12.3rem;
+    --_img-width: 8.3rem;
     gap: 2rem;
   }
 }

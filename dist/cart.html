@@ -53,7 +53,7 @@
 							</div>
 							<div class="top-shopping-bag__content">
 								<div class="top-shopping-bag__title">Ваша корзина:</div>
-								<div class="top-shopping-bag__price">20 шт. на сумму <span class="rub">100.000</span></div>
+								<div class="top-shopping-bag__price ">20 шт. на сумму <span class="rub font-500">100.000</span></div>
 							</div>
 							<div class="top-shopping-bag__text">
 								Работаем для вас 19 лет!
@@ -541,7 +541,7 @@
 											</div>
 											<div class="cart-table__info">
 												<div class="cart-buy">
-													<span class="cart-price rub">364</span>
+													<span class="cart-price rub font-700">364</span>
 													<div class="counter" data-counter>
 														<button class="counter__btn counter__btn--minus" data-counter-minus type="button">–</button>
 														<input class="counter__val form-input form-input--warning" data-counter-val value="1" />
@@ -609,7 +609,7 @@
 											</div>
 											<div class="cart-table__info">
 												<div class="cart-buy">
-													<span class="cart-price color-gray rub">364</span>
+													<span class="cart-price color-gray rub font-700">364</span>
 													<div class="counter" data-counter>
 														<button class="counter__btn counter__btn--minus" data-counter-minus type="button" disabled>–</button>
 														<input class="counter__val form-input form-input--warning _error" data-counter-val value="0" disabled />
@@ -617,9 +617,9 @@
 													</div>
 
 												</div>
-												<div class="d-flex flex-column align-items-xxl-end ">
-													<span class="available">Нет в наличии</span>
-													<a href="#" class="link size-md">Сообщить о поступлении</a>
+												<div class="text-xxl-end ">
+													<div class="available">Нет в наличии</div>
+													<a href="#" class="link size-md ">Сообщить о поступлении</a>
 												</div>
 											</div>
 										</div>
@@ -672,7 +672,7 @@
 											</div>
 											<div class="cart-table__info">
 												<div class="cart-buy">
-													<span class="cart-price color-gray rub">364</span>
+													<span class="cart-price color-gray rub font-700">364</span>
 													<div class="counter" data-counter>
 														<button class="counter__btn counter__btn--minus" data-counter-minus type="button" disabled>–</button>
 														<input class="counter__val form-input form-input--warning _error" data-counter-val value="0" disabled />
@@ -698,7 +698,7 @@
 									<div class="cart-total mt-4">
 										<span class="cart-total__val">
 											<span class="font-500">Итого:</span>
-											<span class="rub">1341464</span>
+											<span class="rub font-700">1 341 464</span>
 										</span>
 
 									</div>
@@ -744,18 +744,24 @@
 									<form action="">
 
 										<div class="form-field">
-											<select class="form-select form-select--max-content2" data-placeholder="Выберите город">
-												<option></option>
-												<option>Ростов-на-Дону</option>
-												<option>Ростов-на-Дону</option>
-											</select>
+											<div class="form-wrapper">
+												<span class="form-placeholder">Выберите город</span>
+												<select class="form-select form-select--max-content2" data-placeholder="">
+													<option></option>
+													<option>Ростов-на-Дону</option>
+													<option>Ростов-на-Дону</option>
+												</select>
+											</div>
 										</div>
 										<div class="form-field">
-											<select class="form-select form-select--max-content2" data-placeholder="Выберите способ доставки">
-												<option></option>
-												<option>Ростов-на-Дону</option>
-												<option>Ростов-на-Дону</option>
-											</select>
+											<div class="form-wrapper">
+												<span class="form-placeholder">Выберите способ доставки</span>
+												<select class="form-select form-select--max-content2" data-placeholder="">
+													<option></option>
+													<option>Ростов-на-Дону</option>
+													<option>Ростов-на-Дону</option>
+												</select>
+											</div>
 										</div>
 									</form>
 
@@ -772,25 +778,34 @@
 								</div>
 								<form action="">
 									<div class="form-field">
-										<select class="form-select form-select--max-content3" data-placeholder="Выберите территорию и вид доставки">
-											<option></option>
-											<option>Ростов-на-Дону</option>
-											<option>Ростов-на-Дону</option>
-										</select>
+										<div class="form-wrapper">
+											<span class="form-placeholder">Выберите территорию и вид доставки</span>
+											<select class="form-select form-select--max-content3" data-placeholder="">
+												<option></option>
+												<option>Ростов-на-Дону</option>
+												<option>Ростов-на-Дону</option>
+											</select>
+										</div>
 									</div>
 									<div class="form-field">
-										<select class="form-select form-select--max-content3" data-placeholder="Выберите регион">
-											<option></option>
-											<option>Ростов-на-Дону</option>
-											<option>Ростов-на-Дону</option>
-										</select>
+										<div class="form-wrapper">
+											<span class="form-placeholder">Выберите регион</span>
+											<select class="form-select form-select--max-content3" data-placeholder="">
+												<option></option>
+												<option>Ростов-на-Дону</option>
+												<option>Ростов-на-Дону</option>
+											</select>
+										</div>
 									</div>
 									<div class="form-field">
-										<select class="form-select form-select--max-content3" data-placeholder="Выберите город">
-											<option></option>
-											<option>Ростов-на-Дону</option>
-											<option>Ростов-на-Дону</option>
-										</select>
+										<div class="form-wrapper">
+											<span class="form-placeholder">Выберите город</span>
+											<select class="form-select form-select--max-content3" data-placeholder="">
+												<option></option>
+												<option>Ростов-на-Дону</option>
+												<option>Ростов-на-Дону</option>
+											</select>
+										</div>
 									</div>
 
 									<div class="mt-4 alert alert--max-content d-flex align-items-start gap-2 size-md">
@@ -816,17 +831,26 @@
 
 									<div class="mt-5">
 										<div class="form-field">
-											<select class="form-select form-select--max-content" data-placeholder="Способ оплаты">
-												<option></option>
-												<option>Способ оплаты</option>
-												<option>Способ оплаты</option>
-											</select>
+											<div class="form-wrapper">
+												<span class="form-placeholder">Способ оплаты</span>
+												<select class="form-select form-select--max-content" data-placeholder="">
+													<option></option>
+													<option>Способ оплаты</option>
+													<option>Способ оплаты</option>
+												</select>
+											</div>
 										</div>
 										<div class="form-field">
-											<input type="text" class="form-input form-input--max-content" placeholder="ФИО*">
+											<div class="form-wrapper">
+												<span class="form-placeholder">ФИО <span>*</span></span>
+												<input type="text" class="form-input form-input--max-content" placeholder="">
+											</div>
 										</div>
 										<div class="form-field">
-											<input type="tel" class="form-input form-input--max-content" placeholder="Телефон*">
+											<div class="form-wrapper">
+												<span class="form-placeholder">Телефон <span>*</span></span>
+												<input type="tel" class="form-input form-input--max-content" placeholder="">
+											</div>
 										</div>
 
 										<div class="form-field mt-4 mb-4">
@@ -837,7 +861,10 @@
 										</div>
 
 										<div class="form-field">
-											<input type="email" class="form-input form-input--max-content" placeholder="E-mail">
+											<div class="form-wrapper">
+												<span class="form-placeholder">E-mail</span>
+												<input type="email" class="form-input form-input--max-content" placeholder="">
+											</div>
 										</div>
 
 										<div class="form-field mt-4 mb-4 d-flex flex-column gap-3">
@@ -854,11 +881,17 @@
 										</div>
 
 										<div class="form-field">
-											<textarea rows="5" class="form-input form-input--max-content" placeholder="Примечание"></textarea>
+											<div class="form-wrapper">
+												<span class="form-placeholder">Примечание</span>
+												<textarea rows="5" class="form-input form-input--max-content" placeholder=""></textarea>
+											</div>
 										</div>
 
 										<div class="form-field">
-											<input type="text" class="form-input form-input--max-content" placeholder="Промокод">
+											<div class="form-wrapper">
+												<span class="form-placeholder">Промокод</span>
+												<input type="text" class="form-input form-input--max-content" placeholder="">
+											</div>
 										</div>
 
 										<div class="mt-4 mb-4 alert alert--max-content d-flex align-items-start gap-2 size-md">
@@ -927,10 +960,16 @@
 								<form action="#">
 									<div class="row g-2">
 										<div class="col-md-5">
-											<input type="text" class="form-input form-input--warning" placeholder="Ваше имя*">
+											<div class="form-wrapper">
+												<span class="form-placeholder">Ваше имя <span>*</span></span>
+												<input type="text" class="form-input form-input--warning" placeholder="">
+											</div>
 										</div>
 										<div class="col-md-5">
-											<input type="tel" class="form-input form-input--warning" placeholder="Телефон*">
+											<div class="form-wrapper">
+												<span class="form-placeholder">Телефон <span>*</span></span>
+												<input type="tel" class="form-input form-input--warning" placeholder="">
+											</div>
 										</div>
 									</div>
 
