@@ -62,14 +62,17 @@ document.addEventListener('DOMContentLoaded', function (event) {
 	
 
 	// select
-	$('.form-select').select2({
-		minimumResultsForSearch: 10,
-		language: {
-			"noResults": function(){
-					return "Не найдено";
-			}	
-		},
-	});
+	$('.form-select').each(function () {
+		$(this).select2({
+			minimumResultsForSearch: 10,
+			language: {
+				"noResults": function(){
+						return "Не найдено";
+				}	
+			},
+			dropdownParent: $(this).parent(),
+			});
+		});
 
 
 	// plus minus
@@ -174,6 +177,31 @@ document.addEventListener('DOMContentLoaded', function (event) {
 		theme: 'light',
 	});
 
+
+	const $header = $('.header');
+	$(window).on('scroll load', function () {
+		if ($(this).scrollTop() > 0) {
+			$header.addClass("is-sticky");
+		} else {
+			$header.removeClass("is-sticky");
+		}
+	});
+
+
+	var ul = $('.js-list');
+	var input = $('.js-sorting-list');
+	var li = ul.find('li');
+
+	input.keyup(function(){
+		var value = $(this).val().toLowerCase();
+		li.filter(function() {
+				$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+		});
+	})
+
+	$('.js-toggle-search').on('click', function () { 
+		$('#toggle-search').toggleClass('is-open')
+	})
 
 
 	// offcanvass
@@ -602,16 +630,9 @@ const popupSwiper = new Swiper('.popup-swiper .swiper', {
 
 // const swiperSlides = document.querySelector('.card-swiper').querySelectorAll('.swiper-slide');
 $('.js-gallery-item').on('click', function () {
-  $(this).closest('.js-gallery').find('.js-gallery-item').not($(this)).removeClass('_active');
-  $(this).addClass('_active');
-  $('#gallery-img').attr('src', $(this).find('img').attr('src'));
+  const index = $(this).index();
+  popupSwiper.slideTo(index, 0, false);
 });
-if ($('.card__img-thubnails div').length > 0) {
-  $('#card-img').on('click', function () {
-    const index = $('.card__img-thubnails div._active').index();
-    popupSwiper.slideTo(index, 0, false);
-  });
-}
 
 	
 let _slideUp = (target, duration = 500) => {
