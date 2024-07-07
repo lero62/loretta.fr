@@ -23,62 +23,74 @@
 			<div class="header__top">
 				<div class="header__container container">
 					<a href="#" class="header__logo logo">
-						<img src="img/logo.png" alt="">
+						<div class="logo__wrap">
+							<img src="img/logo2.png" alt="">
+							<span>.рф</span>
+						</div>
+						<div class="logo__slogan">колготки и нижнее белье</div>
 					</a>
 
-					<ul class="navbar-menu hidden-lg">
+					<div class="header__info top-info">
+						<div class="top-info__row d-flex align-items-center justify-content-between">
+							<div class="country">
+								<svg class="icon icon-marker2">
+									<use xlink:href="img/sprite.svg#marker2"></use>
+								</svg>
+								<span>Москва</span>
+								<a href="#">изменить</a>
+							</div>
+							<a href="#" class="favorite-button">
+								<svg class="icon icon-heart">
+									<use xlink:href="img/sprite.svg#heart"></use>
+								</svg>
+								<span>Избранное</span>
+							</a>
+						</div>
+
+						<a href="#" class="top-info__shopping-bag top-shopping-bag">
+							<div class="top-shopping-bag__icon">
+								<svg class="icon icon-shopping-bag">
+									<use xlink:href="img/sprite.svg#shopping-bag"></use>
+								</svg>
+							</div>
+							<div class="top-shopping-bag__content">
+								<div class="top-shopping-bag__title">Ваша корзина:</div>
+								<div class="top-shopping-bag__price">20 шт. на сумму <span class="rub">100.000</span></div>
+							</div>
+							<div class="top-shopping-bag__text">
+								Работаем для вас 19 лет!
+							</div>
+						</a>
+					</div>
+					<div class="header__actions top-actions">
+						<a href="#" class="top-action">
+							<svg class="icon icon-heart">
+								<use xlink:href="img/sprite.svg#heart"></use>
+							</svg>
+						</a>
+						<button class="top-action _open-modal" data-href="#offcanvas-search">
+							<svg class="icon icon-zoom">
+								<use xlink:href="img/sprite.svg#zoom"></use>
+							</svg>
+						</button>
+						<a href="#" class="top-action">
+							<svg class="icon icon-shopping-bag2">
+								<use xlink:href="img/sprite.svg#shopping-bag2"></use>
+							</svg>
+						</a>
+						<button class="top-action _open-modal" data-href="#offcanvas-navbar">
+							<svg class="icon icon-menu">
+								<use xlink:href="img/sprite.svg#menu"></use>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+			<nav class="header__navbar navbar">
+				<div class="container">
+					<ul class="navbar-menu">
 						<li class="navbar-menu__item">
 							<a href="catalog.html" class="navbar-menu__link">НОВИНКИ</a>
-						</li>
-						<li class="navbar-menu__item">
-							<a href="#" class="navbar-menu__link">
-								Бренды
-								<svg class="icon icon-caret">
-									<use xlink:href="img/sprite.svg?2#caret"></use>
-								</svg>
-							</a>
-
-							<div class="navbar-dropdown">
-								<div class="search-block mb-4">
-									<form action="#">
-										<div class="search-block__input">
-											<input type="text" placeholder="Искать..." class="form-input form-input--warning js-search-input js-sorting-list ">
-											<div class="search-block__actions">
-												<button type="submit" class="search-block__submit">
-													<svg class="icon icon-zoom">
-														<use xlink:href="img/sprite.svg#zoom"></use>
-													</svg>
-												</button>
-
-											</div>
-										</div>
-									</form>
-								</div>
-								<ul class="navbar-dropdown-menu js-list">
-									<li><a href="#">бренд</a></li>
-									<li><a href="#">ad бренд </a></li>
-									<li><a href="#">asd бренд</a></li>
-									<li><a href="#">gfgfg бренд</a></li>
-									<li><a href="#">бренд</a></li>
-									<li><a href="#">бренд</a></li>
-									<li><a href="#">бренд</a></li>
-									<li><a href="#">бренд</a></li>
-									<li><a href="#">бренд</a></li>
-									<li><a href="#">бренд</a></li>
-									<li><a href="#">бренд</a></li>
-									<li><a href="#">бренд</a></li>
-									<li><a href="#">бренд</a></li>
-									<li><a href="#">бренд</a></li>
-									<li><a href="#">бренд</a></li>
-									<li><a href="#">бренд</a></li>
-									<li><a href="#">бренд</a></li>
-									<li><a href="#">бренд</a></li>
-									<li><a href="#">бренд</a></li>
-									<li><a href="#">бренд</a></li>
-									<li><a href="#">бренд</a></li>
-									<li><a href="#">бренд</a></li>
-								</ul>
-							</div>
 						</li>
 						<li class="navbar-menu__item">
 							<a href="delivery.html" class="navbar-menu__link">ДОСТАВКА И ОПЛАТА</a>
@@ -92,7 +104,9 @@
 						<li class="navbar-menu__item">
 							<a href="about-us.html" class="navbar-menu__link">О нас</a>
 						</li>
-
+						<li class="navbar-menu__item">
+							<a href="#" class="navbar-menu__link">Фото и видео</a>
+						</li>
 						<li class="navbar-menu__item">
 							<a href="reviews.html" class="navbar-menu__link">ОТЗЫВЫ О ТОВАРАХ</a>
 						</li>
@@ -101,186 +115,8 @@
 						</li>
 
 					</ul>
-
-					<div class="header__actions top-actions">
-
-						<div class="top-actions__item">
-							<button class="top-action js-toggle-search">
-								<svg class="icon icon-zoom">
-									<use xlink:href="img/sprite.svg#zoom"></use>
-								</svg>
-							</button>
-							<div class="top-actions__search" id="toggle-search">
-								<form action="#" class="search-block__form search-form">
-									<input type="text" placeholder="Искать . . ." class="search-form__input form-input form-input--warning">
-									<svg class="icon icon-zoom">
-										<use xlink:href="img/sprite.svg#zoom"></use>
-									</svg>
-								</form>
-							</div>
-						</div>
-						<div class="top-actions__item">
-							<a href="#" class="top-action">
-								<svg class="icon icon-heart">
-									<use xlink:href="img/sprite.svg#heart"></use>
-								</svg>
-							</a>
-						</div>
-						<div class="top-actions__item">
-							<a href="#" class="top-action">
-								<svg class="icon icon-shopping-bag2">
-									<use xlink:href="img/sprite.svg#shopping-bag2"></use>
-								</svg>
-								<span class="badge">30</span>
-							</a>
-							<div class="top-cart">
-								<div class="top-cart__items scrollbar">
-									<div class="top-cart__item">
-										<div class="cart-table">
-											<div class="cart-table__top">
-												<div class="cart-table__img">
-													<a href="#">
-														<img src="img/product-img.jpg" alt="">
-													</a>
-												</div>
-												<div class="cart-table__content">
-													<a href="#" class="cart-table__title">FilodoroAbsolute 8 vita bassa</a>
-													<div class="card-details mt-3">
-														<ul>
-															<li><strong>Цвет:</strong> playa (телесный)</li>
-															<li><strong>Размер:</strong> 3-M</li>
-														</ul>
-													</div>
-												</div>
-
-											</div>
-											<div class="cart-table__bottom">
-
-												<div class="counter" data-counter>
-													<button class="counter__btn counter__btn--minus" data-counter-minus type="button">–</button>
-													<input class="counter__val form-input form-input--warning " data-counter-val value="0" disabled />
-													<button class="counter__btn counter__btn--plus" data-counter-plus type="button">+</button>
-												</div>
-												<div class="cart-table__right">
-													<span class="cart-price  rub font-700">364</span>
-
-													<button class="remove-btn">
-														<svg class="icon icon-remove">
-															<use xlink:href="img/sprite.svg#remove"></use>
-														</svg>
-													</button>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="top-cart__item">
-										<div class="cart-table">
-											<div class="cart-table__top">
-												<div class="cart-table__img">
-													<a href="#">
-														<img src="img/product-img.jpg" alt="">
-													</a>
-												</div>
-												<div class="cart-table__content">
-													<a href="#" class="cart-table__title">FilodoroAbsolute 8 vita bassa</a>
-													<div class="card-details mt-3">
-														<ul>
-															<li><strong>Цвет:</strong> playa (телесный)</li>
-															<li><strong>Размер:</strong> 3-M</li>
-														</ul>
-													</div>
-												</div>
-
-											</div>
-											<div class="cart-table__bottom">
-
-												<div class="counter" data-counter>
-													<button class="counter__btn counter__btn--minus" data-counter-minus type="button">–</button>
-													<input class="counter__val form-input form-input--warning " data-counter-val value="0" disabled />
-													<button class="counter__btn counter__btn--plus" data-counter-plus type="button">+</button>
-												</div>
-												<div class="cart-table__right">
-													<span class="cart-price  rub font-700">364</span>
-
-													<button class="remove-btn">
-														<svg class="icon icon-remove">
-															<use xlink:href="img/sprite.svg#remove"></use>
-														</svg>
-													</button>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="top-cart__item">
-										<div class="cart-table">
-											<div class="cart-table__top">
-												<div class="cart-table__img">
-													<a href="#">
-														<img src="img/product-img.jpg" alt="">
-													</a>
-												</div>
-												<div class="cart-table__content">
-													<a href="#" class="cart-table__title">FilodoroAbsolute 8 vita bassa</a>
-													<div class="card-details mt-3">
-														<ul>
-															<li><strong>Цвет:</strong> playa (телесный)</li>
-															<li><strong>Размер:</strong> 3-M</li>
-														</ul>
-													</div>
-												</div>
-
-											</div>
-											<div class="cart-table__bottom">
-
-												<div class="counter" data-counter>
-													<button class="counter__btn counter__btn--minus" data-counter-minus type="button">–</button>
-													<input class="counter__val form-input form-input--warning " data-counter-val value="0" disabled />
-													<button class="counter__btn counter__btn--plus" data-counter-plus type="button">+</button>
-												</div>
-												<div class="cart-table__right">
-													<span class="cart-price  rub font-700">364</span>
-
-													<button class="remove-btn">
-														<svg class="icon icon-remove">
-															<use xlink:href="img/sprite.svg#remove"></use>
-														</svg>
-													</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="alert alert--danger  d-flex align-items-start gap-2 mt-4 ">
-									<div class="alert__icon">
-										<svg class="icon icon-notification">
-											<use xlink:href="img/sprite.svg#notification"></use>
-										</svg>
-									</div>
-									<div class="alert__body align-self-center">
-										<div class="mb-1"><strong>Внимание!</strong></div>
-										Минимальная сумма заказа с учетом доставки 1000 рублей
-									</div>
-
-								</div>
-								<div class="top-cart__total mt-4">
-									<div class="top-cart__total-title font-700">ИТОГО:</div>
-									<div class="top-cart__total-price rub font-700">5450</div>
-								</div>
-								<div class="top-cart__text">без учета доставки</div>
-								<button class="btn btn--block mt-4">ПЕРЕЙТИ В КОРЗИНУ</button>
-							</div>
-						</div>
-						<div class="top-actions__item visible-lg">
-							<button class="top-action _open-modal " data-href="#offcanvas-navbar">
-								<svg class="icon icon-menu">
-									<use xlink:href="img/sprite.svg#menu"></use>
-								</svg>
-							</button>
-						</div>
-					</div>
 				</div>
-			</div>
-			<div class="header__image"></div>
+			</nav>
 		</header>
 		<!-- HEADER EOF   -->
 
