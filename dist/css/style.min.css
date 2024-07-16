@@ -2728,7 +2728,7 @@ body:has(.form-select--light + .select2-container--open) .select2-dropdown {
 }
 .box__head--sticky {
   position: sticky;
-  top: 62px;
+  top: 0;
   z-index: 20;
 }
 .box__icon .icon {
@@ -3774,9 +3774,8 @@ body:has(.form-select--light + .select2-container--open) .select2-dropdown {
 }
 @media screen and (max-width: 767px) {
   .card-item__buttons {
-    position: absolute;
-    bottom: 6px;
-    left: 6px;
+    margin-top: 0.5rem;
+    gap: 2rem;
   }
 }
 @media screen and (max-width: 767px) {
@@ -3916,19 +3915,8 @@ body:has(.form-select--light + .select2-container--open) .select2-dropdown {
           flex: none;
 }
 .size-btn .icon {
-  font-size: 2.6rem;
-}
-.size-btn .icon .size-stroke {
-  fill: #AFAFAF;
-}
-.size-btn .icon .size-fill {
-  fill: #fff;
-}
-.size-btn:hover .icon .size-stroke, .size-btn._active .icon .size-stroke {
-  fill: var(--accentColorActive);
-}
-.size-btn:hover .icon .size-fill, .size-btn._active .icon .size-fill {
-  fill: var(--accentColor);
+  font-size: 2rem;
+  color: #fff;
 }
 
 .filter-block {
