@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./template/_head.html', {
+"title": "Home"
+})
+
+<body class="loaded">
+   <!-- BEGIN main wrapper -->
+   <div class="main-wrapper">
+
+      <!-- BEGIN HEADER -->
+      @@include('./template/_header2.html', {
+      "nav": 0,
+      "user": 0,
+      })
+      <!-- HEADER EOF   -->
+
+      <!-- BEGIN MAIN -->
+      <main class="main">
+         <div class="container">
+            <div class="main__wrap">
+               @@include('./template/blocks/aside-left.html')
+               <div class="main__content">
+                  <div class="box">
+                     <div class="box__head">
+                        <div class="box__icon">
+                           <svg class="icon icon-contact">
+                              <use xlink:href="img/sprite.svg#contact"></use>
+                           </svg>
+                        </div>
+                        <h1 class="box__title">Контакты</h1>
+                     </div>
+                     <div class="box__body">
+                        <div class="head gap-4 d-flex align-items-center justify-content-between " data-da="main__content, first, 767">
+                           <div class="breadcrumbs">
+                              <a href="#" class="breadcrumbs__link">Главная</a>
+                              <span class="breadcrumbs__devider">&gt;</span>
+                              <span class="breadcrumbs__item">Контакты</span>
+                           </div>
+
+                        </div>
+                        <div class="row g-xxl-6 g-xxl-4 g-3">
+                           <div class="col-md-5">
+                              <div class="mb-6 pt-2">
+                                 <a href="tel:+74996080853" class="contact-item  mb-4 d-flex align-items-center  gap-2">
+                                    <svg class="icon icon-tel">
+                                       <use xlink:href="img/sprite.svg#tel"></use>
+                                    </svg>
+                                    <span>+7 499 608-08-53</span>
+                                 </a>
+
+                                 <div class="contact-item  d-flex align-items-center  gap-2">
+                                    <svg class="icon icon-marker">
+                                       <use xlink:href="img/sprite.svg#marker"></use>
+                                    </svg>
+                                    <span>г. Москва</span>
+                                 </div>
+                              </div>
+
+                              <div class="contact-buttons ">
+                                 <a href="#" class="btn  btn--block">
+                                    <svg class="icon icon-whatsapp">
+                                       <use xlink:href="img/sprite.svg#whatsapp"></use>
+                                    </svg>
+                                    НАПИСАТЬ В WHATSAPP
+                                 </a>
+                                 <a href="#" class="btn  btn--block">
+                                    <svg class="icon icon-telegram">
+                                       <use xlink:href="img/sprite.svg#telegram"></use>
+                                    </svg>
+                                    НАПИСАТЬ В TELEGRAM
+                                 </a>
+                              </div>
+                           </div>
+                           <div class="col-md-7">
+
+                              <h2 class="font-500 size-lg mb-5">Обратная связь</h2>
+
+                              <form action="#">
+                                 <div class="form-field">
+                                    <div class="form-wrapper">
+                                       <span class="form-placeholder">Ваше имя <span>*</span></span>
+                                       <input type="text" class="form-input" required placeholder="">
+                                    </div>
+                                 </div>
+                                 <div class="form-field">
+                                    <div class="form-wrapper">
+                                       <span class="form-placeholder">Ваш e-mail <span>*</span></span>
+                                       <input type="email" class="form-input  _error" placeholder="" required>
+                                    </div>
+                                    <div class="form-message _error">
+                                       <svg class="icon icon-info-circle">
+                                          <use xlink:href="img/sprite.svg#info-circle"></use>
+                                       </svg> заполните поле
+                                    </div>
+                                 </div>
+                                 <div class="form-field">
+                                    <div class="form-wrapper">
+                                       <span class="form-placeholder">Ваш вопрос <span>*</span></span>
+                                       <textarea class="form-input _error" placeholder=""></textarea>
+                                    </div>
+                                    <div class="form-message _error">
+                                       <svg class="icon icon-info-circle">
+                                          <use xlink:href="img/sprite.svg#info-circle"></use>
+                                       </svg> заполните поле
+                                    </div>
+
+                                 </div>
+                                 <div class="form-field">
+                                    <label class="checkbox">
+                                       <input type="checkbox" checked />
+                                       <span class="checkbox__text "><a href="#">С правилами и условиями магазина (договор оферты), в том числе с соглашением о конфиденциальности и обработке персональных данных ознакомлен и согласен.*.</a></span>
+                                    </label>
+                                 </div>
+
+                                 <button type="submit" class="btn  btn--block">ОТПРАВИТЬ</button>
+                              </form>
+
+                              <div style="display: none;">
+                                 <div class="alert alert--success d-flex align-items-start gap-2">
+                                    <div class="alert__icon">
+                                       <svg class="icon icon-check-circle">
+                                          <use xlink:href="img/sprite.svg#check-circle"></use>
+                                       </svg>
+                                    </div>
+                                    <div class="alert__body align-self-center">
+                                       <div class="mb-1"><strong>Ваше сообщение отправлено</strong></div>
+                                       Ваш вопрос отправлен и будет рассмотрен
+                                       в ближайшее время
+                                    </div>
+
+                                 </div>
+                              </div>
+
+                           </div>
+                        </div>
+
+                        <hr class="mt-6 mb-6">
+
+                        <div class="row g-xxl-6 g-xxl-4 g-3">
+                           <div class="col-md-5">
+                              <div class="row-form">
+                                 <h3 class="font-500 size-lg mb-4 row-form__title">Присоединяйтесь к нам в социальных сетях!</h3>
+
+                                 <div class="contact-buttons ">
+                                    <a href="#" class="btn  btn--block">
+                                       <svg class="icon icon-vk">
+                                          <use xlink:href="img/sprite.svg#vk"></use>
+                                       </svg>
+                                       НАША ГРУППА ВК
+                                    </a>
+                                    <a href="#" class="btn  btn--block">
+                                       <svg class="icon icon-telegram">
+                                          <use xlink:href="img/sprite.svg#telegram"></use>
+                                       </svg>
+                                       НАШ TELEGRAM КАНАЛ
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-7">
+                              <div class="row-form">
+                                 <h3 class="font-500 size-lg mb-4 row-form__title">Подпишитесь на скидки и акции</h3>
+
+                                 <form action="#" class="subs-form">
+                                    <div class="form-field">
+                                       <div class="form-wrapper">
+                                          <span class="form-placeholder">Введите ваш e-mail</span>
+                                          <input type="email" class="form-input  " placeholder="" required>
+                                       </div>
+                                    </div>
+
+                                    <button type="submit" class="btn  btn--block">ПОДПИСАТЬСЯ</button>
+
+                                 </form>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+               </div>
+               @@include('./template/blocks/aside-right.html')
+            </div>
+
+            @@include('./template/blocks/subscribe.html')
+         </div>
+      </main>
+      <!-- MAIN EOF   -->
+
+      <!-- BEGIN FOOTER -->
+      @@include('./template/_footer.html', {})
+      <!-- FOOTER EOF   -->
+
+   </div>
+   <!-- main wrapper EOF   -->
+
+   <!-- BEGIN POPUPS -->
+   @@include('./template/popups/search.html')
+   @@include('./template/popups/navbar.html')
+   @@include('./template/popups/forgot_password.html')
+   <!-- POPUPS EOF   -->
+
+   @@include('./template/_js.html', {})
+
+</body>
+
+</html>

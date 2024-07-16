@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./template/_head.html', {
+"title": "Home"
+})
+
+<body class="loaded">
+  <!-- BEGIN main wrapper -->
+  <div class="main-wrapper">
+
+    <!-- BEGIN HEADER -->
+    @@include('./template/_header2.html', {
+    "nav": 0,
+    "user": 0,
+    })
+    <!-- HEADER EOF   -->
+
+    <!-- BEGIN MAIN -->
+    <main class="main">
+      <div class="container">
+        <div class="main__wrap">
+          @@include('./template/blocks/aside-left.html')
+          <div class="main__content">
+
+
+            <div class="box">
+              <div class="box__head">
+                <div class="box__icon">
+                  <svg class="icon icon-shopping-bag3">
+                    <use xlink:href="img/sprite.svg#shopping-bag3"></use>
+                  </svg>
+                </div>
+                <h1 class="box__title">
+                  <span class="visible-md">Личный кабинет</span>
+                  <span class="hidden-md">Мои заказы</span>
+                </h1>
+                <button class="out-btn ms-auto visible-md">
+                  <svg class="icon icon-out">
+                    <use xlink:href="img/sprite.svg?2#out"></use>
+                  </svg>
+                  <span>Выйти</span>
+                </button>
+              </div>
+              <div class="box__body">
+                <div class="head head--without-line gap-4 d-flex align-items-center justify-content-between " data-da="main__content, first, 767">
+                  <div class="breadcrumbs">
+                    <a href="#" class="breadcrumbs__link">Главная</a>
+                    <span class="breadcrumbs__devider">&gt;</span>
+                    <span class="breadcrumbs__item">Мои заказы</span>
+                  </div>
+
+                </div>
+                <nav class="tab-block__nav tab-block__nav--mobile visible-md mb-4">
+                  <a href="#" class="tab-block__navitem _active">
+                    <svg class="icon icon-order">
+                      <use xlink:href="img/sprite.svg?4#order"></use>
+                    </svg>
+                    <span>Мои заказы</span>
+                  </a>
+                  <a href="#" class="tab-block__navitem ">
+                    <svg class="icon icon-user">
+                      <use xlink:href="img/sprite.svg#user"></use>
+                    </svg>
+                    <span>Мой профиль</span>
+                  </a>
+
+                  <a href="#" class="tab-block__navitem">
+                    <svg class="icon icon-sale">
+                      <use xlink:href="img/sprite.svg#sale"></use>
+                    </svg>
+                    <span>Мои скидки</span>
+                  </a>
+                  <a href="#" class="tab-block__navitem">
+                    <svg class="icon icon-list">
+                      <use xlink:href="img/sprite.svg#list"></use>
+                    </svg>
+                    <span>Партнерка</span>
+                  </a>
+                </nav>
+                <div class="table-container">
+                  <table class="table">
+                    <tr>
+
+                      <th class="text-center">Дата оформления</th>
+                      <th class="tb-order">Номер заказа</th>
+                      <th class="text-center">Статус заказа</th>
+                    </tr>
+                    <tr>
+
+                      <td class="text-center">22.08.2024</td>
+                      <td>
+                        <span class="order-number">
+                          <button class="btn-icon _open-modal" data-href="#popup-consultation">
+                            <svg class="icon icon-message ">
+                              <use xlink:href="img/sprite.svg#message"></use>
+                            </svg>
+                          </button>
+                          128449
+                        </span>
+                      </td>
+                      <td class="text-center">
+                        <span class="order-status">Комплектуется</span>
+                      </td>
+                    </tr>
+                    <tr>
+
+                      <td class="text-center">22.08.2024</td>
+                      <td>
+                        <span class="order-number">
+                          <button class="btn-icon _open-modal" data-href="#popup-consultation">
+                            <svg class="icon icon-message ">
+                              <use xlink:href="img/sprite.svg#message"></use>
+                            </svg>
+                          </button>
+                          128449
+                        </span>
+                      </td>
+                      <td class="text-center">
+                        <span class="order-status">Отправлен.
+                          Бонусы за отзывы!
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+
+                      <td class="text-center">22.08.2024</td>
+                      <td>
+                        <span class="order-number">
+                          <button class="btn-icon _open-modal" data-href="#popup-consultation">
+                            <svg class="icon icon-message ">
+                              <use xlink:href="img/sprite.svg#message"></use>
+                            </svg>
+                          </button>
+                          128449
+                        </span>
+                      </td>
+                      <td class="text-center">
+                        <span class="order-status">Получен.
+                          Ваш промокод
+                          на новый заказ!
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+
+                      <td class="text-center">22.08.2024</td>
+                      <td>
+                        <span class="order-number">
+                          <button class="btn-icon _open-modal" data-href="#popup-consultation">
+                            <svg class="icon icon-message ">
+                              <use xlink:href="img/sprite.svg#message"></use>
+                            </svg>
+                          </button>
+                          128449a123213
+                        </span>
+                      </td>
+                      <td class="text-center">
+                        <span class="order-status">Комплектуется</span>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+          @@include('./template/blocks/aside-right.html', {
+          login: true
+          })
+        </div>
+
+        @@include('./template/blocks/subscribe.html')
+      </div>
+    </main>
+    <!-- MAIN EOF   -->
+
+    <!-- BEGIN FOOTER -->
+    @@include('./template/_footer.html', {})
+    <!-- FOOTER EOF   -->
+
+  </div>
+  <!-- main wrapper EOF   -->
+
+  <!-- BEGIN POPUPS -->
+  @@include('./template/popups/search.html')
+  @@include('./template/popups/navbar.html')
+  @@include('./template/popups/forgot_password.html')
+  @@include('./template/popups/subscribe.html')
+  @@include('./template/popups/consultation.html')
+  <!-- POPUPS EOF   -->
+
+  @@include('./template/_js.html', {})
+
+</body>
+
+</html>

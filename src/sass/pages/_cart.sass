@@ -1,0 +1,243 @@
+.info-text
+   line-height: 2.2rem
+
+.cart-footer
+
+   display: flex
+   gap: 2rem
+   flex-wrap: wrap
+   &__left
+      flex: 1 1 auto
+      max-width: 48rem
+
+   &__right
+      flex: none
+      width: 21rem
+      text-align: right
+      margin-left: auto
+
+.support
+   text-align: center
+   display: flex
+   flex-direction: column
+   gap: 2rem 0
+   font-size: 1.8rem
+
+   &__links
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      gap: 1rem 3rem
+
+.cart-actions
+   display: flex
+
+   align-items: center
+   gap: 1rem 2rem
+   border-bottom: 1px solid #AFAFAF
+   border-top: 1px solid #AFAFAF
+   padding-bottom: 1.5rem
+   padding-top: 1.5rem
+   +sm
+      flex-wrap: wrap
+   & > *
+      +sm
+         width: calc(50% - 1rem)
+
+.cart-btn
+   padding: 0
+   display: inline-flex
+   align-items: center
+   text-align: left
+   font-size: 1.4rem
+   font-weight: 500
+   gap: 1rem
+   color: #282828
+   font-family: var(--font)
+   border: none
+   background: none
+   .icon
+      font-size: 2.5rem
+      color: #797979
+      flex: none
+      &-shopping-bag2
+         color: var(--accentColorActive)
+
+.bag-btn
+   position: relative
+   display: inline-flex
+   justify-content: center
+   align-items: center
+   border: none
+   width: 3rem
+   height: 3rem
+   padding: 0
+   background: transparent
+   flex: none
+   .icon
+      font-size: 2.4rem
+      color: var(--accentColorActive)
+
+.remove-btn
+   position: relative
+   display: inline-flex
+   justify-content: center
+   align-items: center
+   border: none
+   width: 3rem
+   height: 3rem
+   padding: 0
+   background: transparent
+   flex: none
+   .icon
+      font-size: 2.4rem
+      color: #797979
+
+.cart-table
+   margin-top: -1px
+   &__item
+      --_img-width: 12.3rem
+      --_info-width: 22rem
+      border-top: 1px solid #AFAFAF
+      padding: 2.5rem 0
+      display: grid
+      grid-template-columns: 2rem var(--_img-width) 1fr var(--_info-width)
+      gap: 2.5rem
+
+      +xl
+
+         --_img-width: 8.3rem
+         gap: 2rem
+      +lg
+         --_img-width: 8.3rem
+      +md
+         --_img-width: 12.3rem
+      +sm
+         --_img-width: 8.3rem
+         grid-template-columns: 2rem var(--_img-width) 1fr
+      +xs
+         --_img-width: 8.3rem
+         gap: 1.5rem
+
+      +xxs
+         --_img-width: 4rem
+
+      &:last-child
+         border-bottom: 1px solid #AFAFAF
+      &:not(:has(.cart-table__checkbox))
+         --_info-width: 18rem
+         grid-template-columns: var(--_img-width) 1fr var(--_info-width)
+         +sm
+            grid-template-columns: var(--_img-width) 1fr
+            .cart-table__img
+               grid-column: 1/2
+            .cart-table__content, .cart-table__info
+               grid-column: 2/3
+   &__checkbox
+      display: flex
+      justify-content: flex-start
+      align-items: center
+      flex: none
+      +sm
+         grid-row: 1/3
+         grid-column: 1/2
+         align-items: flex-start
+   &__img
+      flex: none
+      margin-right: 1rem
+      +xxm
+         margin-right: 0
+      +sm
+         grid-row: 1/3
+         grid-column: 2/3
+
+      img
+         display: block
+         width: 100%
+   &__content
+      flex: 1
+      display: flex
+      flex-direction: column
+      +xs
+         padding-left: .5rem
+   &__title
+      text-decoration: none
+      font-weight: 500
+      border: none
+
+   &__info
+      display: flex
+      flex-direction: column
+      +sm
+         grid-column: 3/4
+      +xs
+         padding-left: .5rem
+      &:not(:has(.counter))
+         .cart-count
+            width: 100%
+            text-align: right
+            +sm
+               text-align: left
+
+.cart-buy
+   display: flex
+   flex-wrap: wrap
+   align-items: center
+   gap: 1rem 2rem
+   margin: 20px 0 12px
+   +xl
+      margin-top: 0
+
+   .counter
+      margin-left: auto
+      width: 13.3rem
+      +xl
+         width: 100%
+         margin-left: 0
+         order: 1
+   .cart-count
+      width: 13.3rem
+      margin-left: auto
+      +xl
+         margin-left: 0
+         width: auto
+
+.cart-price
+   font-size: 1.6rem
+   font-weight: 700
+
+.cart-count
+   font-weight: 400
+   color: #AFAFAF
+.cart-count-num
+   margin-left: auto
+   +sm
+      margin-left: 0
+.cart-total
+   display: flex
+   flex-wrap: wrap
+   flex-direction: row-reverse
+   gap: 10px 50px
+   font-weight: 700
+
+   &__val
+      width: 250px
+      font-size: 20px
+      +xl
+         width: 210px
+      +sm
+         width: auto
+         text-align: right
+
+.payment-logo
+   background: #fff
+   padding: 2rem
+   border-radius: 1rem
+   display: flex
+   align-items: center
+   justify-content: center
+   height: 15.6rem
+   +sm
+      height: 12rem
+   img
+      max-height: 100%

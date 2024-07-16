@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./template/_head.html', {
+"title": "Home"
+})
+
+<body class="loaded">
+  <!-- BEGIN main wrapper -->
+  <div class="main-wrapper">
+
+    <!-- BEGIN HEADER -->
+    @@include('./template/_header2.html', {
+    "nav": 0,
+    "user": 0,
+    })
+    <!-- HEADER EOF   -->
+
+    <!-- BEGIN MAIN -->
+    <main class="main">
+      <div class="container">
+        <div class="main__wrap">
+          @@include('./template/blocks/aside-left.html')
+          <div class="main__content">
+
+
+            <div class="box">
+              <div class="box__head">
+                <div class="box__icon">
+                  <svg class="icon icon-magazine">
+                    <use xlink:href="img/sprite.svg#magazine"></use>
+                  </svg>
+                </div>
+                <h1 class="box__title">Партнерские заказы</р>
+              </div>
+              <div class="box__body">
+                <div class="head head--without-line gap-4 d-flex align-items-center justify-content-between " data-da="main__content, first, 767">
+                  <div class="breadcrumbs">
+                    <a href="#" class="breadcrumbs__link">Главная</a>
+                    <span class="breadcrumbs__devider">&gt;</span>
+
+                    <a href="#" class="breadcrumbs__link">Личный кабинет</a>
+                    <span class="breadcrumbs__devider">&gt;</span>
+                    <span class="breadcrumbs__item">Партнерские заказы</span>
+                  </div>
+
+                </div>
+                <div class="table-container">
+                  <table class="table table--vertical-top">
+                    <tr>
+                      <td>
+                        <div class="font-500">Номер заказа</div>
+                        929292929
+                      </td>
+                      <td>
+                        <div class="font-500">Статус</div>
+                        получен
+
+                      </td>
+                      <td>
+                        <div class="font-500">Сумма заказа</div>
+                        <span class="nowrap">2239 руб.</span>
+                      </td>
+                      <td>
+                        <div class="font-500">Ваша комиссия</div>
+                        <span class="nowrap">123 руб.</span>
+                      </td>
+                      <td>
+                        <div class="font-500">Статус комиссии</div>
+                        выплачено
+                        <div>01.01.2025</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="font-500">Номер заказа</div>
+                        929292929
+                      </td>
+                      <td>
+                        <div class="font-500">Статус</div>
+                        отправлен
+
+                      </td>
+                      <td>
+                        <div class="font-500">Сумма заказа</div>
+                        <span class="nowrap">2239 руб.</span>
+                      </td>
+                      <td>
+                        <div class="font-500">Ваша комиссия</div>
+                        <span class="nowrap">123 руб.</span>
+                      </td>
+                      <td>
+                        <div class="font-500">Статус комиссии</div>
+                        ожидает оплаты
+
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="font-500">Всего заказов на:</div>
+                        <span class="nowrap">1453333 руб.</span>
+                      </td>
+                      <td colspan="4">
+                        <div class="font-500">Ваша комиссия 5%:</div>
+                        <span class="nowrap">2333 руб.</span>
+
+                      </td>
+
+                    </tr>
+                  </table>
+                </div>
+
+                <div class="mt-4 mb-4 alert  d-flex align-items-start gap-2">
+                  <div class="alert__icon">
+                    <img src="img/flash-sale-not-alt.svg" alt="">
+                  </div>
+                  <div class="alert__body align-self-center">
+                    <div class="mb-1"><strong>Как это работает?</strong></div>
+                    Покупатель, оформивший заказ с указанием вашего промокода, получает скидку в размере 5% и вы
+                    получаете партнерскую комиссию от 5 до 10% от оплаченных заказов.
+                  </div>
+
+                </div>
+                <div class="mt-4 mb-4 alert  d-flex align-items-start gap-2">
+                  <div class="alert__icon">
+                    <img src="img/flash-sale-not-alt.svg" alt="">
+                  </div>
+                  <div class="alert__body align-self-center">
+                    <div class="mb-1"><strong>От чего зависит размер комиссии?</strong></div>
+                    5 - 10% зависит от количества заказов, оформленных и оплаченных с указанием вашего промокода в
+                    течение месяца. До 5 заказов 5%, 5-10 заказов 7%, более 10 заказов 10%.
+                  </div>
+
+                </div>
+
+                <div class="mt-4">
+                  <div class="font-500">Заявка на получение денежных средств
+                  </div>
+                  <form action="#" class="mt-2">
+                    <div class="form-content">
+                      <div class="form-content__input">
+                        <div class="form-wrapper">
+                          <span class="form-placeholder">Ваш e-mail</span>
+                          <input type="email" class="form-input form-input--lg" placeholder="" required>
+                        </div>
+                      </div>
+                      <div class="form-content__button">
+                        <button class="btn btn--lg">ОТПРАВИТЬ</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+          @@include('./template/blocks/aside-right.html', {
+          login: true
+          })
+        </div>
+
+        @@include('./template/blocks/subscribe.html')
+      </div>
+    </main>
+    <!-- MAIN EOF   -->
+
+    <!-- BEGIN FOOTER -->
+    @@include('./template/_footer.html', {})
+    <!-- FOOTER EOF   -->
+
+  </div>
+  <!-- main wrapper EOF   -->
+
+  <!-- BEGIN POPUPS -->
+  @@include('./template/popups/search.html')
+  @@include('./template/popups/navbar.html')
+  @@include('./template/popups/forgot_password.html')
+  @@include('./template/popups/subscribe.html')
+  @@include('./template/popups/consultation.html')
+  <!-- POPUPS EOF   -->
+
+  @@include('./template/_js.html', {})
+
+</body>
+
+</html>

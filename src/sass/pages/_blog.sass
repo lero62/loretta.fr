@@ -1,0 +1,82 @@
+
+.article-item
+  display: flex
+  gap: 2rem
+
+  padding: 3rem 0
+  border-bottom: 1px solid #AFAFAF
+  +sm
+    flex-direction: column
+  &:first-child
+    padding-top: 0
+  &:last-child
+    padding-bottom: 0
+    border: none
+  &__img
+    width: 260px
+    height: 180px
+    flex: none
+    +xxm
+      width: 200px
+      height: 157px
+    +sm
+      width: 100%
+      height: auto
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      border-radius: 1rem
+  &__body
+    flex: 1
+    min-width: 1px
+    display: flex
+    flex-direction: column
+    gap: 1.5rem
+  &__title
+    font-size: 1.8rem
+    font-weight: 500
+    flex: none
+    +text-overflow
+    +xxm
+      font-size: 1.6rem
+    +sm
+      white-space: normal
+    a
+      text-decoration: none
+      border: none
+
+  &__text
+
+    font-size: 1.8rem
+    font-weight: 400
+
+    +ellipsis(5)
+    +xxm
+      -webkit-line-clamp: 4
+      font-size: 1.6rem
+    +sm
+      font-size: 1.4rem
+
+  &__footer
+    margin-top: auto
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 1rem
+
+.more
+
+  font-size: 1.2rem
+  font-weight: 400
+  border-bottom: 1px solid var(--accentColorActive)
+  text-decoration: none
+  &:hover
+    border-color: transparent
+.date
+  font-size: 1.6rem
+  font-weight: 300
+  font-style: italic
+  +sm
+    font-size: 1.4rem

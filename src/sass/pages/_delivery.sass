@@ -1,0 +1,106 @@
+.payment-method
+   &__item
+      border-top: 1px solid #AFAFAF
+
+      display: flex
+      font-size: 1.6rem
+      +xs
+         display: block
+      &:last-child
+         border-bottom: 1px solid #AFAFAF
+
+   &__left
+      width: 40%
+      padding: 1.5rem 2rem 1.5rem 0
+      +sm
+         padding: 1.2rem 1.5rem 1.2rem 0
+      +xs
+         width: 100%
+         border: none
+         padding-right: 0
+   &__right
+      width: 60%
+      padding: 1.5rem 0 1.5rem 2rem
+      +sm
+         padding: 1.2rem 0 1.2rem 1.5rem
+      +xs
+         width: 100%
+         padding-left: 0
+         padding-top: 0
+
+   ul
+      margin-left: 2rem
+      margin-bottom: 2rem
+      li
+         margin-bottom: 0.5rem
+         font-weight: 500
+
+   img
+      display: inline-block
+      vertical-align: middle
+      margin: 0 .5rem .5rem 0
+
+   a
+      text-decoration: underline
+      &:hover
+         text-decoration: none
+
+.dl-list
+   display: grid
+   grid-template-columns: max-content 1fr
+   gap: 1.5rem
+   letter-spacing: -0.4px
+
+   +xs
+      grid-template-columns: 1fr
+      gap: .5rem
+   a
+      text-decoration: underline
+      &:hover
+         text-decoration: none
+   dt
+      font-weight: 500
+      max-width: 19rem
+      +xs
+         max-width: none
+   dd
+
+      +xs
+         margin-bottom: 1rem
+         &:last-child
+            margin-bottom: 0
+   &--nowrap
+      +xs
+         grid-template-columns: max-content 1fr
+         gap: .5rem 1.5rem
+
+.title-w-icon
+   display: flex
+   align-items: center
+   gap: 1rem
+
+   &__icon
+      flex: none
+      width: 3.8rem
+      height: 3.8rem
+      display: flex
+      align-items: center
+      justify-content: center
+      .icon
+         font-size: 3.2rem
+         color: #797979
+      +sm
+         width: 4.2rem
+
+.photo-link
+   display: inline-flex
+   align-items: center
+   gap: 1rem
+   text-decoration: none !important
+   font-weight: 500
+   font-size: 1.6rem
+   border: none
+
+   .icon
+      color: #797979
+      font-size: 2rem

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./template/_head.html', {
+"title": "Home"
+})
+
+<body class="loaded">
+  <!-- BEGIN main wrapper -->
+  <div class="main-wrapper">
+
+    <!-- BEGIN HEADER -->
+    @@include('./template/_header2.html', {
+    "nav": 0,
+    "user": 0,
+    })
+    <!-- HEADER EOF   -->
+
+    <!-- BEGIN MAIN -->
+    <main class="main">
+      <div class="container">
+        <div class="main__wrap">
+          @@include('./template/blocks/aside-left.html')
+          <div class="main__content">
+            <div class="box">
+              <div class="box__head">
+                <div class="box__icon">
+                  <svg class="icon icon-magazine">
+                    <use xlink:href="img/sprite.svg#magazine"></use>
+                  </svg>
+                </div>
+                <div class="box__title">Подарочные сертификаты</div>
+
+              </div>
+              <div class="box__body">
+                <div class="head gap-4 d-flex align-items-center justify-content-between " data-da="main__content, first, 767">
+                  <div class="breadcrumbs">
+                    <a href="#" class="breadcrumbs__link">Главная</a>
+                    <span class="breadcrumbs__devider">&gt;</span>
+                    <span class="breadcrumbs__item">Подарочные сертификаты</span>
+                  </div>
+
+                </div>
+
+                <div class="style-text">
+                  <div class="row mb-4 gy-0">
+                    <div class="col-lg-7 col-md-6">
+                      <p>Не знаете что подарить? Виртуальный Подарочный сертификат - самое лучшее решение! Сертификат может быть на любую сумму по вашему желанию. Используется при онлайн расчетах в нашем магазине. Это просто, быстро и удобно. Главное преимущество данного подарка - покупку можно осуществить даже если до праздника осталось совсем немного времени.</p>
+                    </div>
+                    <div class="col-lg-5 col-md-6">
+                      <figure>
+                        <img src="img/certificate.svg" alt="">
+                      </figure>
+                    </div>
+                  </div>
+
+                  <h3><strong>Как заказать сертификат?</strong></h3>
+                  <ol>
+                    <li>Заполните <a href="#">заявку на сертификат</a>. </li>
+                    <li>В течение 1-го рабочего дня вам будет отправлена ссылка на оплату.</li>
+                  </ol>
+
+                  <h3><strong>Как будет доставлен сертификат?</strong></h3>
+
+
+                  <p>Сертификат будет отправлен на ваш электронный адрес либо может отправлен быть напрямую тому, для кого он предназнчен от имени нашего магазина.</p>
+
+                  <h3><strong>Как использовать сертификат?</strong></h3>
+                  <ol>
+                    <li>Добавьте в корзину товары. </li>
+                    <li>При оформлении заказа укажите номер сертификата.</li>
+                    <li>Сумма заказа с учетом доставки будет рассчитана менеджером: если сумма заказанных товаров с учетом доставки больше номинала сертификата, доплату можно осуществить наличными или электронными деньгами; если сумма товаров меньше номинала сертификата, остаток можно использовать при следующих покупках.</li>
+                  </ol>
+
+                  <h3><strong>Заявка на подарочный сертификат</strong></h3>
+
+                  <form action="#">
+                    <div class="row g-2">
+                      <div class="col-md-6">
+                        <div class="form-wrapper">
+                          <span class="form-placeholder">Сумма сертификата <span>*</span></span>
+                          <input type="text" name="" class="form-input" placeholder="" required />
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-wrapper">
+                          <span class="form-placeholder">Ваше имя <span>*</span></span>
+                          <input type="text" name="name" class="form-input" placeholder="" required />
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-wrapper">
+                          <span class="form-placeholder">Телефон <span>*</span></span>
+                          <input type="tel" name="phone" class="form-input" placeholder="" required />
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-wrapper">
+                          <span class="form-placeholder">Ваш e-mail <span>*</span></span>
+                          <input type="email" name="mail" class="form-input" placeholder="&nbsp;" required />
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="form-wrapper">
+                          <span class="form-placeholder">Кому отправить сертификат? <span>*</span></span>
+                          <input type="text" name="" class="form-input" placeholder required />
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="form-wrapper">
+                          <span class="form-placeholder">Комментарий</span>
+                          <textarea class="form-input" placeholder=" "></textarea>
+                        </div>
+                      </div>
+                      <div class="col-12 d-flex gap-4 align-items-center justify-content-end flex-wrap">
+                        <div class="captcha">
+                          <img src="img/captcha.png" alt="">
+                        </div>
+                        <button type="submit" class="btn btn--lg">ОТПРАВИТЬ</button>
+                      </div>
+
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          @@include('./template/blocks/aside-right.html')
+        </div>
+        @@include('./template/blocks/subscribe.html')
+
+      </div>
+    </main>
+    <!-- MAIN EOF   -->
+
+    <!-- BEGIN FOOTER -->
+    @@include('./template/_footer.html', {})
+    <!-- FOOTER EOF   -->
+
+  </div>
+  <!-- main wrapper EOF   -->
+
+  <!-- BEGIN POPUPS -->
+  @@include('./template/popups/search.html')
+  @@include('./template/popups/navbar.html')
+  <!-- POPUPS EOF   -->
+
+  @@include('./template/_js.html', {})
+
+</body>
+
+</html>

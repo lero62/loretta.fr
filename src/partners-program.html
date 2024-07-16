@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./template/_head.html', {
+"title": "Home"
+})
+
+<body class="loaded">
+  <!-- BEGIN main wrapper -->
+  <div class="main-wrapper">
+
+    <!-- BEGIN HEADER -->
+    @@include('./template/_header2.html', {
+    "nav": 0,
+    "user": 0,
+    })
+    <!-- HEADER EOF   -->
+
+    <!-- BEGIN MAIN -->
+    <main class="main">
+      <div class="container">
+        <div class="main__wrap">
+          @@include('./template/blocks/aside-left.html')
+          <div class="main__content">
+            <div class="box">
+              <div class="box__head">
+                <div class="box__icon">
+                  <svg class="icon icon-magazine">
+                    <use xlink:href="img/sprite.svg#magazine"></use>
+                  </svg>
+                </div>
+                <h1 class="box__title">
+
+                  <span class="visible-md">Личный кабинет</span>
+                  <span class="hidden-md">Партнерская программа</span>
+                </h1>
+                <button class="out-btn ms-auto visible-md">
+                  <svg class="icon icon-out">
+                    <use xlink:href="img/sprite.svg?2#out"></use>
+                  </svg>
+                  <span>Выйти</span>
+                </button>
+
+              </div>
+              <div class="box__body">
+                <div class="head gap-4 d-flex align-items-center justify-content-between " data-da="main__content, first, 767">
+                  <div class="breadcrumbs">
+                    <a href="#" class="breadcrumbs__link">Главная</a>
+                    <span class="breadcrumbs__devider">&gt;</span>
+                    <span class="breadcrumbs__item">Партнерская программа</span>
+                  </div>
+
+                </div>
+
+                <nav class="tab-block__nav tab-block__nav--mobile visible-md mb-4">
+                  <a href="#" class="tab-block__navitem ">
+                    <svg class="icon icon-order">
+                      <use xlink:href="img/sprite.svg?4#order"></use>
+                    </svg>
+                    <span>Мои заказы</span>
+                  </a>
+                  <a href="#" class="tab-block__navitem ">
+                    <svg class="icon icon-user">
+                      <use xlink:href="img/sprite.svg#user"></use>
+                    </svg>
+                    <span>Мой профиль</span>
+                  </a>
+
+                  <a href="#" class="tab-block__navitem">
+                    <svg class="icon icon-sale">
+                      <use xlink:href="img/sprite.svg#sale"></use>
+                    </svg>
+                    <span>Мои скидки</span>
+                  </a>
+                  <a href="#" class="tab-block__navitem _active">
+                    <svg class="icon icon-list">
+                      <use xlink:href="img/sprite.svg#list"></use>
+                    </svg>
+                    <span>Партнерка</span>
+                  </a>
+                </nav>
+
+                <div class="style-text">
+                  <p>В партнерской программе могут участвовать:</p>
+                  <ul>
+                    <li>блогеры</li>
+                    <li>владельцы тематических сообществ или форумов</li>
+                    <li>все, у кого есть свой аккаунт в социальных сетях</li>
+                    <li>все, кто каким-либо образом может распространять свой промо-код для покупки в магазине Лоретта</li>
+                  </ul>
+                  <p>Размещайте информацию о товарах магазина Лоретта.рф и получайте партнерскую комиссию с каждого заказа.</p>
+
+                  <p>Партнерская комиссия – это процент от стоимости товаров, которые пользователи покупают с вашим промо-кодом.</p>
+
+
+                  <h3><strong>Сколько я заработаю?</strong></h3>
+                  <p>После регистрации в качестве партнера, вам будет присвоен личный промокод. На вашем сайте, блоге или форуме вместе с информацией о товаре, указывайте этот промокод. Покупатель, оформивший заказ, указав промокод, получает скидку в размере 5% и вы получаете партнерскую комиссию от 5% до 10% от оплаченных заказов.</p>
+
+                  <h3><strong>От чего зависит размер заработанной комиссии?</strong></h3>
+
+                  <p>5%-10% зависит от количества заказов, оформленных и оплаченных с указанием вашего промокода в течение месяца. До 5 заказов 5%, 5-10 заказов 7%, более 10 заказов 10%.</p>
+
+                  <h3><strong>Как я узнаю об оформленных заказах с моим промокодом?</strong></h3>
+                  <p>После регистрации в качестве партнера и ее одобрения администратором магазина, Вам будет отправлены логин и пароль для входа в личный кабинет партнера. В личном кабинете Вы увидите список заказов, оформленных с указанием Вашего промокода, статус заказа, заработанную комиссию.</p>
+
+                  <h3><strong>Как я получу заработанные деньги?</strong></h3>
+                  <p>По всем заказам со статусом “доставлен” можно получить денежные средства на вашу банковскую карту.</p>
+
+                  <h3><strong>Как начать работу?</strong></h3>
+                  <p>Зарегистрируйтесь на сайте и после этого заполните эту заявку на участие в партнерской программе. Укажите ваш логин, который вы использовали для регистрации. После одобрения регистрации администратором магазина вы сможете начать работу.</p>
+
+                  <h3><strong>Заявка на участие</strong></h3>
+                  <form action="#">
+                    <div class="row g-2">
+                      <div class="col-xxl-7 col-xl-8 col-md-8">
+                        <div class="form-wrapper">
+                          <span class="form-placeholder">Ваш логин <span>*</span></span>
+                          <input type="text" name="" class="form-input" placeholder="" required />
+                        </div>
+                      </div>
+                      <div class="col-xxl-7 col-xl-8 col-md-8">
+                        <div class="form-wrapper">
+                          <span class="form-placeholder">Способ рекламы <span>*</span></span>
+                          <select class="form-select" data-placeholder="">
+                            <option></option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                          </select>
+                        </div>
+
+                      </div>
+                      <div class="col-xxl-7 col-xl-8 col-md-8">
+                        <div class="form-wrapper">
+                          <span class="form-placeholder">Название сайта / форума / блога <span>*</span></span>
+                          <input type="tel" name="text" class="form-input" placeholder="" required />
+                        </div>
+                      </div>
+                      <div class="col-xxl-7 col-xl-8 col-md-8">
+                        <div class="form-wrapper">
+                          <span class="form-placeholder">Ваш e-mail <span>*</span></span>
+                          <input type="email" name="mail" class="form-input" placeholder="" required />
+                        </div>
+                      </div>
+                      <div class="col-xxl-7 col-xl-8 col-md-8">
+                        <div class="form-wrapper">
+                          <span class="form-placeholder">Контактное лицо <span>*</span></span>
+                          <input type="text" name="" class="form-input" placeholder="" required />
+                        </div>
+                      </div>
+                      <div class="col-xxl-7 col-xl-8 col-md-8">
+                        <div class="form-wrapper">
+                          <span class="form-placeholder">Промокод <span>*</span></span>
+                          <input type="text" name="" class="form-input" placeholder="" required />
+                        </div>
+                      </div>
+
+                      <div class="col-xxl-7 col-xl-8 col-md-8">
+                        <div class="form-wrapper">
+                          <span class="form-placeholder">Комментарий</span>
+                          <textarea class="form-input" placeholder=""></textarea>
+                        </div>
+                      </div>
+                      <div class="col-xxl-7 col-xl-8 col-md-8 d-flex gap-4 align-items-center justify-content-end flex-wrap">
+                        <div class="captcha">
+                          <img src="img/captcha.png" alt="">
+                        </div>
+                        <button type="submit" class="btn btn--lg">ОТПРАВИТЬ</button>
+                      </div>
+
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          @@include('./template/blocks/aside-right.html')
+        </div>
+        @@include('./template/blocks/subscribe.html')
+
+      </div>
+    </main>
+    <!-- MAIN EOF   -->
+
+    <!-- BEGIN FOOTER -->
+    @@include('./template/_footer.html', {})
+    <!-- FOOTER EOF   -->
+
+  </div>
+  <!-- main wrapper EOF   -->
+
+  <!-- BEGIN POPUPS -->
+  @@include('./template/popups/search.html')
+  @@include('./template/popups/navbar.html')
+  <!-- POPUPS EOF   -->
+
+  @@include('./template/_js.html', {})
+
+</body>
+
+</html>

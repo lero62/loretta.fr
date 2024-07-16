@@ -1,0 +1,199 @@
+.promo
+   img
+      width: 100%
+
+.products
+   display: grid
+   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr))
+   gap: 2rem 4%
+
+.product
+   display: block
+   text-decoration: none
+   border: none
+   &__img
+      img
+         width: 100%
+         display: block
+   &__title
+      text-align: center
+      font-weight: 500
+      font-size: 1.6rem
+      margin-top: 0.5rem
+
+   &:hover
+      .product__title
+         color: var(--accentColorActive)
+
+.reviews
+   padding: 0 20px 30px
+   position: relative
+   +sm
+      padding-left: 0
+      padding-right: 0
+   +xs
+      .swiper
+         margin-right: -1.5rem
+         padding-right: 1.5rem
+
+   &-swiper-prev, &-swiper-next
+      height: 40px
+      width: 30px
+      opacity: 1 !important
+      background: url('../img/swiper-arrow.svg') no-repeat center
+      &:after
+         display: none
+      +sm
+         display: none !important
+   &-swiper-prev
+      left: -13px !important
+   &-swiper-next
+      transform: rotate(180deg)
+      right: -13px !important
+   .swiper-slide
+      height: auto
+   &-swiper-pagination
+      bottom: 0px !important
+      .swiper-pagination-bullet
+         background: #D9D9D9
+         opacity: 1
+         width: 1.2rem
+         height: 1.2rem
+         &-active
+            background: var(--accentColorActive)
+
+   &--vertical
+      padding: 0
+      .review
+         padding-left: 0
+         padding-right: 0
+         background: transparent
+         border-radius: 0
+         border-bottom: 1px solid #AFAFAF
+         &:first-child
+            border-top: 1px solid #AFAFAF
+.review
+   height: 100%
+   background: #fff
+   border-radius: 10px
+   padding: 25px
+   display: grid
+   grid-template-columns: 10.7rem auto
+   grid-template-rows: auto auto 1fr
+   gap: 2rem 2.5rem
+   +sm
+      gap: 1rem 2rem
+      padding: 1.5rem
+   +xs
+      gap: 1rem
+
+   &__img
+      grid-column: 1/2
+      grid-row: 1/4
+      +xs
+         grid-row: 1/2
+         margin-bottom: 1rem
+
+   &__top
+      grid-row: 1/2
+      grid-column: 2/3
+      display: flex
+      align-items: center
+      gap: 1rem 3rem
+      align-content: flex-start
+      overflow: hidden
+      +xl
+         flex-wrap: wrap
+
+   &__body
+      grid-row: 2/3
+      grid-column: 2/3
+      padding-top: .5rem
+      +xs
+         grid-column: 1/3
+         padding-top: 0
+
+   &__title
+      font-size: 1.6rem
+      font-weight: 700
+      flex: 0 1 auto
+      min-width: 1px
+      +xl
+         flex: 1
+      +xs
+         width: 100%
+         flex: auto
+
+      a
+         display: block
+         +text-overflow
+         border: none
+         +xs
+            white-space: normal
+         &:hover
+            text-decoration: none
+   &__value
+      font-size: 1.4rem
+      font-weight: 300
+      white-space: nowrap
+      flex: none
+      +xl
+         order: 1
+         width: 100%
+      +sm
+         font-size: 1.2rem
+
+   &__price
+      font-size: 1.6rem
+      margin-left: auto
+      white-space: nowrap
+      flex: none
+      +sm
+         font-size: 1.4rem
+      +xs
+         margin-left: 0
+         order: 1
+
+   &__text
+      font-size: 1.6rem
+      font-weight: 300
+      +ellipsis(3)
+      &.is-open
+         display: block
+         text-overflow: clip
+   &__footer
+      grid-column: 2/3
+      grid-row: 3/4
+      display: flex
+      align-items: center
+      justify-content: space-between
+
+      gap: 1.2rem 2rem
+      +sm
+         flex-direction: column
+         align-items: flex-start
+      +xs
+         grid-column: 1/3
+   &__info
+      font-style: italic
+      font-size: 1.6rem
+      font-weight: 300
+
+      text-align: right
+      +xs
+         text-align: left
+
+   &--not-img
+      display: block
+      .review__body
+         padding-top: 0
+      .review__info
+         margin-top: 2rem
+
+.show-more
+   font-size: 1.2rem
+   font-weight: 500
+   white-space: nowrap
+   &:hover
+      text-decoration: none
+      color: var(--accentColorActive)

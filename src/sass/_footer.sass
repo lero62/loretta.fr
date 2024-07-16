@@ -1,0 +1,76 @@
+.footer
+	width: 100%
+	min-width: rem(320)
+	flex-shrink: 0
+	background: #D7D7D7
+	padding: 6rem 0
+	+sm
+		padding: 4rem 0
+
+	&-wrap
+		display: flex
+		align-items: flex-start
+		flex-wrap: wrap
+		gap: 3rem 7rem
+		+xl
+			gap: 3rem 4.5rem
+		+md
+			gap: 3rem
+		+sm
+			gap: 3rem 2rem
+		&__left
+			width: calc(40% - 4.7rem)
+			+xl
+				width: calc(30% - 3rem)
+			+md
+				width: calc(50% - 1.5rem)
+				&:first-child
+					width: 100%
+
+			a
+				border: none
+		&__center
+			width: calc(40% - 4.7rem)
+			+xl
+				width: calc(50% - 3rem)
+			+md
+				width: calc(50% - 1.5rem)
+			+xs
+				width: calc(50% - 1rem)
+				&:nth-child(2)
+					width: 100%
+
+		&__right
+			width: calc(20% - 4.7rem)
+			+xl
+				width: calc(20% - 3rem)
+			+md
+				width: 100%
+				order: 1
+			a
+				border: none
+				text-decoration: underline
+				font-weight: 300
+
+.footer-nav
+	list-style-type: none
+	margin: 0
+	columns: 2
+	column-gap: 2rem
+	+md
+		columns: auto
+	li
+		margin-bottom: 1rem
+		font-size: 1.6rem
+		font-weight: 500
+
+		+md
+			font-size: 1.4rem
+			font-weight: 600
+
+		&:last-child
+			margin-bottom: 0
+
+.social-title
+	+sm
+		max-width: 140px

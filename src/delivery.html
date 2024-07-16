@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./template/_head.html', {
+"title": "Home"
+})
+
+<body class="loaded">
+   <!-- BEGIN main wrapper -->
+   <div class="main-wrapper">
+
+      <!-- BEGIN HEADER -->
+      @@include('./template/_header2.html', {
+      "nav": 0,
+      "user": 0,
+      })
+      <!-- HEADER EOF   -->
+
+      <!-- BEGIN MAIN -->
+      <main class="main">
+         <div class="container">
+            <div class="main__wrap">
+               @@include('./template/blocks/aside-left.html')
+               <div class="main__content">
+                  <div class="box">
+                     <div class="box__head">
+                        <div class="box__icon">
+                           <svg class="icon icon-magazine">
+                              <use xlink:href="img/sprite.svg#magazine"></use>
+                           </svg>
+                        </div>
+                        <div class="box__title">Доставка и оплата</div>
+                     </div>
+                     <div class="box__body">
+                        <div class="head gap-4 d-flex align-items-center justify-content-between " data-da="main__content, first, 767">
+                           <div class="breadcrumbs">
+                              <a href="#" class="breadcrumbs__link">Главная</a>
+                              <span class="breadcrumbs__devider">&gt;</span>
+                              <span class="breadcrumbs__item">Доставка и оплата</span>
+                           </div>
+
+                        </div>
+
+                        <h1 class="font-500 mb-3 size-lg">Выберите регион и город доставки</h1>
+                        <p>Способы, сроки и стоимость доставки</p>
+
+                        <h4 class="font-500 mb-4 ttu mt-5">Способы дотсавки</h4>
+                        <div class="row g-2 ">
+                           <div class="col-xxl-6 col-xl-12 col-md-6">
+                              <div class="form-wrapper">
+                                 <span class="form-placeholder">Выберите регион</span>
+                                 <select class="form-select" data-placeholder="" id="sel-region">
+                                    <option></option>
+                                    <option>Ростовская область</option>
+                                    <option>Московская область</option>
+                                 </select>
+                              </div>
+                           </div>
+                           <div class="col-xxl-6 col-xl-12 col-md-6">
+                              <div class="form-wrapper">
+                                 <span class="form-placeholder">Выберите Город</span>
+                                 <select class="form-select" data-placeholder="" id="sel-city">
+                                    <option></option>
+                                    <option>Ростов-на-Дону</option>
+                                    <option>Москва</option>
+                                    <option>Ростов-на-Дону</option>
+                                    <option>Ростов-на-Дону</option>
+                                    <option>Ростов-на-Дону</option>
+                                    <option>Ростов-на-Дону</option>
+                                    <option>Ростов-на-Дону</option>
+                                    <option>Ростов-на-Дону</option>
+                                    <option>Ростов-на-Дону</option>
+                                    <option>Ростов-на-Дону</option>
+                                 </select>
+                              </div>
+                           </div>
+                        </div>
+                        <div class=" mt-6" id="delivery-info" style="display: none;">
+                           <div class="title-w-icon mb-4">
+                              <div class="title-w-icon__icon">
+                                 <svg class="icon icon-truck">
+                                    <use xlink:href="img/sprite.svg#truck"></use>
+                                 </svg>
+                              </div>
+                              <h4 class="font-500 ">Курьерская доставка</h4>
+                           </div>
+
+                           <div class="mt-4 mb-4">
+                              <dl class="dl-list">
+                                 <dt>Цена доставки:</dt>
+                                 <dd>332 руб.</dd>
+                                 <dt>Способы оплаты:</dt>
+                                 <dd>онлайн на сайте</dd>
+
+                                 <dt>Срок доставки (дней):</dt>
+                                 <dd>3</dd>
+                                 <dt>Дни доставки:</dt>
+                                 <dd>понедельник - суббота</dd>
+                              </dl>
+                           </div>
+
+                           <div class="mt-4 mb-4 spoller" data-spollers data-one-spoller>
+                              <div class="spoller__item">
+                                 <div class="spoller__head " data-spoller>
+                                    <div class="spoller__icon">
+                                       <svg class="icon icon-question">
+                                          <use xlink:href="img/sprite.svg#question"></use>
+                                       </svg>
+                                    </div>
+                                    <div class="spoller__title">Как расчитывается дата доставки заказа?</div>
+                                 </div>
+                                 <div class="spoller__body style-text">
+                                    <p>Дата доставки зависит от выбранного товара. Добавьте товар в корзину и вы увидите дату доставки. Дата доставки действительна для Москвы и МО. Дата доставки в другие регионы точно рассчитывается при оформлении заказа после выбора города доставки. Если в вашем заказе есть товары с разной датой доставки, то заказ будет доставлен в наиболее позднюю дату. Вы можете удалить товары, дата доставки которых вам не подходит.</p>
+                                 </div>
+                              </div>
+                              <div class="spoller__item">
+                                 <div class="spoller__head" data-spoller>
+                                    <div class="spoller__icon">
+                                       <svg class="icon icon-question">
+                                          <use xlink:href="img/sprite.svg#question"></use>
+                                       </svg>
+                                    </div>
+                                    <div class="spoller__title">Порядок и условия доставки курьерской службой</div>
+                                 </div>
+                                 <div class="spoller__body style-text">
+                                    <ol>
+                                       <li>При выборе способа доставки "Курьером", накануне доставки вам будет отправлено e-mail и sms - подтверждение о передачи заказа в службу доставки. В случае, если вам необходим звонок оператора, отметьте этот пункт при оформлении заказа.</li>
+                                       <li>Перед доставкой вам позвонит курьер. Без ответа на звонок курьера, доставка в этот день не осуществляется.</li>
+                                       <li>Согласно правилам, установленным курьерской службой, количество попыток по доставке заказа - в течение 3х дней.</li>
+                                       <li>Частичный выкуп заказа и примерка товаров при их получении невозможны.</li>
+                                       <li>Оплата заказа осуществляется при получении заказа курьеру наличными.</li>
+                                    </ol>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="title-w-icon mb-4 mt-5">
+                              <div class="title-w-icon__icon">
+                                 <svg class="icon icon-box">
+                                    <use xlink:href="img/sprite.svg#box"></use>
+                                 </svg>
+                              </div>
+                              <h4 class="font-500">Пункты выдачи заказов</h4>
+                           </div>
+
+                           <div class="mb-4">
+                              <div class="form-wrapper">
+                                 <span class="form-placeholder">Выберите метро</span>
+
+                                 <select class="form-select" data-placeholder="">
+                                    <option></option>
+                                    <option>Ростов-на-Дону</option>
+                                    <option>Москва</option>
+                                    <option>Ростов-на-Дону</option>
+                                    <option>Ростов-на-Дону</option>
+                                    <option>Ростов-на-Дону</option>
+                                    <option>Ростов-на-Дону</option>
+                                    <option>Ростов-на-Дону</option>
+                                    <option>Ростов-на-Дону</option>
+                                    <option>Ростов-на-Дону</option>
+                                    <option>Ростов-на-Дону</option>
+                                 </select>
+                              </div>
+                           </div>
+                           <div class="mt-4 mb-4">
+                              <dl class="dl-list">
+                                 <dt>Адрес:</dt>
+                                 <dd><strong>пр-т Стачки, 175/2</strong></dd>
+                                 <dt>Цена доставки:</dt>
+                                 <dd>250 руб. , от 2900 руб - 150 руб.</dd>
+                                 <dt>Варианты оплаты:</dt>
+                                 <dd>наличными / онлайн на сайте / картой при получении</dd>
+
+                                 <dt>Служба доставки:</dt>
+                                 <dd>Курьерская компания СДЭК</dd>
+                                 <dt>Режим доставки</dt>
+                                 <dd>Пн-Пт 09:00-20:00, Сб-Вс 10:00-18:00</dd>
+                                 <dt>Срок доставки (дней)</dt>
+                                 <dd>3</dd>
+                                 <dt>
+                                    <a href="#" class="photo-link">
+                                       <svg class="icon icon-photo">
+                                          <use xlink:href="img/sprite.svg#photo"></use>
+                                       </svg>
+                                       фото пункта выдачи
+                                    </a>
+                                 </dt>
+
+                              </dl>
+                           </div>
+
+                           <hr class="mt-5 mb-5">
+
+                           <div class="mt-4 mb-4">
+                              <dl class="dl-list">
+                                 <dt>Адрес:</dt>
+                                 <dd><strong>ул. Лермонтовская, 102, 5</strong></dd>
+                                 <dt>Варианты оплаты:</dt>
+                                 <dd>наличными / онлайн на сайте / картой при получении</dd>
+                                 <dt>Цена доставки:</dt>
+                                 <dd>250 руб. , от 2900 руб - 150 руб.</dd>
+                                 <dt>Партнер:</dt>
+                                 <dd>Курьерская компания СДЭК</dd>
+                                 <dt>Режим доставки</dt>
+                                 <dd>Пн-Пт 09:00-20:00, Сб-Вс 10:00-18:00</dd>
+                                 <dt>Срок доставки (дней)</dt>
+                                 <dd>3</dd>
+                                 <dt>
+                                    <a href="#" class="photo-link">
+                                       <svg class="icon icon-photo">
+                                          <use xlink:href="img/sprite.svg#photo"></use>
+                                       </svg>
+                                       фото пункта выдачи
+                                    </a>
+                                 </dt>
+
+                              </dl>
+                           </div>
+
+                           <div class="spoller" data-spollers data-one-spoller>
+                              <div class="spoller__item">
+                                 <div class="spoller__head " data-spoller>
+                                    <div class="spoller__icon">
+                                       <svg class="icon icon-question">
+                                          <use xlink:href="img/sprite.svg#question"></use>
+                                       </svg>
+                                    </div>
+                                    <div class="spoller__title">Как расчитывается дата доставки заказа?</div>
+                                 </div>
+                                 <div class="spoller__body style-text">
+                                    <p>Дата доставки зависит от выбранного товара. Добавьте товар в корзину и вы увидите дату доставки. Дата доставки действительна для Москвы и МО. Дата доставки в другие регионы точно рассчитывается при оформлении заказа после выбора города доставки. Если в вашем заказе есть товары с разной датой доставки, то заказ будет доставлен в наиболее позднюю дату. Вы можете удалить товары, дата доставки которых вам не подходит.</p>
+                                 </div>
+                              </div>
+
+                           </div>
+
+
+                        </div>
+
+                        <h4 class="font-500 mb-4  ttu mt-6">Способы оплаты</h4>
+                        <div class="payment-method">
+                           <div class="payment-method__item">
+                              <div class="payment-method__left">
+                                 <ul>
+                                    <li>Оплата онлайн на сайте</li>
+                                 </ul>
+
+                              </div>
+                              <div class="payment-method__right">
+                                 <p>Оплата с банковских карт Visa, Mastecard, Maestro, Мир</p>
+                              </div>
+                           </div>
+                           <div class="payment-method__item">
+                              <div class="payment-method__left">
+                                 <ul>
+                                    <li>ЮMoney</li>
+                                 </ul>
+
+                              </div>
+                              <div class="payment-method__right">
+                                 <p>ЮMoney – это платежная система, которая позволяет совершать безопасные платежи в интернете и надежно хранить всю информацию о ваших зачислениях и платежах.</p>
+                              </div>
+                           </div>
+                           <div class="payment-method__item">
+                              <div class="payment-method__left">
+                                 <ul>
+                                    <li>Наличные</li>
+                                 </ul>
+
+                              </div>
+                              <div class="payment-method__right">
+                                 <p>Наличными курьеру при доставке заказа. Данный способ оплаты возможен при курьерской доставке и в пункты выдачи не во всех городах.</p>
+                              </div>
+                           </div>
+
+                           <div class="payment-method__item">
+                              <div class="payment-method__left">
+                                 <ul>
+                                    <li>Система быстрых платежей</li>
+                                    <li>Sber Pay</li>
+                                 </ul>
+
+                              </div>
+                              <div class="payment-method__right">
+                                 <p>Сервисы, с помощью которого можно совершать переводы без банковской карты по QR-коду. Денежные средства списываются со счета покупателя и мгновенно зачисляются на счет продавца</p>
+                              </div>
+                           </div>
+                           <div class="payment-method__item">
+                              <div class="payment-method__left">
+                                 <ul>
+                                    <li>Банковский перевод</li>
+                                 </ul>
+
+                              </div>
+                              <div class="payment-method__right">
+                                 <p>Получатель платежа: ИП Райцина Татьяна Александровна, ИНН 771400173540, р/с 40802810812010953964 в Филиале "Корпоративный" ПАО "Совкомбанк", г. Москва, корр. сч.: 30101810445250000360, БИК 044525360 Без НДС.</p>
+                              </div>
+                           </div>
+
+                        </div>
+
+                     </div>
+                  </div>
+
+               </div>
+               @@include('./template/blocks/aside-right.html')
+            </div>
+
+            @@include('./template/blocks/subscribe.html')
+         </div>
+      </main>
+      <!-- MAIN EOF   -->
+
+      <!-- BEGIN FOOTER -->
+      @@include('./template/_footer.html', {})
+      <!-- FOOTER EOF   -->
+
+   </div>
+   <!-- main wrapper EOF   -->
+
+   <!-- BEGIN POPUPS -->
+   @@include('./template/popups/search.html')
+   @@include('./template/popups/navbar.html')
+   @@include('./template/popups/forgot_password.html')
+   <!-- POPUPS EOF   -->
+
+   @@include('./template/_js.html', {})
+
+</body>
+
+</html>

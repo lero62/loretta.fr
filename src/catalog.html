@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./template/_head.html', {
+"title": "Home"
+})
+
+<body class="loaded">
+   <!-- BEGIN main wrapper -->
+   <div class="main-wrapper">
+
+      <!-- BEGIN HEADER -->
+      @@include('./template/_header2.html', {
+      "nav": 0,
+      "user": 0,
+      })
+      <!-- HEADER EOF   -->
+
+      <!-- BEGIN MAIN -->
+      <main class="main">
+         <div class="container">
+            <div class="main__wrap">
+               @@include('./template/blocks/aside-left.html')
+               <div class="main__content">
+                  <div class="box">
+                     <div class="box__head box__head--sticky">
+                        <div class="box__icon">
+                           <svg class="icon icon-magazine">
+                              <use xlink:href="img/sprite.svg#magazine"></use>
+                           </svg>
+                        </div>
+                        <div class="box__title">Классические колготки</div>
+                        <div class="box__toggle ms-auto">
+                           <button class="btn btn--icon _open-modal" data-href="offcanvas-filter">
+                              <svg class="icon icon-filter">
+                                 <use xlink:href="img/sprite.svg#filter"></use>
+                              </svg>
+                           </button>
+                        </div>
+                     </div>
+                     <div class="box__body">
+                        <div class="head gap-4 d-flex align-items-center justify-content-between " data-da="main__content, first, 767">
+                           <div class="breadcrumbs">
+                              <a href="#" class="breadcrumbs__link">Главная</a>
+                              <span class="breadcrumbs__devider">&gt;</span>
+                              <span class="breadcrumbs__item">колготки классика</span>
+                           </div>
+                           <span class="products-count">Товаров: 1024</span>
+                        </div>
+
+
+
+                        <div class="product-list">
+                           {% for review in range(0,10) %}
+                           <div class="card-item">
+                              <div class="card-item__img">
+                                 <div class="card-item__img-inner">
+                                    <a href="#"><img src="img/product-img.jpg" alt=""></a>
+
+                                 </div>
+                              </div>
+                              <div class="card-item__head">
+                                 <div class="card-item__title"><a href="#">Trasparenze Rosy 20 maxi</a></div>
+                                 <div class="card-item__price hidden-sm">
+                                    <strong>Цена:</strong>
+                                    <span class="rub font-700">1343</span>
+                                 </div>
+                                 <div class="card-item__details card-details visible-sm">
+                                    <ul>
+                                       <li><strong>Плотность:</strong> 20 den</li>
+                                       <li><strong>Состав:</strong> 82% полиамид, 14% эластан, 4% хлопок</li>
+                                       <li><strong>Производство:</strong> Италия</li>
+                                    </ul>
+                                 </div>
+
+                                 <div class="card-item__buttons ">
+                                    <button class="size-btn ">
+                                       <img src="img/size.svg" alt="" class="hidden-sm">
+                                       <img src="img/size-white.svg" alt="" class="visible-sm">
+                                    </button>
+
+                                    <button class="size-btn">
+                                       <svg class="icon icon-fullscreen">
+                                          <use xlink:href="img/sprite.svg?2#fullscreen"></use>
+                                       </svg>
+                                    </button>
+                                 </div>
+
+                              </div>
+                              <div class="card-item__content">
+                                 <div class="card-item__text">
+                                    Тонкие прозрачные элегантные колготки, большого размера, с классической посадкой - на талии.
+                                 </div>
+                                 <div class="card-item__details card-details hidden-sm">
+                                    <ul>
+                                       <li><strong>Плотность:</strong> 20 den</li>
+                                       <li><strong>Состав:</strong> 82% полиамид, 14% эластан, 4% хлопок</li>
+                                       <li><strong>Производство:</strong> Италия</li>
+                                    </ul>
+                                 </div>
+                                 <div class="card-item__price visible-sm">
+                                    <strong class="hidden-sm">Цена:</strong>
+                                    <span class="rub font-700">1343</span>
+                                 </div>
+
+                              </div>
+                              <div class="card-item__actions">
+                                 <div class="d-flex flex-wrap gap-3 mb-3">
+                                    <div class="min-250 flex-1">
+                                       <div class="form-wrapper">
+                                          <span class="form-placeholder">Выберите цвет</span>
+                                          <select class="form-select " data-placeholder="">
+                                             <option></option>
+                                             <option>белый</option>
+                                             <option>чорный</option>
+                                          </select>
+                                       </div>
+
+                                    </div>
+                                    <div class="min-250 flex-1">
+                                       <div class="form-wrapper">
+                                          <span class="form-placeholder">Выберите размер</span>
+                                          <select class="form-select" data-placeholder="">
+                                             <option></option>
+                                             <option>13</option>
+                                             <option>14</option>
+                                          </select>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="card-item__count count">
+                                    <button class="favorite-btn _toggle-action visible-sm">
+                                       <svg class="icon icon-heart">
+                                          <use xlink:href="img/sprite.svg#heart"></use>
+                                       </svg>
+                                    </button>
+
+                                    <div class="count__title hidden-sm">Кол-во</div>
+                                    <input class="count__value form-input " data-counter-val value="0" disabled />
+                                    <button class="btn btn--block">В КОРЗИНУ</button>
+                                 </div>
+                              </div>
+                           </div>
+                           {% endfor %}
+                        </div>
+                        <div class="text-center mt-5">
+                           <button class="btn">ПОКАЗАТЬ ЕЩЕ</button>
+
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               @@include('./template/blocks/aside-right.html')
+            </div>
+            @@include('./template/blocks/subscribe.html', {
+
+            })
+
+         </div>
+      </main>
+      <!-- MAIN EOF   -->
+
+      <!-- BEGIN FOOTER -->
+      @@include('./template/_footer.html', {})
+      <!-- FOOTER EOF   -->
+
+   </div>
+   <!-- main wrapper EOF   -->
+
+   <!-- BEGIN POPUPS -->
+   @@include('./template/popups/search.html')
+   @@include('./template/popups/navbar.html')
+   @@include('./template/popups/filter.html')
+   <!-- POPUPS EOF   -->
+
+   @@include('./template/_js.html', {})
+
+</body>
+
+</html>

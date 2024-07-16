@@ -1,0 +1,240 @@
+.header
+  width: 100%
+  min-width: 32rem
+  text-align: left
+  -ms-flex-negative: 0
+  flex-shrink: 0
+  margin-bottom: 2.4rem
+  +lg
+    margin-bottom: 0
+
+  &__top
+    background: var(--accentColor) url('../img/header-bg.png') no-repeat center 0
+    background-size: auto 100%
+    +lg
+      height: 9rem
+
+    +sm
+      height: 7rem
+
+  &__container
+    display: flex
+    align-items: flex-end
+    justify-content: space-between
+    padding-top: 2rem
+    padding-bottom: 3.5rem
+    height: 186px
+    +lg
+      position: fixed !important
+      top: 0
+      left: 0
+      width: 100% !important
+      z-index: 20
+      background: #fff
+      height: 9rem
+      padding-top: 0
+      padding-bottom: 0
+      align-items: center
+
+    +sm
+      height: 7rem
+
+  &__info
+    width: 42.7rem
+
+    display: flex
+
+    flex-direction: column
+    gap: 2rem
+    padding-left: var(--padding)
+    padding-right: var(--padding)
+
+    +lg
+      display: none
+
+  &__logo
+    margin-bottom: -8px
+
+    +lg
+      margin-top: 0
+
+body.home-page
+  .header
+    margin-bottom: 2.4rem
+
+  .header__top
+    +lg
+      height: 15vw
+      min-height: 12.7rem
+      padding: 0
+      margin-top: 9rem
+      background-position: center top
+    +sm
+      margin-top: 7rem
+
+.top-info__text
+  font-size: 1.5rem
+  line-height: 1.2
+  text-wrap: balance
+
+.country
+  display: flex
+  align-items: center
+  white-space: nowrap
+  gap: 0.9rem
+
+  .icon
+    flex: none
+    font-size: 2.2rem
+    color: var(--accentColorActive)
+
+    +lg
+      font-size: 3rem
+      top: -0.2rem
+
+  span
+    font-size: 1.4rem
+    font-weight: 500
+    +lg
+      display: flex
+      flex-direction: column
+      font-size: 1.6rem
+
+  a
+    color: #9a1e43
+    font-size: 1.4rem
+    font-weight: 300
+    border-color: transparent
+    +lg
+      font-size: 1.6rem
+
+    &:hover
+      border-color: #9a1e43
+
+.favorite-button
+
+  display: inline-flex
+
+  align-items: center
+  gap: 0.9rem
+  white-space: nowrap
+  font-size: 1.4rem
+  font-weight: 300
+  text-decoration: none
+  border: none
+
+  .icon
+    fill: none
+    color: var(--accentColorActive)
+    font-size: 2rem
+
+  &:hover
+    color: #282828
+
+    .icon
+      fill: currentColor
+
+.top-shopping-bag
+  background: #f5f5f5
+  border-radius: 1rem
+  display: flex
+  gap: 2.5rem
+  align-items: center
+  padding: 1.4rem 2rem
+  margin-left: calc(var(--padding) * -1)
+  margin-right: calc(var(--padding) * -1)
+  text-decoration: none
+  border: none
+
+  &__icon
+    width: 4rem
+    text-align: center
+    -webkit-box-flex: 0
+    -ms-flex: none
+    flex: none
+
+  &__icon .icon
+    font-size: 3.8rem
+    color: var(--accentColorActive)
+
+  &__content
+    -webkit-box-flex: 1
+    -ms-flex: 1
+    flex: 1
+    min-width: 1px
+    font-size: 1.4rem
+    font-weight: 500
+
+  &__title
+    border-bottom: 1px solid var(--accentColorActive)
+    margin-bottom: 0.2rem
+    display: inline-block
+
+  &__text
+    max-width: 10rem
+    text-align: right
+    font-size: 1.4rem
+    font-weight: 300
+
+  &:hover
+    color: #282828
+    text-decoration: none
+
+    .top-shopping-bag__title
+      color: var(--accentColorActive)
+
+.top-actions
+  display: none
+
+  +lg
+    display: flex
+    gap: 0.6rem
+    align-items: center
+
+  +xxs
+
+    gap: 0.4rem
+
+.top-action
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  width: 5.5rem
+  height: 5.5rem
+  border-radius: 0.7rem
+  background: var(--accentColorActive)
+  border: none
+
+  +sm
+    width: 5rem
+    height: 5rem
+
+  +xs
+    width: 4.5rem
+    height: 4.5rem
+
+  +xxs
+    height: 3.6rem
+    width: 3.6rem
+
+  .icon
+    color: #fff
+    font-size: 3rem
+
+    +sm
+      font-size: 2.6rem
+
+    +xs
+      font-size: 2.2rem
+    +xxs
+      font-size: 2rem
+
+  .icon-heart
+    fill: none
+    transform: scale(1.1)
+
+  &.active
+    background: #fff
+
+    .icon
+      color: var(--accentColorActive)

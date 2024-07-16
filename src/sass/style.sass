@@ -1,0 +1,108 @@
+$units: 'rem'
+
+@function rem($pxValue)
+	@if $units == 'rem'
+		@return calc($pxValue / 10) + rem
+
+	@else
+		@return calc($pxValue / 16) + rem
+
+/* mixin ============================================== */
+@import lib/base
+@import fonts
+/* mixin ============================================== */
+
+:root
+	--accentColor: #F0D2DC
+	--accentColorActive: #E69AB1
+	--accentColorHover: #DA287E
+	--accentColorCurrent: #9A1E43
+	--bg: #fff
+	--font: 'Ubuntu'
+	--font-pt: pt
+	--color: #282828
+	--size: 1.6rem
+
+$font-family: 'Ubuntu'
+$color: #282828
+$font-size: rem(14)
+$font-weight: 400
+$bgcolor: #fff
+// $color-danger: #D62E2E
+// $color-success: 
+// $color-warning: 
+// $color-default: 
+// $color-info: 
+
+$gutters: 15px
+$maxWidth: 192
+$container: 1260
+$xxl: 1700px
+$xxm: 1600px
+$xl: 1500px
+$lg: 1320px
+$md: 1024px
+$sm: 767px
+$xs: 575px
+$xxs: 370px
+
+/* Normalize =========================================== */
+@import normalize
+
+@if $units == 'rem'
+	html
+		font-size: 62.5%
+@else
+	html
+		font-size: 100%
+
+html
+	&.lock, &.lock body
+		overflow: hidden
+	&.navLock, &.navLock body
+		overflow: hidden
+
+body
+	color: var(--color)
+	font: 400 var(--size) var(--font), Arial, sans-serif
+	line-height: 1.2
+	background: var(--bg)
+	min-height: 100%
+	display: flex
+	margin: 0px
+	padding: 0px
+	position: relative
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+
+@import blocks/utilities
+
+@import blocks/components
+
+@import blocks/buttons
+
+@import blocks/forms
+
+@import blocks/icons
+
+/* HEADER
+/* ================================================ */
+@import header
+
+/* MAIN
+/* ================================================ */
+@import main
+
+@import pages/all
+
+@import blocks/popup
+
+// @import blocks/gallery
+
+@import blocks/layout
+
+// @import blocks/tooltip 
+
+/* FOOTER
+/* ================================================ */
+@import footer

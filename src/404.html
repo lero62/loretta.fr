@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./template/_head.html', {
+"title": "Home"
+})
+
+<body class="loaded">
+  <!-- BEGIN main wrapper -->
+  <div class="main-wrapper">
+
+    <!-- BEGIN HEADER -->
+    @@include('./template/_header2.html', {
+    "nav": 0,
+    "user": 0,
+    })
+    <!-- HEADER EOF   -->
+
+    <!-- BEGIN MAIN -->
+    <main class="main">
+      <div class="container">
+        <div class="error-wrap">
+          <div class="error-wrap__left">
+            <div class="error-wrap__code">404</div>
+          </div>
+          <div class="error-wrap__right">
+            <h1 class="mb-md-4 mb-3">Извините, но такой страницы не существует</h1>
+
+            <h2>Возможно, вы найдете то что искали на главной странице</h2>
+            <a class="btn mt-5" href="#">ПЕРЕЙТИ НА ГЛАВНУЮ</a>
+          </div>
+        </div>
+        @@include('./template/blocks/subscribe.html')
+
+      </div>
+    </main>
+    <!-- MAIN EOF   -->
+
+    <!-- BEGIN FOOTER -->
+    @@include('./template/_footer.html', {})
+    <!-- FOOTER EOF   -->
+
+  </div>
+  <!-- main wrapper EOF   -->
+
+  <!-- BEGIN POPUPS -->
+  @@include('./template/popups/search.html')
+  @@include('./template/popups/navbar.html')
+  <!-- POPUPS EOF   -->
+
+  @@include('./template/_js.html', {})
+
+</body>
+
+</html>

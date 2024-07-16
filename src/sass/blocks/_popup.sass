@@ -1,0 +1,259 @@
+.popup
+	position: fixed
+	width: 100%
+	height: 100%
+
+	top: 0
+	left: 0
+	overflow-y: auto
+	overflow-x: hidden
+
+	z-index: 1040
+	display: none
+	&__body
+		width: 100%
+		min-height: 100%
+		display: flex
+		align-items: center
+		background: transparent
+		justify-content: center
+		padding: rem(30) rem(10)
+		transition: all 0.1s ease-in-out
+	&__container
+		max-width: 1440px
+		margin-left: auto
+		margin-right: auto
+		height: 100%
+		display: flex
+		align-items: flex-start
+		+md
+			display: block
+	&__content
+
+		background-color: #F5F5F5
+		color: #000
+		width: 100%
+		max-width: var(--popup-width, 86rem)
+		padding: 5rem 4rem
+		position: relative
+		opacity: 0
+		font-size: 1.6rem
+		border-radius: 2rem
+
+		transition: all 0.3s ease-in-out
+		transform: translate(0, 30px)
+		+sm
+			padding-left: 3rem
+			padding-right: 3rem
+		+xs
+			padding-left: 2rem
+			padding-right: 2rem
+		&--image
+			width: auto
+			padding: 0
+
+			img
+				max-width: 100%
+				display: block
+	&__title
+		font-size: 1.8rem
+		margin-bottom: 2rem
+	&__close
+		position: absolute
+		right: rem(10)
+		top: rem(10)
+		color: #000
+		cursor: pointer
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 4rem
+		height: 4rem
+
+		.icon
+			font-size: 2.4rem
+			color: var(--accentColorActive)
+			stroke-width: 20px
+
+	&._open
+		display: block
+	&._animate
+		.popup__body
+			background-color: rgba(#282828, 0.7)
+		.popup__content
+			transform: translate(0,0)
+			opacity: 1
+
+	&--image
+		overflow: hidden
+
+		.popup__body
+			padding: 0
+			display: block
+			height: 100%
+			padding: 4rem
+			background: #fff !important
+			opacity: 0
+			+md
+				padding: 4rem 2rem 2rem
+
+		.swiper
+			height: 100%
+			max-height: 100%
+
+		.popup-swiper
+			.swiper-slide
+				display: flex
+				align-items: center
+				justify-content: center
+				flex-direction: column
+				height: auto !important
+				img
+					height: 100%
+					width: 100%
+					display: block
+
+				figure
+					width: auto
+					max-height: 100%
+
+		&._animate
+			.popup__body
+				opacity: 1
+
+.feedback-message
+	padding: 50px 0
+	text-align: center
+	max-width: 400px
+	margin-left: auto
+	margin-right: auto
+	text-wrap: balance
+	+sm
+		padding: 30px 0
+.popup-box-head
+	display: flex
+	align-items: center
+	gap: 1.5rem
+	margin-bottom: 1.7rem
+	font-size: 1.8rem
+	font-weight: 500
+	text-transform: uppercase
+	img
+		flex: none
+#popup-forgot-password
+	.popup__content
+		max-width: 60rem
+
+#popup-login, #popup-status
+	.popup__content
+		max-width: 38rem
+		+sm
+			max-width: 36rem
+		+xs
+			max-width: 33rem
+
+#popup-alert, #popup-alert-error, #popup-alert-success
+	.popup__content
+		max-width: 46rem
+		padding: 3rem 4rem 3rem 3rem
+	.popup__close
+		width: 2.5rem
+		height: 2.5rem
+		.icon
+			font-size: 1.8rem
+			color: #797979
+
+#popup-alert-error
+	.popup__content
+		background: #FFEFEF
+
+#popup-alert-success
+	.popup__content
+		background: #EAFFD8
+
+#popup-consultation, #popup-notify
+	.popup__content
+		max-width: 66rem
+
+.popup-swiper
+	flex: 1
+	min-width: 1px
+	padding-left: 12%
+	padding-right: 12%
+	height: 100%
+	position: relative
+	order: 1
+	+md
+		padding-left: 0
+		padding-right: 0
+		height: calc(100% - 9rem - 2rem)
+
+	&__prev, &__next
+		cursor: pointer
+		padding: 0
+		height: 1.4rem
+		width: 0.8rem
+		margin: 0 0.8rem .2rem
+		background-color: transparent
+		text-indent: -999px
+		overflow: hidden
+		z-index: 10
+		+md
+			display: none !important
+		&:after
+			width: 0px
+			height: 0px
+			border-style: solid
+			display: block
+			content: ''
+
+	&__next
+		right: 4% !important
+		&:after
+			border-width: 1.6rem 0 1.6rem 2rem
+			border-color: transparent transparent transparent var(--accentColorActive)
+
+	&__prev
+		left: 4% !important
+		&:after
+			border-width: 1.6rem 2rem 1.6rem 0
+			border-color: transparent var(--accentColorActive) transparent transparent
+
+	.video
+		width: 100%
+		height: 100%
+		position: relative
+		video
+			position: absolute
+			top: 0
+			left: 50%
+			max-width: 100%
+			transform: translate(-50%, 0)
+			object-fit: cover
+
+			height: 100%
+			background-size: cover
+
+.popup-swiper-thumbs
+	width: 8rem
+	flex: none
+	margin-right: 3rem !important
+	+md
+		width: auto
+		height: 8rem !important
+		margin-right: 0 !important
+		margin-top: 2rem
+
+	.swiper-slide
+		display: flex
+		align-items: center
+		justify-content: center
+		border: .2rem solid transparent
+		background: rgba(41,43,83,.03)
+		+md
+			width: 6rem
+		img
+			max-width: 100%
+			max-height: 100%
+	.swiper-slide-thumb-active
+		border-color: var(--accentColorActive)

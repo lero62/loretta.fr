@@ -1,0 +1,304 @@
+
+.text-left
+	text-align: left
+
+.text-center
+	text-align: center
+
+.text-right
+	text-align: right
+
+.nowrap
+	white-space: nowrap
+
+.ttu
+	text-transform: uppercase
+
+.underline
+	border-bottom: 1px solid var(--accentColorActive)
+	&:hover
+		border-color: transparent
+
+.italic
+	font-style: italic
+
+.font-700
+	font-weight: 700 !important
+.font-500
+	font-weight: 500 !important
+.font-400
+	font-weight: 400 !important
+.font-300
+	font-weight: 300 !important
+.font-100
+	font-weight: 100 !important
+
+.color-gray
+	color: #AFAFAF !important
+.color-gray-100
+	color: #797979 !important
+
+.size-xxl
+	font-size: 2.6rem !important
+	+sm
+		font-size: 2.4rem !important
+	+xs
+		font-size: 2.2rem !important
+.size-xl
+	font-size: 2.4rem !important
+	+sm
+		font-size: 2.2rem !important
+	+xs
+		font-size: 2rem !important
+.size-lg
+	font-size: 2rem !important
+	+sm
+		font-size: 1.8rem !important
+.size-m
+	font-size: 1.8rem !important
+
+.size-md
+	font-size: 1.6rem !important
+
+.size-sm
+	font-size: 1.4rem !important
+
+.color-accent
+	color: var(--accentColorActive) !important
+
+.w-full
+	width: 100%
+
+.flex-1
+	flex: 1
+	min-width: 1px
+
+.min-250
+	min-width: 250px
+
+.unstyle
+	list-style-type: none
+	margin: 0
+	padding: 0
+
+@media screen and (min-width: 768px)
+	.flex-md-1
+		flex: 1
+		min-width: 1px
+
+.margin
+	+margin
+
+.style-text
+	font-size: 1.6rem
+
+	& > *:first-child:not(.row)
+		margin-top: 0
+	& > *:last-child
+		margin-bottom: 0
+	p
+		margin-bottom: 1.5rem
+	h1
+		font-size: 2rem
+		font-weight: 500
+		margin-bottom: 2rem
+
+	h3
+		font-size: 1.8rem
+		font-weight: 500
+		margin-bottom: 1.5rem
+		margin-top: 3rem
+
+	ul, ol
+		margin-left: 3rem
+		margin-bottom: 1.5rem
+		li:not(:last-child)
+			margin-bottom: 1rem
+
+	figure
+		margin-bottom: 3rem
+		margin-top: 3rem
+		display: block
+		width: 100%
+		img
+			border-radius: 1rem
+			width: 100%
+	figcaption
+		text-align: center
+		font-weight: 400
+
+	.row
+		figure:first-child:last-child
+			margin-bottom: 0
+			margin-top: 0
+
+	.img-right
+		float: right
+		margin-left: 20px
+		margin-bottom: 20px
+		max-width: 40%
+
+.styled-images
+	display: flex
+	flex-wrap: wrap
+	align-items: flex-start
+	gap: 2rem
+	width: 100%
+
+.styled-logos
+	width: 100%
+	display: flex
+	margin: 50px 0
+	gap: 30px 20px
+	justify-content: space-around
+	align-items: flex-end
+	+sm
+		flex-direction: column
+		align-items: center
+		gap: 10px
+	&__item
+		position: relative
+
+	&__separate
+		align-self: center
+		margin-top: -30px
+		background: url('../img/styled-logos-separate.svg') no-repeat center
+		width: 1.3rem
+		height: 2.7rem
+		+sm
+			transform: rotate(90deg)
+			margin-top: 0
+	figure
+		margin-bottom: 0
+		margin-top: 0
+		img
+			border-radius: 0
+.list-icon
+	display: grid
+	grid-template-columns: repeat(3, 1fr)
+	align-items: flex-start
+	gap: 2rem 3rem
+	margin-left: 0 !important
+	+lg
+		grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr))
+	&__item
+		display: flex
+		align-items: flex-start
+
+		gap: 1.5rem 2rem
+		margin: 0 !important
+		+xxm
+			flex-direction: column
+			text-align: center
+		+lg
+			flex-direction: row
+			text-align: left
+	&__icon
+		flex: none
+		width: 35px
+		display: flex
+		justify-content: center
+		+xxm
+			margin-left: auto
+			margin-right: auto
+		+lg
+			margin-left: 0
+	&__content
+		flex: 1
+		align-self: center
+		width: 100%
+		line-height: 1.4
+
+[data-hide-mobile]
+	display: block
+	+sm
+		display: none
+
+._show
+	display: block
+
+hr
+	background: #AFAFAF
+	height: 0.1rem
+	border: none
+	margin: 2rem 0
+	width: 100%
+
+figure
+	img
+		max-width: 100%
+		display: block
+figcaption
+	font-style: italic
+	font-size: 1.6rem
+	margin-top: 1.5rem
+
+a
+	text-decoration: none
+	border-bottom: 2px solid var(--accentColorActive)
+
+	&:hover
+		color: var(--accentColorActive)
+		border-color: transparent
+		text-decoration: none
+
+.table-container
+	overflow: hidden
+	overflow-x: auto
+.table
+	width: 100%
+
+	th, td
+		border-top: 1px solid #afafaf
+		border-bottom: 1px solid #afafaf
+		padding: 2rem 1.5rem
+
+	th
+		padding-top: 2.5rem
+		padding-bottom: 2.5rem
+		+sm
+			padding-top: 1.5rem
+			padding-bottom: 1.5rem
+
+	&--vertical-top
+		td
+			vertical-align: top
+
+.tb-order
+	width: 200px
+
+.order-number
+	display: inline-flex
+	align-items: center
+	gap: 1rem
+	.icon
+		color: var(--accentColorActive)
+		font-size: 2.6rem
+.order-status
+	max-width: 200px
+	margin-left: auto
+	margin-right: auto
+	display: block
+.rub
+	white-space: nowrap
+	&:after
+		content: 'у'
+		font-family: pt
+		font-size: 95%
+		margin-left: 4px
+		font-weight: 400
+	&.font-500
+		&:after
+			content: 'е'
+	&.font-700
+		&:after
+			content: 'э'
+
+[data-href="card-review"]._active,
+[data-href="card-question"]._active 
+			display: none
+
+.toggle-show
+	display: none
+.toggle-show._show
+	display: block !important

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./template/_head.html', {
+"title": "Home"
+})
+
+<body class="loaded">
+  <!-- BEGIN main wrapper -->
+  <div class="main-wrapper">
+
+    <!-- BEGIN HEADER -->
+    @@include('./template/_header2.html', {
+    "nav": 0,
+    "user": 0,
+    })
+    <!-- HEADER EOF   -->
+
+    <!-- BEGIN MAIN -->
+    <main class="main">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <button data-href="#popup-alert" class="_open-modal">This is an information message</button>
+
+
+            <div id="popup-alert" class="_modal popup">
+              <div class="popup__body">
+                <div class="popup__content _modal__content">
+                  <div class="popup__close _close-modal">
+                    <svg class="icon icon-close">
+                      <use xlink:href="img/sprite.svg#close"></use>
+                    </svg>
+                  </div>
+                  <div class="d-flex align-items-start gap-2">
+                    <div class="alert__icon">
+                      <img src="img/flash-sale.svg" alt="">
+                    </div>
+                    <div class="alert__body align-self-center">
+                      <div class="mb-1"><strong>This is an information message</strong></div>
+                      Notification message. Here will be information.
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <button data-href="#popup-alert-error" class="_open-modal">This is an error message</button>
+            <div id="popup-alert-error" class="_modal popup">
+              <div class="popup__body">
+                <div class="popup__content _modal__content">
+                  <div class="popup__close _close-modal">
+                    <svg class="icon icon-close">
+                      <use xlink:href="img/sprite.svg#close"></use>
+                    </svg>
+                  </div>
+                  <div class="d-flex align-items-start gap-2">
+                    <div class="alert__icon">
+                      <img src="img/error.svg" alt="">
+                    </div>
+                    <div class="alert__body align-self-center">
+                      <div class="mb-1"><strong>This is an error message</strong></div>
+                      Notification message. Here will be information.
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <button data-href="#popup-card-add" class="_open-modal">Товар добавлен</button>
+
+            <div id="popup-card-add" class="_modal popup" style="--popup-width: 46rem">
+              <div class="popup__body">
+                <div class="popup__content _modal__content text-center">
+                  <div class="popup__close _close-modal">
+                    <svg class="icon icon-close">
+                      <use xlink:href="img/sprite.svg#close"></use>
+                    </svg>
+                  </div>
+
+                  <div class="mb-3 size-m"><strong>Товар добавлен</strong></div>
+                  <button class="btn">ПЕРЕЙТИ В КОРЗИНУ</button>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <button data-href="#popup-alert-success" class="_open-modal">This is an success message</button>
+            <div id="popup-alert-success" class="_modal popup">
+              <div class="popup__body">
+                <div class="popup__content _modal__content">
+                  <div class="popup__close _close-modal">
+                    <svg class="icon icon-close">
+                      <use xlink:href="img/sprite.svg#close"></use>
+                    </svg>
+                  </div>
+                  <div class="d-flex align-items-start gap-2">
+                    <div class="alert__icon">
+                      <img src="img/tick-circle.svg" alt="">
+                    </div>
+                    <div class="alert__body align-self-center">
+                      <div class="mb-1"><strong>This is an success message</strong></div>
+                      Notification message. Here will be information.
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+        </div>
+        <div>
+          <span class="font-400 rub">450</span>
+          <span class="font-500 rub">450</span>
+          <span class="font-700 rub">450</span>
+
+        </div>
+        <div class="d-flex flex-wrap gap-3 mt-4">
+          <svg class="icon icon-rub">
+            <use xlink:href="img/sprite.svg#rub"></use>
+          </svg>
+          <svg class="icon icon-track">
+            <use xlink:href="img/sprite.svg#track"></use>
+          </svg>
+          <svg class="icon icon-langs">
+            <use xlink:href="img/sprite.svg#langs"></use>
+          </svg>
+          <svg class="icon icon-new">
+            <use xlink:href="img/sprite.svg#new"></use>
+          </svg>
+          <svg class="icon icon-sale">
+            <use xlink:href="img/sprite.svg#sale"></use>
+          </svg>
+          <svg class="icon icon-newspaper">
+            <use xlink:href="img/sprite.svg#newspaper"></use>
+          </svg>
+          <svg class="icon icon-reviews">
+            <use xlink:href="img/sprite.svg#reviews"></use>
+          </svg>
+          <svg class="icon icon-contact">
+            <use xlink:href="img/sprite.svg#contact"></use>
+          </svg>
+        </div>
+      </div>
+    </main>
+    <!-- MAIN EOF   -->
+
+    <!-- BEGIN FOOTER -->
+    @@include('./template/_footer.html', {})
+    <!-- FOOTER EOF   -->
+
+  </div>
+  <!-- main wrapper EOF   -->
+
+  <!-- BEGIN POPUPS -->
+  @@include('./template/popups/search.html')
+  @@include('./template/popups/navbar.html')
+  @@include('./template/popups/forgot_password.html')
+  <!-- POPUPS EOF   -->
+
+  @@include('./template/_js.html', {})
+
+</body>
+
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./template/_head.html', {
+"title": "Home"
+})
+
+<body class="loaded home-page">
+	<!-- BEGIN main wrapper -->
+	<div class="main-wrapper">
+
+		<!-- BEGIN HEADER -->
+		@@include('./template/_header2.html', {
+		"nav": 0,
+		"user": 0,
+		})
+		<!-- HEADER EOF   -->
+
+		<!-- BEGIN MAIN -->
+		<main class="main">
+			<div class="container">
+				<div class="main__wrap">
+					@@include('./template/blocks/aside-left.html')
+					<div class="main__content">
+						<div class="box about-block">
+							<div class="box__head ">
+
+								<div class="box__icon">
+									<svg class="icon icon-tights">
+										<use xlink:href="img/sprite.svg#tights"></use>
+									</svg>
+								</div>
+								<div class="box__title">
+									<span class="hidden-sm">Колготки и чулки - доставка по всей России</span>
+									<span class="visible-sm">Интернет-магазин колготок и чулок</span>
+								</div>
+							</div>
+							<div class="box__body">
+								<div class="style-text">
+
+									<p>"Лоретта" - розничный интернет-магазин, в котором вы можете заказать колготки, чулки и нижнее белье на любой вкус с доставкой по всей России. Более 10000 артикулов на любой случай: от классики до авангарда от самых популярных торговых марок.
+
+
+									<ul class="list-icon">
+										<li class="list-icon__item">
+											<div class="list-icon__icon">
+												<img src="img/medal.svg" alt="">
+											</div>
+											<div class="list-icon__content">
+												первый онлайн-магазин колготок - открыты с 2005 года
+											</div>
+										</li>
+										<li class="list-icon__item">
+											<div class="list-icon__icon">
+												<img src="img/calendar.svg" alt="">
+											</div>
+											<div class="list-icon__content">
+												более 30 лет работы в области колготок и чулок
+
+											</div>
+										</li>
+										<li class="list-icon__item">
+											<div class="list-icon__icon">
+												<img src="img/bag.svg" alt="">
+											</div>
+											<div class="list-icon__content">
+												свыше 300 тыс. выполненных заказов по всей России
+
+											</div>
+										</li>
+
+									</ul>
+
+								</div>
+							</div>
+						</div>
+						<div class="box">
+							<div class="box__head">
+								<div class="box__icon">
+									<svg class="icon icon-new">
+										<use xlink:href="img/sprite.svg#new"></use>
+									</svg>
+								</div>
+								<div class="box__title"><span class="hidden-sm">Новинки - </span>Колготки и чулки</div>
+							</div>
+							<div class="box__body">
+								<div class="products">
+									{% for product in range(0,10) %}
+									<div class="products__item">
+										<a href="#" class="product">
+											<picture class="product__img">
+												<img src="img/product-img.jpg" alt="">
+											</picture>
+											<div class="product__title">Palome</div>
+										</a>
+									</div>
+									{% endfor %}
+
+
+								</div>
+							</div>
+						</div>
+						<div class="box">
+							<div class="box__head">
+								<div class="box__icon">
+									<svg class="icon icon-new">
+										<use xlink:href="img/sprite.svg#new"></use>
+									</svg>
+								</div>
+								<div class="box__title"><span class="hidden-sm">Новинки - </span>Нижнее белье и одежда</div>
+							</div>
+							<div class="box__body">
+								<div class="products">
+									{% for product in range(0,10) %}
+									<div class="products__item">
+										<a href="#" class="product">
+											<picture class="product__img">
+												<img src="img/product-img.jpg" alt="">
+											</picture>
+											<div class="product__title">Palome</div>
+										</a>
+									</div>
+									{% endfor %}
+
+
+								</div>
+							</div>
+						</div>
+						<div class="promo">
+							<img src="img/kolgotky.webp" alt="">
+						</div>
+						<div class="box">
+							<div class="box__head">
+								<div class="box__icon">
+									<svg class="icon icon-comments">
+										<use xlink:href="img/sprite.svg#comments"></use>
+									</svg>
+								</div>
+								<div class="box__title">Отзывы о товарах</div>
+							</div>
+							<div class="box__body">
+								<div class="reviews">
+									<div class="swiper reviews-swiper">
+										<div class="swiper-wrapper">
+											{% for review in range(0,4) %}
+											<div class="swiper-slide">
+												<div class="review">
+													<div class="review__img">
+														<a href="#"><img src="img/product-img.jpg" alt=""></a>
+													</div>
+													<div class="review__top">
+														<div class="review__title"><a href="#">MissO P105 Dark Grey</a></div>
+														<div class="review__value">всего отзывов: 1</div>
+														<div class="review__price"><span class="rub">Цена: 1494</span></div>
+													</div>
+													<div class="review__body">
+														<div class="review__text js-collapse-text" id="collapse-text-{{loop.index}}">Невероятно качественные, мягкие с идеальными цвет оттенками и приятным блеском. Невероятно качественные, мягкие с идеальными цвет оттенками и приятным блеском. Невероятно качественные, мягкие с идеальными цвет оттенками и приятным блеском. Невероятно качественные, мягкие с идеальными цвет оттенками и приятным блеском. Не</div>
+
+													</div>
+													<div class="review__footer">
+														<a href="#collapse-text-{{loop.index}}" class="show-more js-collapse-text-toggle">читать полностью</a>
+														<div class="review__info">Дашуля, г. Уфа, <span>21.12.2023</span></div>
+													</div>
+												</div>
+											</div>
+											{% endfor %}
+										</div>
+
+									</div>
+									<div class="swiper-pagination reviews-swiper-pagination"></div>
+									<div class="swiper-button-prev reviews-swiper-prev"></div>
+									<div class="swiper-button-next reviews-swiper-next"></div>
+								</div>
+							</div>
+						</div>
+
+
+					</div>
+					@@include('./template/blocks/aside-right.html')
+				</div>
+
+				@@include('./template/blocks/subscribe.html')
+			</div>
+		</main>
+		<!-- MAIN EOF   -->
+
+		<!-- BEGIN FOOTER -->
+		@@include('./template/_footer.html', {})
+		<!-- FOOTER EOF   -->
+
+	</div>
+	<!-- main wrapper EOF   -->
+
+	<!-- BEGIN POPUPS -->
+	@@include('./template/popups/search.html')
+	@@include('./template/popups/navbar.html')
+	@@include('./template/popups/forgot_password.html')
+	@@include('./template/popups/login.html')
+	@@include('./template/popups/status.html')
+	@@include('./template/popups/survey.html')
+	<!-- POPUPS EOF   -->
+
+	@@include('./template/_js.html', {})
+
+</body>
+
+</html>

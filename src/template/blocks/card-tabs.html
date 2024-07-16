@@ -1,0 +1,220 @@
+<div class="tab-block mt-5" data-tabs>
+  <nav class="tab-block__nav" data-tabs-nav>
+    <div class="tab-block__navitem _active" data-tabs-button="0">
+      <svg class="icon icon-track">
+        <use xlink:href="img/sprite.svg#track"></use>
+      </svg>
+      <span>Доставка</span>
+    </div>
+    <div class="tab-block__navitem " data-tabs-button="1">
+      <svg class="icon icon-reviews">
+        <use xlink:href="img/sprite.svg#reviews"></use>
+      </svg>
+      <span>Отзывы: 0</span>
+    </div>
+    <div class="tab-block__navitem" data-tabs-button="2">
+      <svg class="icon icon-questions">
+        <use xlink:href="img/sprite.svg#questions"></use>
+      </svg>
+      <span>Вопросы: 2</span>
+    </div>
+    <div class="tab-block__navitem" data-tabs-button="3">
+      <svg class="icon icon-list">
+        <use xlink:href="img/sprite.svg#list"></use>
+      </svg>
+      <span class="hidden-sm">Характеристики</span>
+      <span class="visible-sm">Хар-ка</span>
+    </div>
+  </nav>
+  <div class="tab-block__items" data-tabs-items>
+    <div class="tab-block__item _active" data-tabs-block>
+      <div class="d-flex align-items-center gap-2 mb-3">
+        <img src="img/delivery_truck_shipping_package_fast.svg" alt="">
+        <h2 class="font-700  ">Ближайший день доставки:</h2>
+      </div>
+
+      <div class="delivery-list">
+        <div class="delivery-list__item">
+          <div class="delivery-list__label">
+            Москва
+          </div>
+          <div class="delivery-list__labeled">
+            <p>Пятница, 19 Января</p>
+            <p>Пункт выдачи - от 150 руб. Бесплатно от 2900 руб.</p>
+            <p>Курьер - 290 руб. Бесплатно от 2900 руб.</p>
+          </div>
+        </div>
+        <div class="delivery-list__item">
+          <div class="delivery-list__label">
+            Санкт-Петербург:
+          </div>
+          <div class="delivery-list__labeled">
+            <p>Суббота, 20 Января</p>
+            <p>Пункт выдачи - 190 руб. От 3500 руб - 0 руб.</p>
+            <p>Курьер - 325 руб. Бесплатно от 3500 руб.</p>
+          </div>
+        </div>
+        <div class="delivery-list__item">
+          <div class="delivery-list__label">
+            Другой город:
+          </div>
+          <div class="delivery-list__labeled">
+            <div class="d-flex flex-wrap gap-3 mb-3">
+              <div class="min-250 flex-1">
+                <div class="form-wrapper">
+                  <span class="form-placeholder">Выберите регион</span>
+                  <select class="form-select form-select--light" data-placeholder="">
+                    <option></option>
+                    <option>белый</option>
+                    <option>чорный</option>
+                  </select>
+                </div>
+              </div>
+              <div class="min-250 flex-1">
+                <div class="form-wrapper">
+                  <span class="form-placeholder">Выберите город</span>
+                  <select class="form-select form-select--light" data-placeholder="">
+                    <option></option>
+                    <option selected>Ростов-на-Дону</option>
+                    <option>14</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <p>С Четверг, 25 Января</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-block__item " data-tabs-block>
+      <p>По этому товару еще нет отзывов. Будем благодарны, если вы оставите отзыв.</p>
+      <div class="mt-4">
+        <button class="btn _toggle-block" data-href="card-review">НАПИСАТЬ ОТЗЫВ</button>
+      </div>
+
+      <div class="mt-5 toggle-show" id="card-review">
+        <form action="#">
+
+
+          <div class="row gy-0">
+            <div class="col-xxl-6 col-xl-12 col-md-6">
+              <div class="mb-4">
+                <div class="form-wrapper">
+                  <span class="form-placeholder form-placeholder--bg-white">Имя<span>*</span></span>
+                  <input type="text" class="form-input" placeholder="">
+                </div>
+              </div>
+              <div class="mb-4">
+                <div class="form-wrapper">
+                  <span class="form-placeholder form-placeholder--bg-white">Город<span>*</span></span>
+                  <input type="text" class="form-input" placeholder="">
+                </div>
+              </div>
+              <div class="mb-4">
+                <div class="form-wrapper">
+                  <span class="form-placeholder form-placeholder--bg-white">Номер заказа</span>
+                  <input type="number" class="form-input" placeholder="">
+                </div>
+              </div>
+              <div class="mb-4">
+                <div class="form-wrapper">
+                  <span class="form-placeholder form-placeholder--bg-white">E-mail</span>
+                  <input type="email" class="form-input" placeholder="">
+                </div>
+              </div>
+
+            </div>
+            <div class="col-xxl-6 col-xl-12 col-md-6">
+              <div class="mb-4">
+                <div class="form-wrapper">
+                  <span class="form-placeholder form-placeholder--bg-white">Напишите Ваш отзыв</span>
+                  <textarea class="form-input" style="--input-height: 17.2rem" placeholder=""></textarea>
+                </div>
+              </div>
+              <button type="submit" class="btn btn--block">ОТПРАВИТЬ</button>
+            </div>
+          </div>
+
+          <p class="mt-4">Если отзыв отрицательный, пожалуйста, укажите номер заказа. Без указания номера, отзыв не будет опубликован.</p>
+        </form>
+      </div>
+    </div>
+    <div class="tab-block__item" data-tabs-block>
+
+      <div class="reviews reviews--vertical p-0">
+        {% for review in range(0,3) %}
+
+        <div class="review review--not-img">
+
+          <div class="review__body">
+            <div class="review__text">Невероятно качественные, мягкие с идеальными цвет оттенками и приятным блеском. </div>
+            <div class="review__info">Дашуля, г. Уфа, <span>21.12.2023</span></div>
+          </div>
+        </div>
+
+        {% endfor %}
+      </div>
+
+      <div class="mt-4">
+        <button class="btn _toggle-block" data-href="card-question">НАПИСАТЬ Вопрос</button>
+      </div>
+
+      <div class="mt-5 toggle-show" id="card-question">
+        <form action="#">
+          <div class="row gy-0">
+            <div class="col-xxl-6 col-xl-12 col-md-6">
+              <div class="mb-4">
+                <div class="form-wrapper">
+                  <span class="form-placeholder form-placeholder--bg-white">Имя<span>*</span></span>
+                  <input type="text" class="form-input" placeholder="">
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-6 col-xl-12 col-md-6">
+              <div class="mb-4">
+                <div class="form-wrapper">
+                  <span class="form-placeholder form-placeholder--bg-white">E-mail<span>*</span></span>
+                  <input type="email" class="form-input" placeholder="">
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="mb-4">
+                <div class="form-wrapper">
+                  <span class="form-placeholder form-placeholder--bg-white">Напишите Ваш отзыв<span>*</span></span>
+                  <textarea class="form-input" style="--input-height: 17.2rem" placeholder=""></textarea>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-xxl-6 col-xl-12 col-md-6">
+              <div class="mb-4">
+                <button type="submit" class="btn btn--block">ОТПРАВИТЬ</button>
+              </div>
+
+            </div>
+          </div>
+
+          <p class="mt-4">Если отзыв отрицательный, пожалуйста, укажите номер заказа. Без указания номера, отзыв не будет опубликован.</p>
+        </form>
+      </div>
+
+    </div>
+    <div class="tab-block__item" data-tabs-block>
+      <div class="card__text mb-4">
+        Высококачественные прозрачные колготки с невидимо усиленными пальцами ног и плоскими швами для комфорта.
+      </div>
+      <div class="card-details ">
+        <ul>
+          <li><strong>Артикул для заказа:</strong> 294286</li>
+          <li><strong>Марка:</strong> <a href="#">Fiore</a></li>
+          <li><strong>Производство:</strong> Польша. Произведено в ЕС</li>
+          <li><strong>Плотность:</strong> 20 den</li>
+          <li><strong>Состав:</strong> 82% полиамид, 14% эластан, 4% хлопок</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

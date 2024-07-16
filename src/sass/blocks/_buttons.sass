@@ -1,0 +1,104 @@
+.btn, a.btn
+	position: relative
+	display: inline-flex
+	gap: 1rem
+	align-items: center
+	justify-content: center
+	vertical-align: middle
+	height: 4.4rem
+	padding: 0 2.5rem
+	color: #fff
+	font: 500 1.4rem/1.4rem var(--font), Arial, sans-serif
+	text-align: center
+	text-decoration: none
+	text-transform: uppercase
+	border: none
+	background-color: var(--accentColorActive)
+	border-radius: 1rem
+	cursor: pointer
+	transition: all 0.2s linear
+	overflow: hidden
+	flex: none
+	+xl
+		padding-left: 2.5rem
+		padding-right: 2.5rem
+	&:hover, &:focus-visible
+		background: var(--accentColorHover)
+		color: #fff
+
+	.icon
+		font-size: 2rem
+		color: #fff
+
+	&--primary
+		background: #fff
+		color: var(--color)
+		.icon
+			color: var(--accentColorActive)
+	&--lg
+		height: 5rem
+		font-size: 1.6rem
+	&--sm
+		height: 3.2rem
+		font-size: 1.4rem
+		padding-left: 1.5rem
+		padding-right: 1.5rem
+	&--block
+		display: flex
+		width: 100%
+		min-width: none
+		padding-left: rem(10)
+		padding-right: rem(10)
+	&--icon
+		padding: 0
+		width: 3.5rem
+		height: 3.5rem
+		.icon-filter
+			top: 1px
+		&.is-active
+			background: #fff
+			.icon
+				color: var(--accentColorActive)
+	&-sm-block
+		+sm
+			display: flex
+			width: 100%
+			min-width: none
+			padding-left: rem(10)
+			padding-right: rem(10)
+	&-xs-block
+		+xs
+			display: flex
+			width: 100%
+			min-width: none
+			padding-left: rem(10)
+			padding-right: rem(10)
+
+input.btn,
+button.btn
+	display: inline-block
+	&--block
+		display: block
+		width: 100%
+
+.btn-text
+	border: none
+	padding: 0
+	background-color: transparent
+	font: 400 2.4rem/2.4rem var(--font), Arial, sans-serif
+	text-decoration: underline
+	&:hover
+		color: var(--accentColorActive)
+		text-decoration: none
+
+.btn-icon
+	width: 2.6rem
+	height: 2.6rem
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	padding: 0
+	border: none
+	background: transparent
+	.icon
+		font-size: 2.6rem

@@ -1,0 +1,435 @@
+.main-wrapper
+	padding: 0
+	min-width: rem(320)
+	position: relative
+	overflow: clip
+	opacity: 1
+	z-index: 2
+	flex: 1 1 auto
+	display: flex
+	flex-flow: column nowrap
+	min-height: 100vh
+	width: 100%
+
+.main
+	width: 100%
+	min-width: rem(320)
+	text-align: left
+	flex: 1 1 auto
+	&__wrap
+		--sidebar-width: 33.6rem
+		display: flex
+		align-items: flex-start
+		gap: 2.4rem
+		justify-content: center
+		+xl
+			--sidebar-width: 30rem
+		+md
+			flex-direction: column
+	&__content
+
+		min-width: 28rem
+		width: calc(100% - var(--sidebar-width) - var(--sidebar-width) - 4.8rem)
+		display: flex
+		flex-direction: column
+		gap: 2.5rem
+
+		+lg
+			width: calc(100% - var(--sidebar-width) - 2.4rem)
+		+md
+			gap: 1.5rem
+			width: 100%
+	&__aside
+		display: flex
+		flex-direction: column
+		gap: 2.5rem
+		width: var(--sidebar-width)
+		flex: none
+		+md
+			width: 100%
+
+		& + &
+			order: -1
+
+.container
+	--gutters: 2rem
+	width: 100%
+	min-width: rem(320)
+	position: relative
+	max-width: 1700px
+	padding-left: var(--gutters)
+	padding-right: var(--gutters)
+	+sm
+		--gutters: 2rem
+	+xs
+		--gutters: 1.5rem
+	+xxs
+		--gutters: 1rem
+
+.box
+	background: #F5F5F5
+	+xs
+		margin-left: -1.5rem
+		margin-right: -1.5rem
+	&__head
+		padding: .6rem 3rem
+		background: var(--accentColor)
+		display: flex
+		align-items: center
+		min-height: 6rem
+		gap: 2rem
+
+		+xl
+			padding-left: 2.5rem
+			padding-right: 2.5rem
+		+sm
+			padding-left: 2rem
+			padding-right: 2rem
+		+xs
+			gap: 2rem
+			padding-left: 1.5rem
+			padding-right: 1.5rem
+		&--sticky
+			position: sticky
+			// top: 62px
+			top: 0
+			z-index: 20
+	&__icon
+		.icon
+			font-size: 3rem
+			color: var(--accentColorActive)
+			display: block
+			&-zoom
+				transform: scale(0.8)
+			&-heart
+				fill: none
+	&__title
+		font-weight: 500
+		font-size: 1.6rem
+		line-height: 1
+		+sm
+			font-size: 1.8rem
+		a
+			text-decoration: underline
+			&:hover
+				text-decoration: none
+	&__caret
+		width: 3rem
+		height: 3rem
+		background: url('../img/caret.svg') no-repeat center
+		margin-left: auto
+	&__body
+		padding: 3rem
+		+xl
+			padding: 2.5rem
+		+sm
+			padding: 2rem
+		+xs
+			padding: 2rem 1.5rem
+		&-title
+			font-size: 2.4rem
+			font-weight: 500
+			text-transform: uppercase
+			margin-top: 4.6rem
+			margin-bottom: 1rem
+			line-height: 1.2
+			+xxl
+				font-size: 2.2rem
+			&:first-child
+				margin-top: 0
+		&.filter-block
+			margin-bottom: 0
+			border: none
+	.menu-toggle
+		margin-top: -2rem
+		margin-bottom: -2rem
+	.table-container
+		// margin-left: -3rem
+		// margin-right: -3rem
+		// +xl
+		// 	margin-left: -2.5rem
+		// 	margin-right: -2.5rem
+		+sm
+			margin-left: -2rem
+			margin-right: -2rem
+		+xs
+			margin-left: -1.5rem
+			margin-right: -1.5rem
+
+.crumbs
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+	gap: 1rem
+	white-space: nowrap
+	font-size: 1.6rem
+	font-weight: 500
+
+	a
+		text-decoration: underline
+		&:hover
+			text-decoration: none
+			color: var(--color)
+	img
+		margin-top: 0.2rem
+
+.search-block
+	&__input
+		position: relative
+		.form-input
+			padding-right: 8rem
+			background: #fff
+
+	&__actions
+		position: absolute
+		top: .7rem
+		right: 1rem
+		display: flex
+		gap: .6rem
+
+	&__submit, &__clear
+		width: 3rem
+		height: 3rem
+		display: flex
+		align-items: center
+		justify-content: center
+		border: none
+		background: transparent
+		padding: 0
+		.icon
+			font-size: 1.8rem
+
+	&__submit
+		.icon
+			color: var(--accentColorActive)
+	&__clear
+		display: none
+		&.is-show
+			display: flex
+		.icon
+			color: #B8BBBF
+.menu-toggle
+	list-style-type: none
+	&__item
+		&:not(:last-child)
+			border-bottom: 1px solid #AFAFAF
+
+	&__link
+		display: block
+		position: relative
+		padding: 1.3rem 2.5rem 1.3rem 0
+		font-size: 1.6rem
+		font-weight: 500
+		text-transform: uppercase
+		text-decoration: none
+		border: none
+		&._toggle
+
+			&:after
+				content: ''
+				display: block
+				position: absolute
+				top: 50%
+				right: 0
+				background: url('../img/caret.svg') no-repeat center
+				width: 1.4rem
+				height: 1.2rem
+				transform: rotate(-90deg)
+				margin-top: -0.6rem
+		&._active
+
+			&:after
+				transform: rotate(0deg)
+
+	.menu
+		display: none
+		margin-bottom: 1.4rem
+
+.menu
+	font-size: 1.4rem
+	list-style-type: disc
+	padding-left: 2rem
+	margin: 0
+	text-transform: uppercase
+
+	li
+		margin-bottom: 1rem
+		line-height: 1.15
+		&::marker
+			color: var(--accentColorActive)
+		&:last-child
+			margin-bottom: 0
+	a
+		text-decoration: none
+		border: none
+		&:hover
+			color: var(--accentColorActive)
+
+	&--ol
+		list-style-type: none
+		+counter(li)
+		margin-left: 0
+		font-weight: 300
+		padding-left: 0
+		text-transform: none
+		li
+			position: relative
+			padding-left: 4rem
+
+			margin-bottom: 2.2rem
+			&:before
+				content: counter(li)
+				position: absolute
+				left: 0
+				top: 50%
+				transform: translate(0,-50%)
+				font-size: 1.5rem
+				font-weight: 700
+				width: 2.8rem
+				height: 2.8rem
+				text-align: center
+				line-height: 2.4rem
+				border-radius: 50%
+				border: .2rem solid var(--accentColorActive)
+
+.user-menu
+	margin-left: 2rem
+	font-size: 1.6rem
+	li
+		margin-bottom: 1.4rem
+		&::marker
+			color: var(--accentColorActive)
+		&:last-child
+			margin-bottom: 0
+		&.is-active
+			a
+				color: var(--accentColorActive)
+
+	a
+		text-decoration: none
+		border: none
+		&:hover
+			color: var(--accentColorActive)
+
+.certificate
+	display: flex
+	flex-direction: column
+	gap: 1.5rem 2.5rem
+	+md
+		flex-direction: row
+		align-items: center
+	+xs
+		flex-direction: column
+		align-items: flex-start
+	&__content
+		display: flex
+		flex-direction: column
+		gap: 1.5rem 3rem
+		+xs
+			width: 100%
+	&__img
+		+md
+			width: 45%
+			min-width: 21rem
+		+xs
+			width: 100%
+			min-width: none
+		img
+			width: 100%
+	&__title
+		font-size: 1.8rem
+		font-weight: 500
+		+md
+			font-size: clamp(1.6rem, 2.6vw, 2.2rem)
+	&__button
+		.btn
+			width: 100%
+			+md
+				width: auto
+			+xs
+				width: 100%
+.subscribe
+	margin: 3.5rem 0
+	border-top: 1px solid #AFAFAF
+	border-bottom: 1px solid #AFAFAF
+	padding: 3rem 0
+	+lg
+		padding: 2.5rem 0
+	&__head
+
+		img
+			+lg
+				width: 4.4rem
+
+	&__title
+		font-size: 2rem
+		font-weight: 500
+
+	&__form
+		+sm
+			width: 100%
+			max-width: 44rem
+		.form-field
+			width: 30rem
+			+sm
+				width: 100%
+
+.promocode
+	padding: 1.4rem
+	border-radius: 1rem
+	border: 2px solid var(--accentColorActive)
+
+	&__code
+		font-size: 22px
+		line-height: 25px
+		color: var(--accentColorActive)
+.copy-wrapper
+	display: flex
+	align-items: center
+	justify-content: center
+	gap: 6px
+.copy
+	background: none
+	width: 25px
+	height: 25px
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	vertical-align: middle
+	padding: 0
+	border: none
+	.icon
+		color: #AFAFAF
+		font-size: 20px
+
+.copy-label
+	background: var(--accentColorActive)
+	display: inline-block
+	vertical-align: middle
+	white-space: nowrap
+	font-size: 16px
+	line-height: 25px
+	padding: 0 10px
+
+.hidden-lg
+	+lg
+		display: none !important
+
+.hidden-md
+	+md
+		display: none !important
+.hidden-sm
+	+sm
+		display: none !important
+
+@media screen and (min-width: $sm + 1)
+	.visible-sm
+		display: none !important
+
+@media screen and (min-width: $md + 1)
+	.visible-md
+		display: none !important
+
+@media screen and (min-width: $lg + 1)
+	.visible-lg
+		display: none !important

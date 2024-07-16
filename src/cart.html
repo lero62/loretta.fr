@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./template/_head.html', {
+"title": "Home"
+})
+
+<body class="loaded">
+   <!-- BEGIN main wrapper -->
+   <div class="main-wrapper">
+
+      <!-- BEGIN HEADER -->
+      @@include('./template/_header2.html', {
+      "nav": 0,
+      "user": 0,
+      })
+      <!-- HEADER EOF   -->
+
+      <!-- BEGIN MAIN -->
+      <main class="main">
+         <div class="container">
+            <div class="main__wrap">
+               @@include('./template/blocks/aside-left.html')
+               <div class="main__content">
+                  <div class="box">
+                     <div class="box__head">
+                        <div class="box__icon">
+                           <svg class="icon icon-cart">
+                              <use xlink:href="img/sprite.svg#cart"></use>
+                           </svg>
+                        </div>
+                        <div class="box__title">Корзина</div>
+                     </div>
+                     <div class="box__body">
+                        <div class="head gap-4 d-flex align-items-center justify-content-between " data-da="main__content, first, 767">
+                           <div class="breadcrumbs">
+                              <a href="#" class="breadcrumbs__link">Главная</a>
+                              <span class="breadcrumbs__devider">&gt;</span>
+                              <span class="breadcrumbs__item">Корзина</span>
+                           </div>
+
+                        </div>
+                        <div class="info-block d-flex align-items-center gap-3 mb-5">
+                           <img src="img/mol.svg" alt="">
+                           <div>
+                              Дата доставки зависит от выбранного товара, города и способа доставки. Вы можете удалить из корзины товары, дата доставки которых вам не подходит.
+                           </div>
+                        </div>
+
+                        <div class="cart-wrap">
+                           <div class="cart-actions">
+
+                              <label class="checkbox checkbox--warning checkbox--sm">
+                                 <input type="checkbox" />
+                                 <span class="checkbox__text">Выбрать все</span>
+                              </label>
+
+                              <button class="cart-btn">
+                                 <svg class="icon icon-remove">
+                                    <use xlink:href="img/sprite.svg#remove"></use>
+                                 </svg>
+                                 <span>Удалить выбранное</span>
+                              </button>
+                           </div>
+
+                           <div class="cart-table">
+                              <div class="cart-table__item">
+                                 <div class="cart-table__checkbox">
+                                    <label class="checkbox checkbox--sm checkbox--warning">
+                                       <input type="checkbox" />
+                                       <span class="checkbox__text"></span>
+                                    </label>
+                                 </div>
+                                 <div class="cart-table__img">
+                                    <a href="#">
+                                       <img src="img/product-img.jpg" alt="">
+                                    </a>
+
+                                    <div class="d-md-none d-flex flex-wrap gap-4 alig-items-center mt-auto pt-3">
+                                       <button class="favorite-btn  _toggle-action">
+                                          <svg class="icon icon-heart">
+                                             <use xlink:href="img/sprite.svg#heart"></use>
+                                          </svg>
+                                       </button>
+
+                                       <button class="remove-btn">
+                                          <svg class="icon icon-remove">
+                                             <use xlink:href="img/sprite.svg#remove"></use>
+                                          </svg>
+                                       </button>
+                                    </div>
+                                 </div>
+                                 <div class="cart-table__content">
+                                    <a href="#" class="cart-table__title">FilodoroAbsolute 8 vita bassa</a>
+                                    <div class="card-details mt-3">
+                                       <ul>
+                                          <li><strong>Цвет:</strong> playa (телесный)</li>
+                                          <li><strong>Размер:</strong> 3-M</li>
+                                       </ul>
+                                    </div>
+                                    <div class="d-md-flex d-none gap-4 alig-items-center mt-auto pt-3">
+                                       <button class="favorite-btn  _toggle-action">
+                                          <svg class="icon icon-heart">
+                                             <use xlink:href="img/sprite.svg#heart"></use>
+                                          </svg>
+
+                                       </button>
+
+                                       <button class="remove-btn">
+                                          <svg class="icon icon-remove">
+                                             <use xlink:href="img/sprite.svg#remove"></use>
+                                          </svg>
+                                       </button>
+                                    </div>
+                                 </div>
+                                 <div class="cart-table__info">
+                                    <div class="cart-buy">
+                                       <span class="cart-price rub font-700">364</span>
+                                       <div class="counter" data-counter>
+                                          <button class="counter__btn counter__btn--minus" data-counter-minus type="button">–</button>
+                                          <input class="counter__val form-input form-input--warning" data-counter-val value="1" />
+                                          <button class="counter__btn counter__btn--plus" data-counter-plus type="button">+</button>
+                                       </div>
+                                       <span class="cart-count">
+                                          <span class="rub">544</span> / 1 шт.
+                                       </span>
+                                    </div>
+                                    <div class="info-text pt-3 mt-auto d-flex alig-items-center">
+                                       <div class="me-2">
+                                          <span class="font-500">Доставка:</span>
+                                          21.02.2024
+                                       </div>
+                                       <span class="i-block" data-tippy-content="Write title here asd sadsad ad">?</span>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="cart-table__item">
+                                 <div class="cart-table__checkbox">
+                                    <label class="checkbox checkbox--sm checkbox--warning">
+                                       <input type="checkbox" />
+                                       <span class="checkbox__text"></span>
+                                    </label>
+                                 </div>
+                                 <div class="cart-table__img">
+                                    <a href="#">
+                                       <img src="img/product-img.jpg" alt="">
+                                    </a>
+                                    <div class="d-md-none d-flex flex-wrap gap-4 alig-items-center mt-auto pt-3">
+                                       <button class="favorite-btn  _toggle-action">
+                                          <svg class="icon icon-heart">
+                                             <use xlink:href="img/sprite.svg#heart"></use>
+                                          </svg>
+                                       </button>
+
+                                       <button class="remove-btn">
+                                          <svg class="icon icon-remove">
+                                             <use xlink:href="img/sprite.svg#remove"></use>
+                                          </svg>
+                                       </button>
+                                    </div>
+                                 </div>
+                                 <div class="cart-table__content">
+                                    <a href="#" class="cart-table__title">FilodoroAbsolute 8 vita bassa</a>
+                                    <div class="card-details mt-3">
+                                       <ul>
+                                          <li><strong>Цвет:</strong> playa (телесный)</li>
+                                          <li><strong>Размер:</strong> 3-M</li>
+                                       </ul>
+                                    </div>
+                                    <div class="d-md-flex d-none gap-4 alig-items-center mt-auto pt-3">
+                                       <button class="favorite-btn  _toggle-action">
+                                          <svg class="icon icon-heart">
+                                             <use xlink:href="img/sprite.svg#heart"></use>
+                                          </svg>
+                                       </button>
+
+                                       <button class="remove-btn">
+                                          <svg class="icon icon-remove">
+                                             <use xlink:href="img/sprite.svg#remove"></use>
+                                          </svg>
+                                       </button>
+                                    </div>
+                                 </div>
+                                 <div class="cart-table__info">
+                                    <div class="cart-buy">
+                                       <span class="cart-price color-gray rub font-700">364</span>
+                                       <div class="counter" data-counter>
+                                          <button class="counter__btn counter__btn--minus" data-counter-minus type="button" disabled>–</button>
+                                          <input class="counter__val form-input form-input--warning _error" data-counter-val value="0" disabled />
+                                          <button class="counter__btn counter__btn--plus" data-counter-plus type="button" disabled>+</button>
+                                       </div>
+
+                                    </div>
+                                    <div class="text-xxl-end ">
+                                       <div class="available">Нет в наличии</div>
+                                       <a href="#" class="link size-md ">Сообщить о поступлении</a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="cart-table__item">
+                                 <div class="cart-table__checkbox">
+                                    <label class="checkbox checkbox--sm checkbox--warning">
+                                       <input type="checkbox" />
+                                       <span class="checkbox__text"></span>
+                                    </label>
+                                 </div>
+                                 <div class="cart-table__img">
+                                    <a href="#">
+                                       <img src="img/product-img.jpg" alt="">
+                                    </a>
+                                    <div class="d-md-none d-flex flex-wrap gap-4 alig-items-center mt-auto pt-3">
+                                       <button class="favorite-btn  _toggle-action">
+                                          <svg class="icon icon-heart">
+                                             <use xlink:href="img/sprite.svg#heart"></use>
+                                          </svg>
+                                       </button>
+
+                                       <button class="remove-btn">
+                                          <svg class="icon icon-remove">
+                                             <use xlink:href="img/sprite.svg#remove"></use>
+                                          </svg>
+                                       </button>
+                                    </div>
+                                 </div>
+                                 <div class="cart-table__content">
+                                    <a href="#" class="cart-table__title">FilodoroAbsolute 8 vita bassa</a>
+                                    <div class="card-details mt-3">
+                                       <ul>
+                                          <li><strong>Цвет:</strong> playa (телесный)</li>
+                                          <li><strong>Размер:</strong> 3-M</li>
+                                       </ul>
+                                    </div>
+                                    <div class="d-md-flex d-none gap-4 alig-items-center mt-auto pt-3">
+                                       <button class="favorite-btn  _toggle-action">
+                                          <svg class="icon icon-heart">
+                                             <use xlink:href="img/sprite.svg#heart"></use>
+                                          </svg>
+                                       </button>
+
+                                       <button class="remove-btn">
+                                          <svg class="icon icon-remove">
+                                             <use xlink:href="img/sprite.svg#remove"></use>
+                                          </svg>
+                                       </button>
+                                    </div>
+                                 </div>
+                                 <div class="cart-table__info">
+                                    <div class="cart-buy">
+                                       <span class="cart-price color-gray rub font-700">364</span>
+                                       <div class="counter" data-counter>
+                                          <button class="counter__btn counter__btn--minus" data-counter-minus type="button" disabled>–</button>
+                                          <input class="counter__val form-input form-input--warning _error" data-counter-val value="0" disabled />
+                                          <button class="counter__btn counter__btn--plus" data-counter-plus type="button" disabled>+</button>
+                                       </div>
+
+                                    </div>
+                                    <div class="d-flex flex-column align-items-xxl-end ">
+                                       <span class="available">Доступно только 4 шт</span>
+                                    </div>
+
+                                    <div class="info-text pt-3 d-flex mt-auto alig-items-center">
+                                       <div class="me-2">
+                                          <span class="font-500">Доставка:</span>
+                                          21.02.2024
+                                       </div>
+                                       <span class="i-block" data-tippy-content="Write title here asd sadsad ad">?</span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="cart-footer-details  mt-4">
+                              <div class="cart-delivery ">
+                                 <span class="cart-delivery-title">
+                                    Доставка:
+                                 </span>
+                                 <span class="cart-delivery-val nowrap">
+                                    <span class="d-inline-block">23 Января</span>
+                                    <span class="i-block" data-tippy-content-popover data-template="one" data-tippy-placement="left">?</span>
+                                    <div style="display: none;">
+                                       <div id="one">
+                                          <div><strong>Tooltip title</strong></div>
+                                          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+                                       </div>
+                                    </div>
+                                 </span>
+                              </div>
+                              <dl class="dl-list ">
+                                 <dt>Скидка 5%:</dt>
+                                 <dd><span class="rub">111</span></dd>
+                                 <dt>Итого со скидкой:</dt>
+                                 <dd><span class="rub">2781</span></dd>
+                                 <dt>Доставка:</dt>
+                                 <dd><span class="rub">0</span></dd>
+                                 <dt class="font-700">Итого к оплате:</dt>
+                                 <dd><span class="rub font-700">2781</span></dd>
+                              </dl>
+                           </div>
+
+
+
+
+                           <div class="alert alert--danger d-flex align-items-start gap-2 mt-4 ">
+                              <div class="alert__icon">
+                                 <svg class="icon icon-notification">
+                                    <use xlink:href="img/sprite.svg#notification"></use>
+                                 </svg>
+                              </div>
+                              <div class="alert__body align-self-center">
+                                 <div class="mb-1"><strong>Внимание!</strong></div>
+                                 Минимальная сумма заказа с учетом доставки 1000 рублей
+                              </div>
+
+                           </div>
+                        </div>
+
+                     </div>
+                  </div>
+
+                  <div class="box">
+                     <div class="box__head">
+                        <div class="box__icon">
+                           <svg class="icon icon-cart">
+                              <use xlink:href="img/sprite.svg#cart"></use>
+                           </svg>
+                        </div>
+                        <div class="box__title">Оформление заказа</div>
+                     </div>
+                     <div class="box__body">
+                        <div style="display: none;">
+                           <form action="">
+
+                              <div class="form-field">
+                                 <div class="form-wrapper">
+                                    <span class="form-placeholder">Выберите город</span>
+                                    <select class="form-select form-select--max-content2" data-placeholder="">
+                                       <option></option>
+                                       <option>Ростов-на-Дону</option>
+                                       <option>Ростов-на-Дону</option>
+                                    </select>
+                                 </div>
+                              </div>
+                              <div class="form-field">
+                                 <div class="form-wrapper">
+                                    <span class="form-placeholder">Выберите способ доставки</span>
+                                    <select class="form-select form-select--max-content2" data-placeholder="">
+                                       <option></option>
+                                       <option>Ростов-на-Дону</option>
+                                       <option>Ростов-на-Дону</option>
+                                    </select>
+                                 </div>
+                              </div>
+                           </form>
+
+
+                           <div class="mt-4 alert alert--max-content2 d-flex align-items-start gap-2 size-md">
+                              <div class="alert__icon">
+                                 <img src="img/flash-sale-not-alt.svg" alt="">
+                              </div>
+                              <div class="alert__body align-self-center ">
+                                 <div class="mb-1"><strong>Нет времени заполнять анкету?</strong></div>
+                                 <a href="#" class="underline">Оформите заказ в 1 клик</a>
+                              </div>
+                           </div>
+
+                        </div>
+                        <form action="">
+                           <div class="form-field">
+                              <div class="form-wrapper">
+                                 <span class="form-placeholder">Выберите территорию и вид доставки</span>
+                                 <select class="form-select form-select--max-content3" data-placeholder="">
+                                    <option></option>
+                                    <option>Ростов-на-Дону</option>
+                                    <option>Ростов-на-Дону</option>
+                                 </select>
+                              </div>
+                           </div>
+                           <div class="form-field">
+                              <div class="form-wrapper">
+                                 <span class="form-placeholder">Выберите регион</span>
+                                 <select class="form-select form-select--max-content3" data-placeholder="">
+                                    <option></option>
+                                    <option>Ростов-на-Дону</option>
+                                    <option>Ростов-на-Дону</option>
+                                 </select>
+                              </div>
+                           </div>
+                           <div class="form-field">
+                              <div class="form-wrapper">
+                                 <span class="form-placeholder">Выберите город</span>
+                                 <select class="form-select form-select--max-content3" data-placeholder="">
+                                    <option></option>
+                                    <option>Ростов-на-Дону</option>
+                                    <option>Ростов-на-Дону</option>
+                                 </select>
+                              </div>
+                           </div>
+
+
+                           <div class="mt-4 alert alert--max-content d-flex align-items-start gap-2 size-md">
+                              <div class="alert__icon">
+                                 <img src="img/flash-sale-not-alt.svg" alt="">
+                              </div>
+                              <div class="alert__body align-self-center">
+                                 <div class="mb-1"><strong>Внимание!</strong></div>
+                                 Для получения заказа необходим паспорт.
+                                 Получить без паспорта? <br>Выберите "постамат".
+                              </div>
+
+                           </div>
+
+                           <ul class="mt-5 unstyle d-flex flex-column gap-2 size-m">
+                              <li><strong>Расположение:</strong> "Западный"</li>
+                              <li><strong>Доставку заказа выполняет:</strong> "Курьерская компания СДЭК"</li>
+                              <li><strong>Режим работы:</strong> Пн-Пт 09:00-20:00, Сб-Вс 10:00-18:00</li>
+                              <li><strong>Телефон:</strong> +78632098745</li>
+                           </ul>
+
+                           <hr class="mt-5 mb-5">
+
+                           <div class="mt-5">
+                              <div class="form-field">
+                                 <div class="form-wrapper">
+                                    <span class="form-placeholder">Способ оплаты</span>
+                                    <select class="form-select form-select--max-content" data-placeholder="">
+                                       <option></option>
+                                       <option>Способ оплаты</option>
+                                       <option>Способ оплаты</option>
+                                    </select>
+                                 </div>
+                              </div>
+                              <div class="form-field">
+                                 <div class="form-wrapper">
+                                    <span class="form-placeholder">ФИО <span>*</span></span>
+                                    <input type="text" class="form-input form-input--max-content" placeholder="">
+                                 </div>
+                              </div>
+                              <div class="form-field">
+                                 <div class="form-wrapper">
+                                    <span class="form-placeholder">Телефон <span>*</span></span>
+                                    <input type="tel" class="form-input form-input--max-content" placeholder="">
+                                 </div>
+                              </div>
+
+                              <div class="form-field mt-4 mb-4">
+                                 <label class="checkbox ">
+                                    <input type="checkbox" checked />
+                                    <span class="checkbox__text">Соглашаюсь получать новости, обновления, информацию о скидках и специальных предложениях магазина по SMS</span>
+                                 </label>
+                              </div>
+
+                              <div class="form-field">
+                                 <div class="form-wrapper">
+                                    <span class="form-placeholder">E-mail</span>
+                                    <input type="email" class="form-input form-input--max-content" placeholder="">
+                                 </div>
+                              </div>
+
+                              <div class="form-field mt-4 mb-4 d-flex flex-column gap-3">
+                                 <label class="checkbox ">
+                                    <input type="checkbox" />
+                                    <span class="checkbox__text">Соглашаюсь получать E-mail рассылку о новинках и спецпредложениях
+
+                                    </span>
+                                 </label>
+                                 <label class="checkbox ">
+                                    <input type="checkbox" />
+                                    <span class="checkbox__text">Это дополнительный заказ</span>
+                                 </label>
+                              </div>
+
+
+                              <div class="form-field">
+                                 <div class="form-wrapper">
+                                    <span class="form-placeholder">Примечание</span>
+                                    <textarea rows="5" class="form-input form-input--max-content" placeholder=""></textarea>
+                                 </div>
+                              </div>
+
+                              <div class="form-field">
+                                 <div class="form-wrapper">
+                                    <span class="form-placeholder">Промокод</span>
+                                    <input type="text" class="form-input form-input--max-content" placeholder="">
+                                 </div>
+                              </div>
+
+                              <div class="mt-4 mb-4 alert alert--max-content d-flex align-items-start gap-2 size-md">
+                                 <div class="alert__icon">
+                                    <img src="img/flash-sale-not-alt.svg" alt="">
+                                 </div>
+                                 <div class="alert__body align-self-center">
+                                    <div class="mb-1"><strong>Внимание!</strong></div>
+                                    Осмотр, примерка, выбор и частичный отказ невозможнымы доставляем только
+                                    новый товар, упаковка которого не была ранее вскрыта, товар не был осмотрен
+                                    либо примерен.
+                                 </div>
+
+                              </div>
+
+                              <div class="block block--warning block--max-content">
+                                 <div class="block__icon">
+                                    <svg class="icon icon-cart">
+                                       <use xlink:href="img/sprite.svg#cart"></use>
+                                    </svg>
+                                 </div>
+                                 <div class="block__content size-md">
+                                    <div class="font-700 mb-3">ВАШ ЗАКАЗ:</div>
+                                    <ul class="unstyle d-flex flex-column gap-2">
+                                       <li>Товары: 1229 руб. </li>
+                                       <li>Доставка: 150 руб.</li>
+                                       <li>Скидка: 10% (129 руб.) </li>
+                                       <li>Доставка: 06.06.2024 <span class="i-block" data-tippy-content="Write title here asd sadsad ad">?</span></li>
+                                       <li><strong>Всего: <span class="rub">1341464</span></strong></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                              <div class="form-field mt-4 mb-4">
+                                 <label class="checkbox ">
+                                    <input type="checkbox" checked />
+                                    <span class="checkbox__text">Получить ссылку на отслеживание в <a href="#">Whatsapp</a></span>
+                                 </label>
+                              </div>
+
+                              <div class="form-field mt-4 mb-4">
+                                 <label class="checkbox ">
+                                    <input type="checkbox" checked />
+                                    <span class="checkbox__text"><a href="#">С правилами и условиями магазина (договор оферты), в том числе с соглашением о конфиденциальности и обработке персональных данных ознакомлен и согласен.*.</a></span>
+                                 </label>
+                              </div>
+
+                              <div class=" mt-5">
+                                 <button class="btn" disabled>ОФОРМИТЬ ЗАКАЗ</button>
+                              </div>
+                           </div>
+
+                        </form>
+                     </div>
+                  </div>
+
+                  <div class="box">
+                     <div class="box__head">
+                        <div class="box__icon">
+                           <svg class="icon icon-cart">
+                              <use xlink:href="img/sprite.svg#cart"></use>
+                           </svg>
+                        </div>
+                        <div class="box__title">Быстрое оформление заказа</div>
+                     </div>
+                     <div class="box__body">
+                        <form action="#">
+                           <div class="row g-2">
+                              <div class="col-md-5">
+                                 <div class="form-wrapper">
+                                    <span class="form-placeholder">Ваше имя <span>*</span></span>
+                                    <input type="text" class="form-input form-input--warning" placeholder="">
+                                 </div>
+                              </div>
+                              <div class="col-md-5">
+                                 <div class="form-wrapper">
+                                    <span class="form-placeholder">Телефон <span>*</span></span>
+                                    <input type="tel" class="form-input form-input--warning" placeholder="">
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="form-field mt-4 mb-4 d-flex flex-column gap-3">
+
+                              <label class="checkbox ">
+                                 <input type="checkbox" checked />
+                                 <span class="checkbox__text">Соглашаюсь получать sms и/или whatsapp сообщение о заказе и статусе доставки</span>
+                              </label>
+                              <label class="checkbox ">
+                                 <input type="checkbox" />
+                                 <span class="checkbox__text">Это дополнительный заказ (объединить с другим)</span>
+                              </label>
+                           </div>
+
+                           <div class="mt-5 mb-5 alert alert--max-content d-flex align-items-start gap-2">
+                              <div class="alert__icon">
+                                 <img src="img/flash-sale-not-alt.svg" alt="">
+                              </div>
+                              <div class="alert__body align-self-center">
+                                 <div class="mb-1"><strong>Внимание!</strong></div>
+                                 Осмотр, примерка, выбор и частичный отказ невозможнымы доставляем только
+                                 новый товар, упаковка которого не была ранее вскрыта, товар не был осмотрен
+                                 либо примерен.
+
+                              </div>
+
+                           </div>
+
+                           <div class="form-field mt-4 mb-4">
+                              <label class="checkbox">
+                                 <input type="checkbox" checked />
+                                 <span class="checkbox__text"><a href="#">С правилами и условиями магазина (договор оферты), в том числе с соглашением о конфиденциальности и обработке персональных данных ознакомлен и согласен * </a></span>
+                              </label>
+                           </div>
+
+                           <div class="mt-5">
+                              <button class="btn" disabled>ОФОРМИТЬ ЗАКАЗ</button>
+                           </div>
+
+
+                        </form>
+                     </div>
+                  </div>
+
+                  <div class="box">
+                     <div class="box__head">
+                        <div class="box__icon">
+                           <svg class="icon icon-cart">
+                              <use xlink:href="img/sprite.svg#cart"></use>
+                           </svg>
+                        </div>
+                        <div class="box__title">Корзина</div>
+                     </div>
+                     <div class="box__body">
+                        <div class="info-block d-flex align-items-start gap-3 mb-4">
+                           <img src="img/mol.svg" alt="">
+                           <div>
+                              <p class="mb-3"><strong>Оформление завершено!</strong></p>
+
+                              <p>Ваш заказ <strong>№1829101092</strong> передан на комплектацию</p>
+
+                              <a href="#" class="btn mt-3">ПЕРЕЙТИ К СТАТУСУ ЗАКАЗА</a>
+                           </div>
+                        </div>
+
+
+                     </div>
+                  </div>
+
+               </div>
+               @@include('./template/blocks/aside-right.html', {
+               login: true
+               })
+            </div>
+            @@include('./template/blocks/subscribe.html', {
+            login: true
+            })
+
+         </div>
+      </main>
+      <!-- MAIN EOF   -->
+
+      <!-- BEGIN FOOTER -->
+      @@include('./template/_footer.html', {})
+      <!-- FOOTER EOF   -->
+
+   </div>
+   <!-- main wrapper EOF   -->
+
+   <!-- BEGIN POPUPS -->
+   @@include('./template/popups/search.html')
+   @@include('./template/popups/navbar.html')
+   @@include('./template/popups/forgot_password.html')
+   <!-- POPUPS EOF   -->
+
+   @@include('./template/_js.html', {})
+
+</body>
+
+</html>

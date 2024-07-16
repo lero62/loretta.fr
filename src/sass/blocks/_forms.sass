@@ -1,0 +1,511 @@
+$form-height: 4.4rem
+$form-size: rem(16)
+$form-weight: 500
+$form-color: #797979
+$form-border: rem(2) solid #AFAFAF
+$form-bg: transparent
+$form-radius: 1rem
+$form-placeholder: #AFAFAF
+
+$checkWidth: rem(18)
+
+/* Form =========================================== */
+.form
+	&-row
+		display: flex
+		flex-wrap: wrap
+		margin: 0 rem(-15)
+		&__col
+			padding: 0 rem(15)
+	&-field
+		margin-bottom: 2rem
+		position: relative
+	&-wrapper
+		position: relative
+		&:has(.form-input:focus),
+		&:has(.form-input:not(:placeholder-shown)),
+		&:has(.select2-container):not(:has(.select2-selection__placeholder))
+			.form-input, .select2-selection
+				border-color: var(--accentColorActive)
+			.form-placeholder
+				top: -7px
+				font-size: 12px
+				padding: 0 5px
+				left: 15px
+				color: #797979
+				background: #F5F5F5
+				&--bg-white
+					background: #fff
+		&:has(.form-input:hover),
+		&:has(.select2-container:hover)
+			.form-placeholder
+				color: #797979
+		&:has(.form-select--light)
+			.form-placeholder
+				background: #fff !important
+
+	&-input
+		display: block
+		width: 100%
+		height: var(--input-height, $form-height)
+		padding: 0 rem(20)
+		color: $form-color
+		font: $form-weight $form-size $font-family, Arial, sans-serif
+		line-height: normal
+		border: $form-border
+		background: $form-bg
+		border-radius: $form-radius
+		transition: all 0.2s linear
+		+placeholder
+			color: $form-placeholder
+			font-weight: 400
+
+		&:hover, &:focus
+			border-color: var(--accentColorActive)
+
+		&--warning
+			border-color: var(--accentColorActive)
+		&--lg
+			height: 5rem
+			font-size: 1.8rem
+		&--max-content
+			max-width: 31.5rem
+			+sm
+				max-width: none
+		&._error
+			border-color: #FF0000 !important
+
+		&._valid
+			border-color: #797979
+	&-placeholder
+		color: $form-placeholder
+		font-weight: 400
+		position: absolute
+		top: 12px
+		left: 20px
+		z-index: 11
+		pointer-events: none
+		white-space: nowrap
+		max-width: calc(100% - 40px)
+		overflow: hidden
+
+		&:has(+ .form-input--lg)
+			font-size: 1.8rem
+			top: 15px
+		span
+			color: #FF0000
+
+	&-select
+		&--max-content +	.select2
+			max-width: 31.5rem
+			+sm
+				max-width: none
+		&--max-content2 +	.select2
+			max-width: 36.5rem
+			+sm
+				max-width: none
+		&--max-content3 +	.select2
+			max-width: 63rem
+			+sm
+				max-width: none
+		&._error
+			& + .select2-container .select2-selection
+				border-color: #FF0000
+
+	&-button
+		margin-top: rem(20)
+	&-message
+		font-size: 1.4rem
+		font-weight: 400
+		margin-top: .7rem
+		.icon
+			vertical-align: middle
+			top: -1px
+		&._error
+			color: #FF0000
+
+[type="search"]::-webkit-search-cancel-button 
+			-webkit-appearance: none
+			background-color: var(--accentColorActive)
+			-webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23777'><path d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'/></svg>")
+			background-size: 20px 20px
+			height: 20px
+			width: 20px
+[type="number"]::-webkit-outer-spin-button,
+[type="number"]::-webkit-inner-spin-button
+			-webkit-appearance: none
+			margin: 0
+textarea.form-input
+	height: auto
+	min-height: var(--input-height, 12rem)
+	padding-top: rem(15)
+	padding-bottom: rem(15)
+	resize: none
+	overflow: auto
+	&--max-content
+		max-width: 63rem
+		+sm
+			max-width: none
+
+label
+	display: block
+	font-weight: 600
+	margin-bottom: rem(5)
+
+.form-content
+	display: flex
+	gap: 20px
+	flex-wrap: wrap
+	&__input
+		width: 100%
+		max-width: 302px
+		+sm
+			max-width: none
+	&__button
+		flex: none
+		+sm
+			width: 100%
+		.btn
+			min-width: 160px
+			+sm
+				width: 100%
+.price-form
+	&__title
+		color: #797979
+		font-size: 1.6rem
+		font-weight: 700
+		white-space: nowrap
+		margin-right: .5rem
+		flex: none
+	&__input
+		flex: 1
+		.form-input
+			padding: 0 .2rem 0 .5rem
+	&__separate
+		height: .2rem
+		width: 1.4rem
+		flex: none
+		background: #AFAFAF
+.select2-hidden-accessible
+	display: none
+.select2
+	width: 100% !important
+	display: block
+	position: relative
+	.selection
+		display: block
+
+.select2-selection
+	height: 4.4rem
+	border: .2rem solid #AFAFAF
+	background: transparent
+	width: 100%
+	display: flex
+	border-radius: 1rem
+	cursor: pointer
+	&__rendered
+		line-height: 4rem
+		padding: 0 .5rem 0 2rem
+		font-size: 1.6rem
+		color: #797979
+		font-weight: 500
+		flex: 1 1 auto
+		min-width: 1px
+		+text-overflow
+
+	&__arrow
+		flex: none
+		background: url('../img/caret.svg') no-repeat center
+		width: 3.6rem
+	&__placeholder
+		color: #AFAFAF
+		font-weight: 400
+
+	&:hover
+		border-color: var(--accentColorActive)
+
+.select2-container
+	z-index: 10
+	&:has(.select2-dropdown)
+		z-index: 12
+	&--open
+
+		.select2-selection
+			border-radius: 1rem 1rem 0 0
+		.select2-selection__placeholder
+			color: 	#797979
+
+	&--above.select2-container--open
+		.select2-selection
+			border-radius: 0 0 1rem 1rem
+
+.select2-dropdown
+	border: .2rem solid #AFAFAF
+	border-top: none
+	border-radius: 0 0 1rem 1rem
+	display: block
+	padding: 1rem 0
+	background: #F5F5F5
+	&--above
+		border-radius: 1rem 1rem 0 0
+		border-top: .2rem solid #AFAFAF
+		border-bottom: none
+
+body:has(.form-select--light + .select2-container--open)
+	.select2-dropdown
+		background: #fff
+
+.select2-results
+	&__options
+		list-style-type: none
+		overflow: hidden
+		overflow-y: auto
+		max-height: 20rem
+	&__option
+		padding: .8rem 2rem
+		font-size: 1.6rem
+		color: #797979
+		cursor: pointer
+
+		&:hover, &--selected
+			background: var(--accentColorActive)
+			color: #fff
+
+.select2-search
+	display: block
+	width: 100%
+	margin-bottom: .5rem
+	input
+		width: 100%
+		display: block
+		border: none
+		background: transparent
+		border-bottom: $form-border
+		padding: 0 2rem
+		height: 3.4rem
+		margin-top: -1rem
+		color: $form-color
+.select2-search--hide
+	display: none
+
+/* Checkbox	======================================= */
+.checkbox, .radio
+	display: flex
+	align-items: flex-start
+	cursor: pointer
+	font-size: 1.4rem
+	font-weight: 400
+	margin: 0
+	position: relative
+	gap: 1.2rem
+	input
+		display: none
+
+	&:before
+		content: ''
+		display: block
+		width: 2rem
+		height: 2rem
+		flex: none
+		background-color: $form-bg
+		border: $form-border
+		border-color: var(--accentColorActive)
+		border-radius: 5px
+		transition: border-color 0.2s linear
+		position: relative
+		top: -1px
+		+sm
+			width: 2.4rem
+			height: 2.4rem
+			top: -2px
+	&__text
+		display: block
+		align-self: center
+
+	&:has( > input:checked)
+
+		&:before
+			background-image: url('../img/checkbox-bg.svg')
+			background-repeat: no-repeat
+			background-position: 0 2px
+			background-size: contain
+	&:hover
+		&:before
+			border-color: var(--accentColorHover)
+
+	&._error
+		&:before
+			border-color: red
+
+/* Selectbox	======================================= */
+.selectbox
+	position: relative
+	&__head
+		display: flex
+		height: $form-height
+		border: $form-border
+		border-radius: $form-radius
+		cursor: pointer
+		background: $form-bg
+		position: relative
+
+	&__legend
+		color: #aaa
+		// top: 0
+		// left: 1.2rem
+		// font-size: 1.6rem
+		// line-height: $form-height - .2rem
+		// color: #000
+		// position: absolute
+		// z-index: 2
+		// +text-overflow
+
+		// max-width: calc(100% - 2.4rem)
+		// pointer-events: none
+		// padding: 0 .3rem
+		// transition: all 0.1s linear
+		// letter-spacing: 0.01rem
+
+	&__text
+
+		flex: 1
+		min-width: 1px
+		padding: 0 rem(13)
+		max-width: 100%
+		+text-overflow
+		font: $form-weight $form-size $font-family, Arial, sans-serif
+		color: $form-color
+		line-height: $form-height - rem(2)
+
+	&__caret
+		display: flex
+		align-items: center
+		flex: none
+		margin-right: rem(13)
+		font-size: 0
+		&:after
+			content: ''
+			display: block
+			+arr(rem(10),rem(8),#aaa, b)
+
+	&__drop
+		display: none
+		border: $form-border
+		border-top: none
+		position: absolute
+		top: 100%
+		left: 0
+		width: 100%
+		z-index: 10
+		background: #fff
+		margin-top: rem(-1)
+
+		ul
+
+			max-height: rem(172)
+			overflow: hidden
+			overflow-y: auto
+			li
+				padding: rem(8) rem(13)
+				font-size: rem(14)
+				color: $color
+				cursor: pointer
+
+				@media (any-hover: hover)
+					&:hover
+						background: #F5F5F5
+				&._selected
+					background: #F5F5F5
+
+	&__search
+		margin-left: rem(-1)
+		margin-right: rem(-1)
+		position: relative
+		.icon-zoom
+			position: absolute
+			left: rem(13)
+			top: rem(10)
+			font-size: rem(16)
+			color: #aaa
+		.form-input
+			padding-left: rem(39)
+
+	&._open
+		.selectbox__head
+			z-index: 11
+		.selectbox__caret
+			transform: rotate(180deg)
+		.selectbox__drop
+			display: block
+
+	&._change
+		// .selectbox__legend
+		// 	top: -.9rem
+		// 	background: #fff
+		// 	font-size: 1.3rem
+		// 	line-height: 1.4rem
+		// 	color: #aaa
+		// 	letter-spacing: -.03rem
+
+.select2-results__options::-webkit-scrollbar
+	width: 15px
+	height: 15px
+
+.select2-results__options::-webkit-scrollbar-track
+	background: #eee
+
+.select2-results__options::-webkit-scrollbar-thumb
+	background: var(--accentColorActive)
+	border-radius: 10px
+	border: 3px solid #eee
+
+.select2-results__options::-webkit-scrollbar-button
+	display: none
+
+.scrollbar::-webkit-scrollbar
+	width: 15px
+	height: 15px
+
+.scrollbar::-webkit-scrollbar-track
+	background: #eee
+.scrollbar::-webkit-scrollbar-thumb
+	background: var(--accentColorActive)
+	border-radius: 10px
+	border: 3px solid #eee
+
+.scrollbar:-webkit-scrollbar-button
+	display: none
+
+/* File	=========================================== */
+.file
+	display: inline-flex
+	align-items: center
+	width: rem(230)
+	position: relative
+	overflow: hidden
+	input
+		position: absolute
+		top: 0
+		right: 0
+		height: auto
+		margin: 0
+		padding: 0
+		opacity: 0
+		font-size: 100px
+		line-height: 1em
+		cursor: pointer
+
+	&__name
+		flex: 1
+		order: 1
+		text-decoration: underline
+		font-weight: $form-weight
+		font-size: $form-size
+		color: $form-color
+		+tr
+		padding: 0 rem(20)
+		+text-overflow
+
+	&:active
+		.jq-file__name, .jq-file__browse .icon
+			color: #00669b

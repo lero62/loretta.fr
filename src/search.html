@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./template/_head.html', {
+"title": "Home"
+})
+
+<body class="loaded">
+  <!-- BEGIN main wrapper -->
+  <div class="main-wrapper">
+
+    <!-- BEGIN HEADER -->
+    @@include('./template/_header2.html', {
+    "nav": 0,
+    "user": 0,
+    })
+    <!-- HEADER EOF   -->
+
+    <!-- BEGIN MAIN -->
+    <main class="main">
+      <div class="container">
+        <div class="main__wrap">
+          @@include('./template/blocks/aside-left.html')
+          <div class="main__content">
+            <div class="box">
+              <div class="box__head">
+                <div class="box__icon">
+                  <svg class="icon icon-zoom">
+                    <use xlink:href="img/sprite.svg#zoom"></use>
+                  </svg>
+                </div>
+                <h1 class="box__title">Поиск</h1>
+                <div class="box__toggle ms-auto">
+                  <button class="btn btn--icon js-filter-toggle">
+                    <svg class="icon icon-filter">
+                      <use xlink:href="img/sprite.svg#filter"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="box__body">
+                <div class="head gap-4 d-flex align-items-center justify-content-between " data-da="main__content, first, 767">
+                  <div class="breadcrumbs">
+                    <a href="#" class="breadcrumbs__link">Главная</a>
+                    <span class="breadcrumbs__devider">&gt;</span>
+                    <span class="breadcrumbs__item">Поиск</span>
+                  </div>
+
+                </div>
+
+                <div class="size-md font-500 mb-3">Товаров: 0</div>
+
+                <div class="size-md font-500 mb-4">
+                  <p>К сожалению, по Вашему запросу не найдено результатов. Это вовсе не означает, что у нас нет желаемого Вам товара. Попробуйте изменить запрос или оставьте заявку на поиск менеджеру.
+                  </p>
+                </div>
+
+                <div class="filter-block">
+                  <div class="row g-2">
+                    <div class="col-xxl-4 col-xl-6 col-lg-4 col-sm-6">
+                      <div class="form-wrapper">
+                        <span class="form-placeholder">Бренд</span>
+                        <select class="form-select" data-placeholder="">
+                          <option></option>
+                          <option>Марка 1</option>
+                          <option>Марка 2</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-6 col-lg-4 col-sm-6">
+                      <div class="form-wrapper">
+                        <span class="form-placeholder">Категория</span>
+                        <select class="form-select" data-placeholder="">
+                          <option></option>
+                          <option>Марка</option>
+                          <option>Марка 2</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-6 col-lg-4 col-sm-6">
+                      <div class="form-wrapper">
+                        <span class="form-placeholder">Подкатегория</span>
+                        <select class="form-select" data-placeholder="">
+                          <option></option>
+                          <option>Марка</option>
+                          <option>Марка 2</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-6 col-lg-4 col-sm-6">
+                      <div class="form-wrapper">
+                        <span class="form-placeholder">Размер</span>
+                        <select class="form-select" data-placeholder="">
+                          <option></option>
+                          <option>Марка</option>
+                          <option>Марка 2</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-6 col-lg-4 col-sm-6">
+                      <div class="form-wrapper">
+                        <span class="form-placeholder">Цвет</span>
+                        <select class="form-select" data-placeholder="">
+                          <option></option>
+                          <option>Марка</option>
+                          <option>Марка 2</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-6 col-lg-4 col-sm-6">
+                      <div class="form-wrapper">
+                        <span class="form-placeholder">Плотность</span>
+                        <select class="form-select" data-placeholder="">
+                          <option></option>
+                          <option>Марка</option>
+                          <option>Марка 2</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-xxl-8 col-xl-12 col-lg-8 col-sm-12">
+                      <div class="form-wrapper">
+                        <span class="form-placeholder">Поисковый запрос</span>
+                        <input type="text" placeholder="" class="form-input">
+                      </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-6 col-lg-4 col-sm-6">
+                      <div class="form-wrapper">
+                        <span class="form-placeholder">Сортировать по</span>
+                        <select class="form-select" data-placeholder="">
+                          <option></option>
+                          <option>Марка</option>
+                          <option>Марка 2</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-6 col-lg-5 col-sm-6">
+                      <div class="d-flex align-items-center gap-2 price-form">
+                        <span class="price-form__title">Цена</span>
+                        <div class="price-form__input">
+                          <input type="number" class="form-input" placeholder="0">
+                        </div>
+                        <div class="price-form__separate"></div>
+                        <div class="price-form__input">
+                          <input type="number" class="form-input" placeholder="5000">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="row">
+                        <div class="col-xxl-4 col-xl-6 col-lg-4 col-sm-6">
+                          <button class="btn btn--block">ПОКАЗАТЬ</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="box">
+              <div class="box__head">
+                <div class="box__icon">
+                  <svg class="icon icon-voice">
+                    <use xlink:href="img/sprite.svg#voice"></use>
+                  </svg>
+                </div>
+                <div class="box__title">Заявка менеджеру на поиск товара</div>
+
+              </div>
+              <div class="box__body">
+                <form action="#">
+                  <div class="row g-2">
+
+                    <div class="col-12">
+                      <div class="form-wrapper">
+                        <span class="form-placeholder">Что вы ищете?</span>
+                        <textarea class="form-input" rows="7" placeholder=""></textarea>
+                      </div>
+                    </div>
+                    <div class="col-xxl-5 col-xl-6 col-lg-5 col-sm-6">
+                      <div class="form-wrapper">
+                        <span class="form-placeholder">Ваш e-mail</span>
+                        <input type="email" class="form-input" placeholder="">
+                      </div>
+                    </div>
+                    <div class="col-xxl-5 col-xl-6 col-lg-5 col-sm-6">
+                      <button class="btn btn--block">ОТПРАВИТЬ</button>
+                    </div>
+                  </div>
+                </form>
+
+              </div>
+            </div>
+          </div>
+          @@include('./template/blocks/aside-right.html')
+        </div>
+        @@include('./template/blocks/subscribe.html', {
+
+        })
+
+      </div>
+    </main>
+    <!-- MAIN EOF   -->
+
+    <!-- BEGIN FOOTER -->
+    @@include('./template/_footer.html', {})
+    <!-- FOOTER EOF   -->
+
+  </div>
+  <!-- main wrapper EOF   -->
+
+  <!-- BEGIN POPUPS -->
+  @@include('./template/popups/search.html')
+  @@include('./template/popups/navbar.html')
+  <!-- POPUPS EOF   -->
+
+  @@include('./template/_js.html', {})
+
+</body>
+
+</html>

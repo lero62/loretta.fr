@@ -1,0 +1,38 @@
+.stock
+   display: flex
+   align-items: flex-start
+   border-bottom: 1px solid #AFAFAF
+   padding-bottom: 2rem
+   padding-top: 2rem
+   gap: 2rem 4rem
+   +xs
+      flex-direction: column-reverse
+
+   &:first-child
+      padding-top: 0
+   &__content
+      flex: 1
+      min-width: 1px
+      align-self: center
+      font-size: 2.4rem
+      font-weight: 400
+      +xxl
+         font-size: 2rem
+      +md
+         font-size: 1.8rem
+
+      +xs
+         align-self: flex-start
+
+   &__price
+      margin-top: 1.2rem
+      font-weight: 700
+      +xs
+         margin-top: 0.5rem
+
+   &__img
+      flex: none
+      width: 36rem
+      max-width: 50%
+      +xs
+         max-width: 100%

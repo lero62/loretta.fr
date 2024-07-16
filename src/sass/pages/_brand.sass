@@ -1,0 +1,14 @@
+.brand
+  display: flex
+  gap: 2rem
+  +xs
+    flex-direction: column
+  &__img
+    flex: none
+    max-width: 19rem
+  &__content
+    flex: 1
+    min-width: 1px
+  &__text
+    font-weight: 300
+    +ellipsis(6)
