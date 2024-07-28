@@ -115,7 +115,8 @@
             border-radius: .6rem
             img
                width: 2.2rem
-
+   .select2-search
+      display: none
    .count .btn
       min-width: auto
 
@@ -133,7 +134,8 @@
    align-items: center
    justify-content: flex-end
    gap: 1.2rem
-
+   +sm
+      gap: 1.5rem
    &__title
 
       text-align: right
@@ -165,6 +167,9 @@
 
       flex: 0 1 auto
       max-width: 240px
+      +sm
+
+         max-width: none
    .available
       text-align: right
 
