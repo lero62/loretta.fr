@@ -1,4 +1,14 @@
 /* Elements ============ */
+.swiper-button-prev, .swiper-button-next
+	--swiper-navigation-sides-offset: 3rem
+	height: 40px !important
+	width: 30px !important
+	opacity: 1 !important
+	background: url(../img/swiper-arrow.svg) no-repeat center
+	&:after
+		display: none
+.swiper-button-next
+	transform: rotate(180deg) !important
 
 .alert
 	text-align: left
@@ -70,6 +80,8 @@
 	font-weight: 500
 	font-size: 1.4rem
 	text-decoration: none
+	border: none
+	text-decoration: underline
 
 	&:hover
 		color: var(--accentColorActive)

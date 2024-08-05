@@ -191,33 +191,20 @@
 	&__prev, &__next
 		cursor: pointer
 		padding: 0
-		height: 1.4rem
-		width: 0.8rem
 		margin: 0 0.8rem .2rem
 		background-color: transparent
 		text-indent: -999px
 		overflow: hidden
 		z-index: 10
+		background-size: 70% auto
 		+md
 			display: none !important
-		&:after
-			width: 0px
-			height: 0px
-			border-style: solid
-			display: block
-			content: ''
 
 	&__next
 		right: 4% !important
-		&:after
-			border-width: 1.6rem 0 1.6rem 2rem
-			border-color: transparent transparent transparent var(--accentColorActive)
 
 	&__prev
 		left: 4% !important
-		&:after
-			border-width: 1.6rem 2rem 1.6rem 0
-			border-color: transparent var(--accentColorActive) transparent transparent
 
 	.video
 		width: 100%

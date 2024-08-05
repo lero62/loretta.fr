@@ -126,7 +126,7 @@
 				<div class="main__wrap">
 					<aside class="main__aside hidden-lg">
 						<div class="box-default">
-							<div class="search-block" data-da="offcanvas-search, first, 1320">
+							<div class="search-block" data-da="offcanvas-search, first, 1260">
 								<form action="#">
 									<div class="search-block__input">
 										<input type="text" placeholder="Искать..." class="form-input form-input--warning js-search-input">
@@ -464,8 +464,8 @@
 								<div class="card">
 									<div class="card__left">
 										<div class="card__img">
-											<div class="card__img-active " id="card-img">
-												<img src="img/img-1.jpg" alt="" class="_open-modal js-gallery-item" data-href="#popup-card-slider">
+											<div class="card__img-active js-gallery-item" id="card-img">
+												<img src="img/img-1.jpg" alt="" class="_open-modal" data-href="#popup-card-slider">
 												<div class="card-actions__button gap-4 alig-items-center visible-sm">
 													<button class="size-btn" data-tippy-content-popover data-template="sizes" data-tippy-placement="top">
 														<img src="img/size.svg" alt="" class="hidden-sm">
@@ -485,19 +485,29 @@
 													</div>
 												</div>
 											</div>
-											<div class="card__img-thubnails js-gallery">
-												<div class="js-gallery-item _active _open-modal" data-href="#popup-card-slider">
-													<img src="img/img-1.jpg" class="thumbnails " alt="">
+											<div class="card__img-thubnails ">
+												<div class="swiper card-thubnails">
+													<div class="swiper-wrapper">
+														<div class="swiper-slide js-gallery-item _active _open-modal" data-href="#popup-card-slider">
+															<img src="img/img-1.jpg" class="thumbnails " alt="">
+														</div>
+														<div class="swiper-slide js-gallery-item _open-modal" data-href="#popup-card-slider">
+															<img src="img/product-img2.png" class="thumbnails" alt="">
+														</div>
+														<div class="swiper-slide js-gallery-item _open-modal" data-href="#popup-card-slider">
+															<img src="img/product-img.jpg" class="thumbnails" alt="">
+														</div>
+														<div class="swiper-slide js-gallery-item _open-modal" data-href="#popup-card-slider">
+															<img src="img/product-img.jpg" class="thumbnails" alt="">
+														</div>
+														<div class="swiper-slide js-gallery-item _open-modal" data-href="#popup-card-slider">
+															<img src="img/product-img.jpg" class="thumbnails" alt="">
+														</div>
+													</div>
+
 												</div>
-												<div class="js-gallery-item _open-modal" data-href="#popup-card-slider">
-													<img src="img/product-img2.png" class="thumbnails" alt="">
-												</div>
-												<div class="js-gallery-item _open-modal" data-href="#popup-card-slider">
-													<img src="img/product-img.jpg" class="thumbnails" alt="">
-												</div>
-												<div class="js-gallery-item _open-modal" data-href="#popup-card-slider">
-													<img src="img/product-img.jpg" class="thumbnails" alt="">
-												</div>
+												<div class="swiper-button-prev card-thubnails-prev"></div>
+												<div class="swiper-button-next card-thubnails-next"></div>
 											</div>
 										</div>
 									</div>
@@ -1530,6 +1540,11 @@
 									<img src="img/product-img.jpg" alt="">
 								</figure>
 							</div>
+							<div class="swiper-slide">
+								<figure>
+									<img src="img/product-img.jpg" alt="">
+								</figure>
+							</div>
 						</div>
 					</div>
 					<div class="swiper-button-prev popup-swiper__prev hidden-iphone"></div>
@@ -1543,6 +1558,9 @@
 						</div>
 						<div class="swiper-slide">
 							<img src="img/product-img2.png" alt="">
+						</div>
+						<div class="swiper-slide">
+							<img src="img/product-img.jpg" alt="">
 						</div>
 						<div class="swiper-slide">
 							<img src="img/product-img.jpg" alt="">

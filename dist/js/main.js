@@ -634,6 +634,31 @@ $('.js-gallery-item').on('click', function () {
   popupSwiper.slideTo(index, 0, false);
 });
 
+const cardSwiperThumbs = new Swiper('.card-thubnails', {
+  // Optional parameters
+  loop: false,
+  slidesPerView: 4,
+  spaceBetween: 4,
+  watchSlidesProgress: true,
+  slideToClickedSlide: true,
+  breakpoints: {
+    100: {
+      slidesPerView: 3.5,
+    },
+
+    380: {
+      slidesPerView: 4.5,
+    },
+    768: {
+      slidesPerView: 3.5,
+    },
+
+    1550: {
+      slidesPerView: 4,
+    },
+  },
+});
+
 	
 let _slideUp = (target, duration = 500) => {
 	if(!target.classList.contains('_slide')){
