@@ -1816,12 +1816,6 @@ label {
   border-color: var(--accentColorActive);
 }
 
-.select2-container {
-  z-index: 10;
-}
-.select2-container:has(.select2-dropdown) {
-  z-index: 12;
-}
 .select2-container--open .select2-selection {
   border-radius: 1rem 1rem 0 0;
 }
@@ -1830,6 +1824,10 @@ label {
 }
 .select2-container--above.select2-container--open .select2-selection {
   border-radius: 0 0 1rem 1rem;
+}
+
+.select2-container:not(.select2) {
+  z-index: 12;
 }
 
 .select2-dropdown {

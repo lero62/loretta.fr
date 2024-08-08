@@ -225,9 +225,7 @@ label
 		border-color: var(--accentColorActive)
 
 .select2-container
-	z-index: 10
-	&:has(.select2-dropdown)
-		z-index: 12
+
 	&--open
 
 		.select2-selection
@@ -239,12 +237,15 @@ label
 		.select2-selection
 			border-radius: 0 0 1rem 1rem
 
+.select2-container:not(.select2)
+	z-index: 12
 .select2-dropdown
 	border: .2rem solid #AFAFAF
 	border-top: none
 	border-radius: 0 0 1rem 1rem
 	display: block
 	padding: 1rem 0
+
 	background: #F5F5F5
 	&--above
 		border-radius: 1rem 1rem 0 0
