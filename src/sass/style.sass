@@ -41,7 +41,7 @@ $xxl: 1700px
 $xxm: 1600px
 $xl: 1500px
 $xm: 1360px
-$lg: 1260px
+$lg: 1200px
 $md: 1024px
 $sm: 767px
 $xs: 575px
@@ -53,6 +53,8 @@ $xxs: 370px
 @if $units == 'rem'
 	html
 		font-size: 62.5%
+		@media (max-width: 1360px) and (min-width: 1025px)
+			font-size: 58%
 @else
 	html
 		font-size: 100%

@@ -8,7 +8,7 @@
   flex-shrink: 0;
   margin-bottom: 2.4rem;
 }
-@media screen and (max-width: 1260px) {
+@media screen and (max-width: 1200px) {
   .header {
     margin-bottom: 0;
   }
@@ -17,7 +17,7 @@
   background: var(--accentColor) url('../img/header-bg2.png') no-repeat center 0;
   background-size: auto 100%;
 }
-@media screen and (max-width: 1260px) {
+@media screen and (max-width: 1200px) {
   .header__top {
     height: 9rem;
   }
@@ -39,9 +39,9 @@
   justify-content: space-between;
   padding-top: 2rem;
   padding-bottom: 3.5rem;
-  height: 186px;
+  height: 18.6rem;
 }
-@media screen and (max-width: 1260px) {
+@media screen and (max-width: 1200px) {
   .header__container {
     position: fixed !important;
     top: 0;
@@ -75,15 +75,15 @@
   padding-left: var(--padding);
   padding-right: var(--padding);
 }
-@media screen and (max-width: 1260px) {
+@media screen and (max-width: 1200px) {
   .header__info {
     display: none;
   }
 }
 .header__logo {
-  margin-bottom: -8px;
+  margin-bottom: -0.8rem;
 }
-@media screen and (max-width: 1260px) {
+@media screen and (max-width: 1200px) {
   .header__logo {
     margin-top: 0;
   }
@@ -92,7 +92,7 @@
 body.home-page .header {
   margin-bottom: 2.4rem;
 }
-@media screen and (max-width: 1260px) {
+@media screen and (max-width: 1200px) {
   body.home-page .header__top {
     height: 15vw;
     min-height: 12.7rem;
@@ -118,7 +118,7 @@ body.home-page .header {
     max-width: 28rem;
   }
 }
-@media screen and (max-width: 1260px) {
+@media screen and (max-width: 1200px) {
   .logo img {
     max-width: 18rem;
   }
@@ -139,12 +139,12 @@ body.home-page .header {
   background-size: contain;
   display: block;
   position: absolute;
-  left: 100px;
+  left: 10rem;
   bottom: 52%;
   width: 20rem;
   height: 10rem;
 }
-@media screen and (max-width: 1260px) {
+@media screen and (max-width: 1200px) {
   .logo:before {
     display: none;
   }
@@ -158,14 +158,14 @@ body.home-page .header {
   align-items: center;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-bottom: -15px;
+  margin-bottom: -1.5rem;
 }
 @media screen and (max-width: 1700px) {
   .logo__wrap {
-    margin-bottom: -5px;
+    margin-bottom: -0.5rem;
   }
 }
-@media screen and (max-width: 1260px) {
+@media screen and (max-width: 1200px) {
   .logo__wrap {
     margin: 0;
   }
@@ -179,7 +179,7 @@ body.home-page .header {
     font-size: 2.6rem;
   }
 }
-@media screen and (max-width: 1260px) {
+@media screen and (max-width: 1200px) {
   .logo__wrap span {
     font-size: 1.8rem;
   }
@@ -199,7 +199,7 @@ body.home-page .header {
   font-size: 1.6rem;
   font-style: italic;
 }
-@media screen and (max-width: 1260px) {
+@media screen and (max-width: 1200px) {
   .logo__slogan {
     display: none;
   }
@@ -228,7 +228,7 @@ body.home-page .header {
   font-size: 2.2rem;
   color: var(--accentColorActive);
 }
-@media screen and (max-width: 1260px) {
+@media screen and (max-width: 1200px) {
   .country .icon {
     font-size: 3rem;
     top: -0.2rem;
@@ -238,7 +238,7 @@ body.home-page .header {
   font-size: 1.4rem;
   font-weight: 500;
 }
-@media screen and (max-width: 1260px) {
+@media screen and (max-width: 1200px) {
   .country span {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -256,7 +256,7 @@ body.home-page .header {
   font-weight: 300;
   border-color: transparent;
 }
-@media screen and (max-width: 1260px) {
+@media screen and (max-width: 1200px) {
   .country a {
     font-size: 1.6rem;
   }
@@ -348,7 +348,7 @@ body.home-page .header {
 .top-actions {
   display: none;
 }
-@media screen and (max-width: 1260px) {
+@media screen and (max-width: 1200px) {
   .top-actions {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -434,7 +434,7 @@ body.home-page .header {
 .navbar {
   background: #f5f5f5;
 }
-@media screen and (max-width: 1260px) {
+@media screen and (max-width: 1200px) {
   .navbar {
     display: none;
   }
@@ -448,7 +448,7 @@ body.home-page .header {
   justify-content: center;
   list-style-type: none;
   gap: 1rem 3rem;
-  padding: 8px 2rem;
+  padding: 0.8rem 2rem;
 }
 @media screen and (max-width: 1500px) {
   .navbar-menu {

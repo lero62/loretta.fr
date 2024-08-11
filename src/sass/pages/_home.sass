@@ -4,9 +4,9 @@
 
 .products
    display: grid
-   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr))
+   grid-template-columns: repeat(4, 1fr)
    gap: 2rem 4%
-   +xs
+   +sm
       gap: 1rem
       grid-template-columns: 1fr 1fr
 
@@ -14,6 +14,7 @@
    display: block
    text-decoration: none
    border: none
+   min-width: 1px
    &__img
       img
          width: 100%
@@ -29,7 +30,7 @@
          color: var(--accentColorActive)
 
 .reviews
-   padding: 0 20px 30px
+   padding: 0 2rem 3rem
    position: relative
    +sm
       padding-left: 0
@@ -40,8 +41,8 @@
          padding-right: 1.5rem
 
    &-swiper-prev, &-swiper-next
-      height: 40px
-      width: 30px
+      height: 4rem
+      width: 3rem
       opacity: 1 !important
       background: url('../img/swiper-arrow.svg') no-repeat center
       &:after
@@ -49,10 +50,10 @@
       +sm
          display: none !important
    &-swiper-prev
-      left: -13px !important
+      left: -1.3rem !important
    &-swiper-next
       transform: rotate(180deg)
-      right: -13px !important
+      right: -1.3rem !important
    .swiper-slide
       height: auto
    &-swiper-pagination
@@ -78,8 +79,8 @@
 .review
    height: 100%
    background: #fff
-   border-radius: 10px
-   padding: 25px
+   border-radius: 1rem
+   padding: 2.5rem
    display: grid
    grid-template-columns: 10.7rem auto
    grid-template-rows: auto auto 1fr

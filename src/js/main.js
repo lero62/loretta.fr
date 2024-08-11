@@ -59,7 +59,20 @@ document.addEventListener('DOMContentLoaded', function (event) {
 		}
 	}
 
-	
+	// fixed placeholder
+
+
+$('.form-input').focus(function () {
+	var value = $(this).val();
+	if (value == '') {
+		$(this).closest('.form-wrapper').addClass('focus')
+	} 
+}).blur(function () {
+	var value = $(this).val();
+	if (value == '') {
+		$(this).closest('.form-wrapper').removeClass('focus')
+	}
+});
 
 	// select
 	$('.form-select').each(function () {
@@ -71,7 +84,9 @@ document.addEventListener('DOMContentLoaded', function (event) {
 				}	
 			},
 			dropdownParent: $(this).parent(),
-			});
+		}).on("select2:select", function () { 
+			$(this).closest(".form-wrapper").addClass('focus')
+		});
 		});
 
 

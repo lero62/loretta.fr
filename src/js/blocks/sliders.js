@@ -111,24 +111,11 @@ $('.js-gallery-item').on('click', function () {
 const cardSwiperThumbs = new Swiper('.card-thubnails', {
   // Optional parameters
   loop: false,
-  slidesPerView: 4,
+  slidesPerView: 'auto',
   spaceBetween: 4,
-  watchSlidesProgress: true,
   slideToClickedSlide: true,
-  breakpoints: {
-    100: {
-      slidesPerView: 3.5,
-    },
-
-    380: {
-      slidesPerView: 4.5,
-    },
-    768: {
-      slidesPerView: 3.5,
-    },
-
-    1550: {
-      slidesPerView: 4,
-    },
+  navigation: {
+    nextEl: '.card-thubnails-next',
+    prevEl: '.card-thubnails-prev',
   },
 });
