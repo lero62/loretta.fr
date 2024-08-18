@@ -1,6 +1,9 @@
+@import lib/base
+@import variables
+
 .header
   width: 100%
-  min-width: 32rem
+  min-width: 30rem
   text-align: left
   -ms-flex-negative: 0
   flex-shrink: 0
@@ -9,7 +12,7 @@
     margin-bottom: 0
 
   &__top
-    background: var(--accentColor) url('../img/header-bg.png') no-repeat center 0
+    background: var(--accentColor) url('../img/header-bg2.png') no-repeat center 0
     background-size: auto 100%
     +lg
       height: 9rem
@@ -59,8 +62,6 @@
       margin-top: 0
 
 body.home-page
-  .header
-    margin-bottom: 2.4rem
 
   .header__top
     +lg
@@ -71,6 +72,67 @@ body.home-page
       background-position: center top
     +sm
       margin-top: 7rem
+
+.logo
+  position: relative
+  text-align: right
+  border: none
+  text-decoration: none
+
+  img
+    +xxl
+      max-width: 28rem
+    +lg
+      max-width: 18rem
+    +sm
+      max-width: 10.6rem
+    +xxs
+      max-width: 9.6rem
+
+  &:before
+    content: ''
+    background: url('../img/logo-element.png')
+    background-size: contain
+    display: block
+    position: absolute
+    left: 100px
+    bottom: 52%
+    width: 20rem
+    height: 10rem
+
+    +xxl
+      display: none
+
+  &__wrap
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    margin-bottom: -15px
+
+    +xxl
+      margin-bottom: -5px
+
+    +lg
+      margin: 0
+
+    span
+      font-size: 3rem
+      color: var(--accentColorActive)
+      +xxl
+        font-size: 2.6rem
+      +lg
+        font-size: 1.8rem
+      +sm
+        font-size: 1.4rem
+      +xxs
+        font-size: 1.2rem
+
+  &__slogan
+    color: #9a1e43
+    font-size: 1.6rem
+    font-style: italic
+    +lg
+      display: none
 
 .top-info__text
   font-size: 1.5rem
@@ -238,3 +300,38 @@ body.home-page
 
     .icon
       color: var(--accentColorActive)
+
+.navbar
+  background: #f5f5f5
+  +lg
+    display: none
+
+.navbar-menu
+  display: flex
+  justify-content: center
+  list-style-type: none
+  gap: 1rem 3rem
+  padding: 8px 2rem
+
+  +xl
+    gap: 1rem 2rem
+  +xm
+    gap: 1rem
+
+  &__item
+    flex: none
+
+  &__link
+    display: block
+    font-size: 1.6rem
+    font-weight: 500
+    padding: 1.2rem 1.5rem
+    text-transform: uppercase
+    text-decoration: none
+    border: none
+
+    &:hover
+      color: var(--accentColorActive)
+
+    &._active
+      color: var(--accentColorCurrent)

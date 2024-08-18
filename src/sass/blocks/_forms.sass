@@ -91,7 +91,11 @@ $checkWidth: rem(18)
 			color: #FF0000
 
 	&-select
-
+		padding: 0 .5rem 0 2rem
+		font-size: 1.6rem
+		color: #797979
+		font-weight: 500
+		font-family: var(--font), Arial, sans-serif
 		height: $form-height
 		width: 100%
 		background: transparent
@@ -100,15 +104,18 @@ $checkWidth: rem(18)
 		appearance: none
 		&::-ms-expand
 			display: none
-		&--max-content +	.select2
+		&--max-content +	.select2,
+		&--max-content
 			max-width: 31.5rem
 			+sm
 				max-width: none
-		&--max-content2 +	.select2
+		&--max-content2 +	.select2,
+		&--max-content2
 			max-width: 36.5rem
 			+sm
 				max-width: none
-		&--max-content3 +	.select2
+		&--max-content3 +	.select2,
+		&--max-content3
 			max-width: 63rem
 			+sm
 				max-width: none

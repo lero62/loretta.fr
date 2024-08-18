@@ -1,8 +1,18 @@
-/* HEADER */
-/* ================================================ */
+:root {
+  --accentColor: #F0D2DC;
+  --accentColorActive: #E69AB1;
+  --accentColorHover: #DA287E;
+  --accentColorCurrent: #9A1E43;
+  --bg: #fff;
+  --font: "Ubuntu";
+  --font-pt: pt;
+  --color: #282828;
+  --size: 1.6rem;
+}
+
 .header {
   width: 100%;
-  min-width: 32rem;
+  min-width: 30rem;
   text-align: left;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -14,7 +24,7 @@
   }
 }
 .header__top {
-  background: var(--accentColor) url('../img/header-bg2.png') no-repeat center 0;
+  background: var(--accentColor) url("../img/header-bg2.png") no-repeat center 0;
   background-size: auto 100%;
 }
 @media screen and (max-width: 1200px) {
@@ -32,11 +42,11 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding-top: 2rem;
   padding-bottom: 3.5rem;
   height: 18.6rem;
@@ -53,8 +63,8 @@
     padding-top: 0;
     padding-bottom: 0;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 @media screen and (max-width: 767px) {
@@ -69,8 +79,8 @@
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 2rem;
   padding-left: var(--padding);
   padding-right: var(--padding);
@@ -89,9 +99,6 @@
   }
 }
 
-body.home-page .header {
-  margin-bottom: 2.4rem;
-}
 @media screen and (max-width: 1200px) {
   body.home-page .header__top {
     height: 15vw;
@@ -134,17 +141,17 @@ body.home-page .header {
   }
 }
 .logo:before {
-  content: '';
-  background: url('../img/logo-element.png');
+  content: "";
+  background: url("../img/logo-element.png");
   background-size: contain;
   display: block;
   position: absolute;
-  left: 10rem;
+  left: 100px;
   bottom: 52%;
   width: 20rem;
   height: 10rem;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1700px) {
   .logo:before {
     display: none;
   }
@@ -154,15 +161,15 @@ body.home-page .header {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-bottom: -1.5rem;
+      flex-wrap: wrap;
+  margin-bottom: -15px;
 }
 @media screen and (max-width: 1700px) {
   .logo__wrap {
-    margin-bottom: -0.5rem;
+    margin-bottom: -5px;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -216,15 +223,15 @@ body.home-page .header {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   white-space: nowrap;
   gap: 0.9rem;
 }
 .country .icon {
   -webkit-box-flex: 0;
-  -ms-flex: none;
-  flex: none;
+      -ms-flex: none;
+          flex: none;
   font-size: 2.2rem;
   color: var(--accentColorActive);
 }
@@ -245,8 +252,8 @@ body.home-page .header {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     font-size: 1.6rem;
   }
 }
@@ -270,8 +277,8 @@ body.home-page .header {
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 0.9rem;
   white-space: nowrap;
   font-size: 1.4rem;
@@ -299,8 +306,8 @@ body.home-page .header {
   display: flex;
   gap: 2.5rem;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 1.4rem 2rem;
   margin-left: calc(var(--padding) * -1);
   margin-right: calc(var(--padding) * -1);
@@ -355,8 +362,8 @@ body.home-page .header {
     display: flex;
     gap: 0.6rem;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 @media screen and (max-width: 370px) {
@@ -370,11 +377,11 @@ body.home-page .header {
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 5.5rem;
   height: 5.5rem;
   border-radius: 0.7rem;
@@ -421,8 +428,8 @@ body.home-page .header {
 .top-action .icon-heart {
   fill: none;
   -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
 }
 .top-action.active {
   background: #fff;
@@ -439,26 +446,32 @@ body.home-page .header {
     display: none;
   }
 }
+
 .navbar-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   list-style-type: none;
   gap: 1rem 3rem;
-  padding: 0.8rem 2rem;
+  padding: 8px 2rem;
 }
 @media screen and (max-width: 1500px) {
   .navbar-menu {
     gap: 1rem 2rem;
   }
 }
+@media screen and (max-width: 1360px) {
+  .navbar-menu {
+    gap: 1rem;
+  }
+}
 .navbar-menu__item {
   -webkit-box-flex: 0;
-  -ms-flex: none;
-  flex: none;
+      -ms-flex: none;
+          flex: none;
 }
 .navbar-menu__link {
   display: block;
@@ -468,11 +481,6 @@ body.home-page .header {
   text-transform: uppercase;
   text-decoration: none;
   border: none;
-}
-@media screen and (max-width: 1380px) {
-  .navbar-menu__link {
-    padding: 1.2rem 1rem;
-  }
 }
 .navbar-menu__link:hover {
   color: var(--accentColorActive);

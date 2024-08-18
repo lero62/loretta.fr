@@ -317,7 +317,7 @@ body {
 }
 
 .min-250 {
-  min-width: 250px;
+  min-width: 180px;
 }
 
 .unstyle {
@@ -1605,6 +1605,11 @@ a:hover {
   color: #FF0000;
 }
 .form-select {
+  padding: 0 0.5rem 0 2rem;
+  font-size: 1.6rem;
+  color: #797979;
+  font-weight: 500;
+  font-family: var(--font), Arial, sans-serif;
   height: 4.4rem;
   width: 100%;
   background: transparent;
@@ -1617,27 +1622,27 @@ a:hover {
 .form-select::-ms-expand {
   display: none;
 }
-.form-select--max-content + .select2 {
+.form-select--max-content + .select2, .form-select--max-content {
   max-width: 31.5rem;
 }
 @media screen and (max-width: 767px) {
-  .form-select--max-content + .select2 {
+  .form-select--max-content + .select2, .form-select--max-content {
     max-width: none;
   }
 }
-.form-select--max-content2 + .select2 {
+.form-select--max-content2 + .select2, .form-select--max-content2 {
   max-width: 36.5rem;
 }
 @media screen and (max-width: 767px) {
-  .form-select--max-content2 + .select2 {
+  .form-select--max-content2 + .select2, .form-select--max-content2 {
     max-width: none;
   }
 }
-.form-select--max-content3 + .select2 {
+.form-select--max-content3 + .select2, .form-select--max-content3 {
   max-width: 63rem;
 }
 @media screen and (max-width: 767px) {
-  .form-select--max-content3 + .select2 {
+  .form-select--max-content3 + .select2, .form-select--max-content3 {
     max-width: none;
   }
 }
@@ -2130,6 +2135,10 @@ body:has(.form-select--light + .select2-container--open) .select2-dropdown {
 
 /* HEADER */
 /* ================================================ */
+body.home-page .header {
+  margin-bottom: 2.4rem;
+}
+
 .offcanvas {
   position: fixed;
   width: 100%;
@@ -2553,7 +2562,7 @@ body:has(.form-select--light + .select2-container--open) .select2-dropdown {
 /* ================================================ */
 .main-wrapper {
   padding: 0;
-  min-width: 32rem;
+  min-width: 30rem;
   position: relative;
   overflow: clip;
   opacity: 1;
@@ -2574,7 +2583,7 @@ body:has(.form-select--light + .select2-container--open) .select2-dropdown {
 
 .main {
   width: 100%;
-  min-width: 32rem;
+  min-width: 30rem;
   text-align: left;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
@@ -2662,7 +2671,7 @@ body:has(.form-select--light + .select2-container--open) .select2-dropdown {
 .container {
   --gutters: 2rem;
   width: 100%;
-  min-width: 32rem;
+  min-width: 30rem;
   position: relative;
   max-width: 1700px;
   padding-left: var(--gutters);
@@ -3599,8 +3608,8 @@ body:has(.form-select--light + .select2-container--open) .select2-dropdown {
 }
 @media screen and (max-width: 1500px) {
   .card-item {
-    -ms-grid-columns: 14.7rem 1fr;
-    grid-template-columns: 14.7rem 1fr;
+    -ms-grid-columns: minmax(12rem, 27.5%) 1fr;
+    grid-template-columns: minmax(12rem, 27.5%) 1fr;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -5828,6 +5837,28 @@ body:has(.form-select--light + .select2-container--open) .select2-dropdown {
 }
 .popup-swiper-thumbs .swiper-slide-thumb-active {
   border-color: var(--accentColorActive);
+}
+
+figure.zoom {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+}
+figure.zoom img {
+  -webkit-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  display: block;
+  width: 100%;
+}
+@media (any-hover: hover) {
+  figure.zoom:hover img {
+    opacity: 0;
+  }
 }
 
 :root {
@@ -11179,7 +11210,7 @@ body:has(.form-select--light + .select2-container--open) .select2-dropdown {
 /* ================================================ */
 .footer {
   width: 100%;
-  min-width: 32rem;
+  min-width: 30rem;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   background: #D7D7D7;

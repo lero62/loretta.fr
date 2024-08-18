@@ -87,7 +87,12 @@ $('.form-input').focus(function () {
 		}).on("select2:select", function () { 
 			$(this).closest(".form-wrapper").addClass('focus')
 		});
-		});
+		if ($(this).val()) {
+        $(this).closest(".form-wrapper").addClass('focus')
+    }
+	});
+	
+	
 
 
 	// plus minus
@@ -216,6 +221,21 @@ $('.form-input').focus(function () {
 
 	$('.js-toggle-search').on('click', function () { 
 		$('#toggle-search').toggleClass('is-open')
+	})
+
+
+	//Img zoom
+
+	const zoom = document.querySelectorAll('.zoom');
+	zoom.forEach((zoom) => {
+		zoom.addEventListener('mousemove', function (e) {
+			var zoomer = e.currentTarget;
+			offsetX = e.offsetX
+			offsetY = e.offsetY
+			x = offsetX / zoomer.offsetWidth * 100
+			y = offsetY / zoomer.offsetHeight * 100
+			zoomer.style.backgroundPosition = x + '% ' + y + '%';
+		})
 	})
 
 
