@@ -681,6 +681,35 @@ const cardSwiperThumbs = new Swiper('.card-thubnails', {
   },
 });
 
+if (document.querySelector('.products-swiper')) {
+  new Swiper('.products-swiper ', {
+    // Optional parameters
+    loop: true,
+    slidesPerView: 4,
+    spaceBetween: 20,
+    watchOverflow: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    navigation: {
+      nextEl: '.products-slider__next',
+      prevEl: '.products-slider__prev',
+    },
+    pagination: {
+      el: '.products-slider__pagination',
+    },
+
+    breakpoints: {
+      100: {
+        slidesPerView: 'auto',
+      },
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+    },
+  });
+}
+
 	
 let _slideUp = (target, duration = 500) => {
 	if(!target.classList.contains('_slide')){

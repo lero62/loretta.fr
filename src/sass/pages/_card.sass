@@ -180,3 +180,34 @@
    color: #D9222A
    +sm
       font-size: 1.4rem
+
+.products-slider
+   padding: 0 2rem
+   position: relative
+   +sm
+      padding-left: 0
+      padding-right: 0
+   .swiper
+      +sm
+         margin-right: -2rem
+         padding-right: 2rem
+
+   .swiper-button-prev, .swiper-button-next
+      +sm
+         display: none !important
+   .swiper-button-prev
+      left: -1.3rem !important
+   .swiper-button-next
+
+      right: -1.3rem !important
+   .swiper-slide
+      height: auto
+      +sm
+         width: 15rem !important
+   .swiper-pagination
+      display: none
+      +sm
+         display: flex
+         justify-content: center
+         position: static
+         margin-top: 1.5rem

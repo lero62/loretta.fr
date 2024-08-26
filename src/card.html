@@ -175,20 +175,28 @@
                         <div class="box__title">Лидеры продаж в подкатегории классика 13-40 ден</div>
                      </div>
                      <div class="box__body">
-                        <div class="products">
-                           {% for product in range(0,10) %}
-                           <div class="products__item">
-                              <a href="#" class="product">
-                                 <picture class="product__img">
-                                    <img src="img/product-img.jpg" alt="">
-                                 </picture>
-                                 <div class="product__title">Palome</div>
-                              </a>
+                        <div class="products-slider">
+                           <div class="swiper products-swiper">
+                              <div class="swiper-wrapper">
+                                 {% for product in range(0,8) %}
+                                 <div class="swiper-slide">
+                                    <a href="#" class="product">
+                                       <picture class="product__img">
+                                          <img src="img/product-img.jpg" alt="">
+                                       </picture>
+                                       <div class="product__title">Palome</div>
+                                    </a>
+                                 </div>
+                                 {% endfor %}
+                              </div>
+
+
                            </div>
-                           {% endfor %}
-
-
+                           <div class="products-slider__pagination swiper-pagination"></div>
+                           <div class="products-slider__prev swiper-button-prev"></div>
+                           <div class="products-slider__next swiper-button-next"></div>
                         </div>
+
                      </div>
                   </div>
                   <div class="box">
