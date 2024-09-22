@@ -319,6 +319,11 @@ body {
 .min-250 {
   min-width: 180px;
 }
+@media screen and (max-width: 767px) {
+  .min-250 {
+    min-width: 220px;
+  }
+}
 
 .unstyle {
   list-style-type: none;
