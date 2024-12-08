@@ -194,7 +194,20 @@ $('.form-input').focus(function () {
 		},
 		allowHTML: true,
 		placement: 'top',
+		trigger: 'click',
+		interactive: true,
 		theme: 'light',
+		onShow(instance) {
+ 
+			setTimeout(() => { 
+				const closeBtn = instance.popper.querySelector('.tuppy-close');
+				if (closeBtn) {
+					closeBtn.addEventListener('click', () => {
+						instance.hide(); 
+					});
+				}
+			});
+		},
 	});
 
 
@@ -235,6 +248,24 @@ $('.form-input').focus(function () {
 			x = offsetX / zoomer.offsetWidth * 100
 			y = offsetY / zoomer.offsetHeight * 100
 			zoomer.style.backgroundPosition = x + '% ' + y + '%';
+		})
+	})
+
+	// layout cards 
+	const gridColumnBtns = document.querySelectorAll('.grid-column__item');
+	const productList = document.querySelector('.product-list');
+	gridColumnBtns.forEach((btn) => {
+		btn.addEventListener('click', function (e) {
+			gridColumnBtns.forEach((item) => item.classList.remove('_active'));
+    
+			this.classList.add('_active');
+			
+			if (this.dataset.gridColumn === 'default') {
+				productList.classList.remove('product-list--grid');
+			} else if (this.dataset.gridColumn === 'fast') {
+				productList.classList.add('product-list--grid');
+			}
+			
 		})
 	})
 

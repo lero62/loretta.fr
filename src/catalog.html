@@ -45,12 +45,17 @@
                               <span class="breadcrumbs__devider">&gt;</span>
                               <span class="breadcrumbs__item">колготки классика</span>
                            </div>
-                           <span class="products-count">Товаров: 1024</span>
+
+                           <div class="grid-column d-flex align-items-center gap-2">
+                              <span class="products-count">Товаров: 1024</span>
+                              <span class="hidden-sm">|</span> <span class="hidden-sm grid-column__item _active" data-grid-column="default">Обычный просмотр</span>
+                              <span class="hidden-sm">|</span> <span class="hidden-sm grid-column__item" data-grid-column="fast">Быстрый просмотр</span>
+                           </div>
                         </div>
 
 
 
-                        <div class="product-list">
+                        <div class="product-list ">
                            {% for review in range(0,10) %}
                            <div class="card-item">
                               <div class="card-item__img">

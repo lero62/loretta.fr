@@ -139,9 +139,22 @@
                                  </div>
                                  <div class="d-flex align-items-center justify-content-between gap-3 mt-2">
                                     <div class="card-actions__button d-flex gap-4 alig-items-center ">
-                                       <button class="size-btn hidden-sm">
-                                          <img src="img/size.svg" alt="">
+
+                                       <button class="size-btn" data-tippy-content-popover data-template="sizes-desktop" data-tippy-placement="top">
+                                          <img src="img/size.svg" alt="" class="hidden-sm">
+                                          <img src="img/size-white.svg" alt="" class="visible-sm">
                                        </button>
+
+                                       <div style="display: none;">
+                                          <div id="sizes-desktop">
+                                             <button class="tuppy-close">
+                                                <svg class="icon icon-close">
+                                                   <use xlink:href="img/sprite.svg#close"></use>
+                                                </svg>
+                                             </button>
+                                             <img src="img/size.jpg" alt="">
+                                          </div>
+                                       </div>
 
                                        <button class="favorite-btn _toggle-action">
                                           <svg class="icon icon-heart">

@@ -3041,6 +3041,113 @@ body.home-page .header {
   color: var(--accentColorActive);
 }
 
+.sale-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+@media screen and (max-width: 1024px) {
+  .sale-card {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 3rem;
+  }
+}
+@media screen and (max-width: 575px) {
+  .sale-card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+.sale-card__img {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  border: none;
+  display: block;
+}
+@media screen and (max-width: 1024px) {
+  .sale-card__img {
+    max-width: 40%;
+  }
+}
+@media screen and (max-width: 575px) {
+  .sale-card__img {
+    max-width: 100%;
+  }
+}
+.sale-card__img img {
+  width: 100%;
+}
+.sale-card__contnet {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.sale-card__title {
+  font-size: 16px;
+  color: inherit;
+  text-decoration: none;
+  font-weight: 500;
+  border: none;
+}
+@media screen and (max-width: 1024px) {
+  .sale-card__title {
+    font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+  }
+}
+.sale-card__title:hover {
+  color: var(--accentColorActive);
+}
+.sale-card__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 0.6rem 1.4rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 1.5rem;
+}
+.sale-card__price-current {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.sale-card__price-discount {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5;
+  position: relative;
+}
+.sale-card__price-discount:before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #DA287E;
+  -webkit-transform: rotate(-25deg);
+      -ms-transform: rotate(-25deg);
+          transform: rotate(-25deg);
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+.sale-card__button {
+  margin-top: 1.5rem;
+}
+
 .certificate {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3601,6 +3708,46 @@ body.home-page .header {
   font-weight: 300;
 }
 
+@media screen and (min-width: 768px) {
+  .product-list--grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[4];
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 767px) {
+  .product-list--grid {
+    gap: 1rem;
+    -ms-grid-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 575px) {
+  .product-list--grid {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 768px) {
+  .product-list--grid .card-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    border: none;
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .product-list--grid .card-item__buttons, .product-list--grid .card-item__price, .product-list--grid .card-item__details, .product-list--grid .card-item__text, .product-list--grid .card-item__content, .product-list--grid .card-item__actions {
+    display: none !important;
+  }
+}
+
 .card-item {
   position: relative;
   display: -ms-grid;
@@ -3972,6 +4119,19 @@ body.home-page .header {
   padding-bottom: 3rem;
   border-bottom: 1px solid #AFAFAF;
   margin-bottom: 3rem;
+}
+
+.grid-column {
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+.grid-column__item {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.grid-column__item._active {
+  text-decoration: none;
+  cursor: text;
 }
 
 .card {

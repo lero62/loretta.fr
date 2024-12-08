@@ -3,6 +3,27 @@
    font-size: 1.2rem
    font-weight: 300
 
+.product-list
+   +rmin(768px)
+      &--grid
+         display: grid
+         grid-template-columns: repeat(4, 1fr)
+         gap: 2rem
+         +sm
+            gap: 1rem
+            grid-template-columns: 1fr 1fr 1fr
+         +xs
+
+            grid-template-columns: 1fr 1fr
+         .card-item
+            display: flex
+            padding: 0
+            border: none
+            text-align: center
+            flex-direction: column
+            &__buttons, &__price, &__details, &__text, &__content, &__actions
+               display: none !important
+
 .card-item
    position: relative
    display: grid
@@ -221,3 +242,14 @@
    padding-bottom: 3rem
    border-bottom: 1px solid #AFAFAF
    margin-bottom: 3rem
+
+.grid-column
+   font-weight: 300
+   font-size: 1.2rem
+   &__item
+      cursor: pointer
+      text-decoration: underline
+
+      &._active
+         text-decoration: none
+         cursor: text
