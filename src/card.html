@@ -51,22 +51,10 @@
                                  <div class="card__img-active js-gallery-item" id="card-img">
                                     <img src="img/img-1.jpg" alt="" class="_open-modal" data-href="#popup-card-slider">
                                     <div class="card-actions__button gap-4 alig-items-center visible-sm">
-                                       <button class="size-btn" data-tippy-content-popover data-template="sizes" data-tippy-placement="top">
+                                       <button class="size-btn _open-modal" data-href="popup-size">
                                           <img src="img/size.svg" alt="" class="hidden-sm">
                                           <img src="img/size-white.svg" alt="" class="visible-sm">
                                        </button>
-
-                                       <div style="display: none;">
-                                          <div id="sizes">
-                                             <button class="tuppy-close">
-                                                <svg class="icon icon-close">
-                                                   <use xlink:href="img/sprite.svg#close"></use>
-                                                </svg>
-                                             </button>
-                                             <img src="img/size.jpg" alt="">
-
-                                          </div>
-                                       </div>
                                     </div>
                                  </div>
                                  <div class="card__img-thubnails ">
@@ -140,21 +128,10 @@
                                  <div class="d-flex align-items-center justify-content-between gap-3 mt-2">
                                     <div class="card-actions__button d-flex gap-4 alig-items-center ">
 
-                                       <button class="size-btn" data-tippy-content-popover data-template="sizes-desktop" data-tippy-placement="top">
+                                       <button class="size-btn _open-modal" data-href="popup-size">
                                           <img src="img/size.svg" alt="" class="hidden-sm">
                                           <img src="img/size-white.svg" alt="" class="visible-sm">
                                        </button>
-
-                                       <div style="display: none;">
-                                          <div id="sizes-desktop">
-                                             <button class="tuppy-close">
-                                                <svg class="icon icon-close">
-                                                   <use xlink:href="img/sprite.svg#close"></use>
-                                                </svg>
-                                             </button>
-                                             <img src="img/size.jpg" alt="">
-                                          </div>
-                                       </div>
 
                                        <button class="favorite-btn _toggle-action">
                                           <svg class="icon icon-heart">
@@ -263,6 +240,7 @@
    @@include('./template/popups/catalog.html')
    @@include('./template/popups/forgot_password.html')
    @@include('./template/popups/card_slider.html')
+   @@include('./template/popups/size.html')
    <!-- POPUPS EOF   -->
 
    @@include('./template/_js.html', {})
