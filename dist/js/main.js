@@ -286,6 +286,7 @@ if (offcanvasLinks.length > 0) {
   for (let index = 0; index < offcanvasLinks.length; index++) {
     const offcanvasLink = offcanvasLinks[index];
     offcanvasLink.addEventListener('click', function (e) {
+      e.preventDefault();
       let offcanvasName;
       if (this.hasAttribute('href')) {
         offcanvasName = offcanvasLink.getAttribute('href').replace('#', '');
@@ -295,7 +296,6 @@ if (offcanvasLinks.length > 0) {
 
       const curentoffcanvas = document.getElementById(offcanvasName);
       offcanvasOpen(curentoffcanvas);
-      e.preventDefault();
     });
   }
 }
@@ -304,8 +304,8 @@ if (offcanvasCloseIcon.length > 0) {
   for (let index = 0; index < offcanvasCloseIcon.length; index++) {
     const el = offcanvasCloseIcon[index];
     el.addEventListener('click', function (e) {
-      offcanvasClose(el.closest('._modal'));
       e.preventDefault();
+      offcanvasClose(el.closest('._modal'));
     });
   }
 }
@@ -313,7 +313,7 @@ if (offcanvasCloseIcon.length > 0) {
 function offcanvasOpen(curentoffcanvas) {
   if (curentoffcanvas && unlock) {
     const offcanvasActive = document.querySelector('._modal._open');
-    const offcanvasInputFirst = document.querySelector('.search-block__input input');
+    const offcanvasInputFirst = document.querySelector('#offcanvas-search .search-block__input input');
 
     if (offcanvasActive) {
       offcanvasClose(offcanvasActive, false);
@@ -325,11 +325,11 @@ function offcanvasOpen(curentoffcanvas) {
       curentoffcanvas.classList.add('_animate');
     }, 50);
 
-    setTimeout(() => {
-      if (offcanvasInputFirst) {
+    if (offcanvasInputFirst) {
+      setTimeout(() => {
         offcanvasInputFirst.focus();
-      }
-    }, 100);
+      }, 100);
+    }
 
     curentoffcanvas.addEventListener('click', function (e) {
       if (!e.target.closest('._modal__content')) {
@@ -363,7 +363,7 @@ function bodyLock(classEl = 'lock') {
     }
   }
   body.style.paddingRight = lockPaddingValue;
-  html.classList.add(classEl);
+  body.classList.add(classEl);
 
   unlock = false;
   setTimeout(function () {
@@ -380,7 +380,7 @@ function bodyUnLock(classEl = 'lock') {
       }
     }
     body.style.paddingRight = '0px';
-    html.classList.remove(classEl);
+    body.classList.remove(classEl);
   }, timeout);
 
   unlock = false;

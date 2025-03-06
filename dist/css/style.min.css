@@ -170,10 +170,10 @@ html {
   }
 }
 
-html.lock, html.lock body {
+body.lock {
   overflow: hidden;
 }
-html.navLock, html.navLock body {
+body.navLock {
   overflow: hidden;
 }
 
@@ -188,7 +188,6 @@ body {
   display: flex;
   margin: 0px;
   padding: 0px;
-  position: relative;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
